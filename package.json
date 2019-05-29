@@ -1,0 +1,27 @@
+{
+  "name": "arc-portal",
+  "version": "1.0.0",
+  "description": "Portal for research projects for IIT Kanpur",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chinmaygoyal/ARC-portal.git"
+  },
+  "author": "Nilay Majorwar, Chinmay Goyal, Ayush Kumar, Karanveer Singh Oberoi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chinmaygoyal/ARC-portal/issues"
+  },
+  "homepage": "https://github.com/Chinmaygoyal/ARC-portal#readme",
+  "dependencies": {
+    "config": "^3.1.0",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.11"
+  }
+}
