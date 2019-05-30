@@ -17,7 +17,8 @@ const studentSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        lowercase: true
     },
     isVerified: {
         type: Boolean,
@@ -26,10 +27,19 @@ const studentSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        // Password required only when user is verified
+        // Password required only when email is verified
         required: function() { return this.isVerified },
         minlength: 8,
         maxlength: 1024
+    },
+    // Delete unverified accounts after 24 hrs
+    createdAt: {
+        type: Date,
+        required: true,
+        default: Date.now,
+        index: {
+            expires: '24h'
+        }
     }
 });
 
@@ -43,7 +53,7 @@ studentSchema.methods.generateAuthToken = function() {
 function validate(studentLoginInfo) {
     const schema = {
         email: Joi.string().required().email(),
-        password: Joi.string().min(8).max(1024)
+        password: Joi.string().min(8).max(255)
     }
     return Joi.validate(studentLoginInfo, schema);
 };
