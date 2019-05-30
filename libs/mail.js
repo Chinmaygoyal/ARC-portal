@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const mailBody = require('../config/mail-body.json');
 const mailInfo = require('../config/mail-credentials.json');
 
 // Set up the transporter
@@ -13,12 +14,12 @@ const smtpTransport = nodemailer.createTransport({
 });
 
 // Mail sender function
-function sendMail(recipient, subject, body) {
+function sendVerificationMail(recipient, subject, verificationLink) {
     const mailOptions = {
         from: mailInfo.username,
         to: recipient,
         subject: subject,
-        text: body
+        text: mailBody.verifyMail.replace("$", verificationLink)
     };
 
     smtpTransport.sendMail(mailOptions, (err, result) => {
@@ -26,4 +27,4 @@ function sendMail(recipient, subject, body) {
     });
 };
 
-exports.send = sendMail;
+exports.sendVerificationMail = sendVerificationMail;
