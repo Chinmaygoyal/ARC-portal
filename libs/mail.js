@@ -22,9 +22,7 @@ function sendVerificationMail(recipient, subject, verificationLink) {
         text: mailBody.verifyMail.replace("$", verificationLink)
     };
 
-    smtpTransport.sendMail(mailOptions, (err, result) => {
-        return err;
-    });
+    smtpTransport.sendMail(mailOptions);
 };
 
 exports.sendVerificationMail = sendVerificationMail;
