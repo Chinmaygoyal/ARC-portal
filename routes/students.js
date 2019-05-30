@@ -28,7 +28,7 @@ router.post('/', async(req, res) => {
         await student.save();
         const token = student.generateAuthToken();
         // TODO: Enter official link once project is up 
-        mailer.sendVerificationMail(email, "Verify your email ID", `ENTER_ROUTE_HANDLER_HERE.com/verify?${token}`);
+        mailer.sendVerificationMail(email, "Verify your email ID", `ENTER_ROUTE_HANDLER_HERE.com/verify?token=${token}`);
         res.status(200).send('Verification mail sent');
     } catch (ex) {
         res.status(500).send('Internal server error');
