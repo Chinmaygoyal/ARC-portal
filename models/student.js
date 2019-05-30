@@ -19,9 +19,15 @@ const studentSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
+    isVerified: {
+        type: Boolean,
+        required: true,
+        default: false
+    },
     password: {
         type: String,
-        required: true,
+        // Password required only when user is verified
+        required: function() { return this.isVerified },
         minlength: 8,
         maxlength: 1024
     }
@@ -29,7 +35,6 @@ const studentSchema = new mongoose.Schema({
 
 // Generate login auth token
 studentSchema.methods.generateAuthToken = function() {
-    // TODO: Add an expiration time to the token 
     const token = jwt.sign({ _id: this._id, rollNumber: this.rollNumber, email: this.email }, config.get("authTokenKey"));
     return token;
 };
