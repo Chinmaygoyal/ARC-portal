@@ -1,4 +1,4 @@
-const https = require('https');
+const http = require('http');
 const express = require('express');
 const mongoose = require('mongoose');
 const config = require('config')
@@ -22,7 +22,7 @@ mongoose.connect(DB_URL, { useNewUrlParser: true }, (err, result) => {
 });
 
 // Start the server
-const server = https.createServer(app);
+const server = http.createServer(app);
 server.listen(PORT, () => {
     console.log(`Server live at port ${PORT}.`);
 })
