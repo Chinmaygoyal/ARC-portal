@@ -1,12 +1,16 @@
 const http = require('http');
 const express = require('express');
 const mongoose = require('mongoose');
-const config = require('config')
+const config = require('config');
+const studentRouter = require('./routes/students');
+const tokenRouter = require('./routes/token');
 const app = express();
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('views'));
+app.use('/auth/student', studentRouter);
+app.use('/token', tokenRouter);
 
 // Environment variables
 const PORT = config.get("PORT");

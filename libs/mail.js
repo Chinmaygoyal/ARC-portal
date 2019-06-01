@@ -19,7 +19,7 @@ function sendVerificationMail(recipient, subject, verificationLink) {
         from: mailInfo.username,
         to: recipient,
         subject: subject,
-        text: mailBody.verifyMail.replace("$", verificationLink)
+        html: mailBody.verifyMail.replace("$", verificationLink)
     };
 
     smtpTransport.sendMail(mailOptions);

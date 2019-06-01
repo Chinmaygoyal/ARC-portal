@@ -1,6 +1,7 @@
 const jwt = require('jwt');
 const config = require('config');
 
+// Middleware to verify login token
 function tokenAuth(req, res, next) {
     // Retrieve token
     const token = req.header('x-auth-token');
@@ -16,4 +17,5 @@ function tokenAuth(req, res, next) {
     }
 };
 
-module.exports = tokenAuth;
+exports.tokenAuth = tokenAuth;
+exports.mailAuth = mailAuth;

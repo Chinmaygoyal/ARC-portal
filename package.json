@@ -18,6 +18,7 @@
     },
     "homepage": "https://github.com/Chinmaygoyal/ARC-portal#readme",
     "dependencies": {
+        "bcrypt": "^3.0.6",
         "config": "^3.1.0",
         "express": "^4.17.1",
         "https": "^1.0.0",

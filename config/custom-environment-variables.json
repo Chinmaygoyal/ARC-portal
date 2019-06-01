@@ -1,3 +1,4 @@
 {
-    "authTokenKey": "authTokenKey"
+    "authTokenKey": "authTokenKey",
+    "mailTokenKey": "mailTokenKey"
 }
