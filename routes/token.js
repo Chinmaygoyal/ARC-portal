@@ -1,35 +1,30 @@
-const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const mailAuth = require('../middleware/mailVerify');
 const { Student } = require('../models/student');
 const router = require('express').Router();
 
 // Mail token confirmation
-router.get('/verify', async (req, res) => {
-    const token = req.query.token;
+router.post('/verify', mailAuth, async (req, res) => {
+    const decoded = req.token;
     const password = req.body.password;
-    // Preliminary check
-    if (!token) return res.status(400).send('Confirmation failed: token not provided');
-    if (!password) return res.status(400).send('Bad request: password is required.');
-
     try {
-        // Decode and validate the token
-        const studentInfo = jwt.verify(token, config.get('authTokenKey'));
-        if (studentInfo.exp > new Date().getTime / 1000) return res.status(401).send('Access denied: token expired');
-        const student = await Student.findById(studentInfo._id);
-        if (!student) return res.status(400).send('Verification time expired. Register again.');
 
-        // Hash and set the password. Verify the student, in case this is first verification.
-        const hash = await bcrypt.hash(password, await bcrypt.genSalt());
-        student.password = hash;
+        // Retrieve the student from database
+        const student = await Student.findById(decoded._id);
+        if (!student) return res.status(400).send('Student not found');
+
+        // Verify the student in case unverified, and set the hashed password
         student.isVerified = true;
-        await student.save();
+        const salt = await bcrypt.genSalt();
+        student.password = await bcrypt.hash(password, salt);
+        student.save();
 
+        // Send confirmation response
         res.send('Password set successfully');
 
-    } catch (ex) {
-        res.status(500).send('Internal server error.');
-    }
+    } catch (error) {
+        return res.status(400).send("Invalid token.");
+    };
 });
 
 // Resend initial verification token

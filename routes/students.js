@@ -7,13 +7,13 @@ const mailAuth = require('../middleware/mailVerify');
 const { Student, validateStudent } = require("../models/student");
 
 // Initial registration route
-router.post("/", async (req, res) => {
+router.post('/', async (req, res) => {
   const email = req.body.email;
 
   // Check if email is an IITK email id
   const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
   if (!email.match(regex))
-    return res.status(400).send("Send valid IITK email id (*@iitk.ac.in)");
+    return res.status(400).send('Send valid IITK email id (*@iitk.ac.in)');
 
   // Check if student is already registered
   const studentInDB = await Student.findOne({ email: email });
@@ -65,31 +65,6 @@ router.get("/", async (req, res) => {
   // Generate token and send
   const token = student.generateAuthToken();
   res.header(token).send("Authorised");
-});
-
-// Set password after verification
-router.post("/setpwd", mailAuth, async (req, res) => {
-  const decoded = req.token;
-  const password = req.body.password;
-  if (!token) return res.status(401).send('Access denied')
-  try {
-
-    // Retrieve the student from database
-    const student = await Student.findById(decoded._id);
-    if (!student) return res.status(400).send('Student not found');
-
-    // Verify the student in case unverified, and set the hashed password
-    student.isVerified = true;
-    const salt = await bcrypt.genSalt();
-    student.password = await bcrypt.hash(password, salt);
-    student.save();
-
-    // Send confirmation response
-    res.send('Student verified');
-
-  } catch (error) {
-    return res.status(400).send("Invalid token.");
-  };
 });
 
 module.exports = router;
