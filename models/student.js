@@ -41,7 +41,7 @@ const studentSchema = new mongoose.Schema({
 });
 
 // Delete unverified accounts after 24 hrs
-studentSchema.index({ createdAt: 1 }, { expires: '2m' });
+// studentSchema.index({ createdAt: 1 }, { expires: '24h' });
 
 // Generate login auth token
 studentSchema.methods.generateAuthToken = function (options = { useMailKey: true }) {

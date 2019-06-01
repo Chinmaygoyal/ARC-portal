@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const config = require("config");
 const mailer = require("../libs/mail");
+const mailAuth = require('../middleware/mailVerify');
 const { Student, validateStudent } = require("../models/student");
 
 // Initial registration route
@@ -67,20 +68,18 @@ router.get("/", async (req, res) => {
 });
 
 // Set password after verification
-router.post("/setpwd", async (req, res) => {
-  const token = req.header("x-auth-token");
+router.post("/setpwd", mailAuth, async (req, res) => {
+  const decoded = req.token;
   const password = req.body.password;
-  // TODO: Check for existence of token and password 
+  if (!token) return res.status(401).send('Access denied')
   try {
 
-    // Decode the token and find the student
-    const decoded = await jwt.verify(token, config.get("mailTokenKey"));
+    // Retrieve the student from database
     const student = await Student.findById(decoded._id);
     if (!student) return res.status(400).send('Student not found');
 
     // Verify the student in case unverified, and set the hashed password
     student.isVerified = true;
-    await student.collection.dropIndex('expireAt')
     const salt = await bcrypt.genSalt();
     student.password = await bcrypt.hash(password, salt);
     student.save();
