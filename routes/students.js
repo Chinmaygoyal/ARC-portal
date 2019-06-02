@@ -1,13 +1,11 @@
 const router = require("express").Router();
-const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const config = require("config");
 const mailer = require("../libs/mail");
-const mailAuth = require('../middleware/mailVerify');
-const { Student, validateStudent } = require("../models/student");
+const { Student } = require("../models/student");
 
 // Initial registration route
-router.post('/', async (req, res) => {
+router.post('/register', async (req, res) => {
   const email = req.body.email;
 
   // Check if email is an IITK email id
@@ -43,13 +41,10 @@ router.post('/', async (req, res) => {
 });
 
 // Login route
-router.get("/", async (req, res) => {
+router.post('/login', async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
-
-  // Joi validation
-  const { error } = validateStudent({ email: email, password: password });
-  if (error) return res.status(400).send(error.details[0].message);
+  if (!email || !password) return res.status(400).send('Email and/or password not provided');
 
   // Check if email exists
   const student = await Student.findOne({ email: email });
@@ -64,7 +59,7 @@ router.get("/", async (req, res) => {
 
   // Generate token and send
   const token = student.generateAuthToken();
-  res.header(token).send("Authorised");
+  res.header('x-auth-token', token).send("Authorised");
 });
 
 module.exports = router;
