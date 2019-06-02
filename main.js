@@ -2,13 +2,16 @@ const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
+
 const signUpButtonMobile = document.getElementById('signUpMobile');
 const signInButtonMobile = document.getElementById('signInMobile');
 
 
 
 signUpButton.addEventListener('click', () => {
+	
 	container.classList.add("right-panel-active");
+	
 });
 
 signInButton.addEventListener('click', () => {
@@ -21,3 +24,16 @@ signUpButtonMobile.addEventListener('click', () => {
 signInButtonMobile.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+
+
+function func(){
+	console.log("hello");
+	container.classList.add("forgot-p-active");
+	
+}
+
+function func2(){
+	console.log("hello");
+	container.classList.remove("forgot-p-active");
+	
+}
