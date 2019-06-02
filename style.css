@@ -183,6 +183,8 @@ input {
   	transform: translateX(50%);
 }
 
+
+
 .overlay-panel {
 	position: absolute;
 	display: flex;
@@ -217,6 +219,42 @@ input {
 .mobile-icon{
 	display: none;
 }
+
+
+.forgot-p-active .signinc{
+	z-index: 2;
+	transform: translateY(200%);
+
+}
+
+.forgot{
+z-index: 1;
+transform: translateY(-100%);
+}
+.forgot-p-active .forgot{
+	z-index: 3;
+	transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media(max-width: 800px){
 	section{
