@@ -1,0 +1,45 @@
+:root {
+  --theme-color: #be00be;
+  --font-family: 'Montserrat';
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+input {
+  border: none;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+td, th {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: var(--theme-color);
+  color: white;
+}
+
+tr {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+tr:hover {
+  background: #f3f3f3;
+}
+
+/* TOP BAR */
+
