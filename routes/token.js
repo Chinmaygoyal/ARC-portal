@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const Joi = require('joi');
 const mailAuth = require('../middleware/mailVerify');
 const { Student } = require('../models/student');
 const router = require('express').Router();
@@ -7,11 +8,15 @@ const router = require('express').Router();
 router.post('/verify', mailAuth, async (req, res) => {
     const decoded = req.token;
     const password = req.body.password;
-    try {
 
+    // Joi validation
+    const { error } = Joi.validate({ password: password }, { password: Joi.string().required().min(8).max(255) });
+    if (error) return res.status(400).send(error.details[0].message);
+
+    try {
         // Retrieve the student from database
         const student = await Student.findById(decoded._id);
-        if (!student) return res.status(400).send('Student not found');
+        if (!student) return res.status(401).send('Student not found');
 
         // Verify the student in case unverified, and set the hashed password
         student.isVerified = true;
@@ -21,9 +26,8 @@ router.post('/verify', mailAuth, async (req, res) => {
 
         // Send confirmation response
         res.send('Password set successfully');
-
     } catch (error) {
-        return res.status(400).send("Invalid token.");
+        return res.status(401).send("Invalid token.");
     };
 });
 

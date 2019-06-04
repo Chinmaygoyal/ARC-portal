@@ -1,11 +1,11 @@
-const jwt = require('jwt');
+const jwt = require('jsonwebtoken');
 const config = require('config');
 
 // Middleware to verify login token
 function tokenAuth(req, res, next) {
     // Retrieve token
     const token = req.header('x-auth-token');
-    if (!token) return res.status(401).send('Access denied: no token provided.');
+    if (token == 'null') return res.status(401).send('Access denied: no token provided.');
 
     // Decode the token and attach info to req
     try {
@@ -17,5 +17,4 @@ function tokenAuth(req, res, next) {
     }
 };
 
-exports.tokenAuth = tokenAuth;
-exports.mailAuth = mailAuth;
+module.exports = tokenAuth;

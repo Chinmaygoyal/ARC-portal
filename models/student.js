@@ -55,7 +55,7 @@ studentSchema.methods.generateAuthToken = function (options = { useMailKey: true
 function validate(studentLoginInfo) {
   const schema = {
     email: Joi.string().required().email(),
-    password: Joi.string().min(8).max(255)
+    password: Joi.string().min(8).max(255).required()
   };
   return Joi.validate(studentLoginInfo, schema);
 }

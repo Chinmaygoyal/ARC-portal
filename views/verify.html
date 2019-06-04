@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'
+    integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=' crossorigin='anonymous'></script>
+  <title>Set Password</title>
+</head>
+
+<body>
+  <h1>Set new password</h1>
+  <input type="password" id="pwd" placeholder="Enter new password"><br>
+  <input type="password" id="cnf-pwd" placeholder="Confirm new password"><br>
+  <label id="message"></label><br>
+  <button id="submit">Submit</button>
+
+  <script>
+    $('#submit').on('click', () => {
+      // Get the elements
+      const pwd = $('#pwd').val();
+      const cnf = $('#cnf-pwd').val();
+      const label = $('#message');
+
+      // Password length and match check
+      if (pwd.length < 8 || pwd.length > 255) return label.html('Password must be between 8 and 255 characters');
+      if (pwd !== cnf) return label.html('Passwords do not match.');
+
+      // Retrieve token
+      const params = (new URL(document.location)).searchParams;
+      const token = params.get('token');
+      label.val('Sending...');
+
+      // Send request
+      $.ajax('http://localhost:3000/token/verify', {
+        method: 'POST',
+        data: { password: pwd },
+        headers: { 'x-auth-token': token },
+        statusCode: {
+          200: () => { alert('Password set succesfully! You can now login.') },
+          401: () => { alert('Token invalid/expired. Resend mail again') }
+        }
+      });
+      label.html('');
+    });
+  </script>
+
+</body>
+
+</html>
