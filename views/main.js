@@ -1,3 +1,4 @@
+console.log("Working")
 // SLIDER CODE
 const container = document.getElementById('container');
 const fpButtons = document.querySelectorAll('.fp');
