@@ -236,25 +236,13 @@ transform: translateY(-100%);
 	transform: translateY(0);
 }
 
+.fp {
+	cursor: pointer;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.fp:hover {
+	text-decoration: underline;
+}
 
 @media(max-width: 800px){
 	section{
