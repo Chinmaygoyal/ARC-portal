@@ -43,12 +43,12 @@ const professorSchema = new mongoose.Schema({
 // studentSchema.index({ createdAt: 1 }, { expires: '24h' });
 
 // Generate login auth token
-studentSchema.methods.generateAuthToken = function (options = { useMailKey: true }) {
-  const key = options.useMailKey ? config.get("mailTokenKey") : config.get("authTokenKey");
-  const jwtOptions = options.useMailKey ? { expiresIn: '30m' } : undefined;
-  const token = jwt.sign({ _id: this._id, rollNumber: this.rollNumber, email: this.email }, key, jwtOptions);
-  return token;
-};
+// studentSchema.methods.generateAuthToken = function (options = { useMailKey: true }) {
+//   const key = options.useMailKey ? config.get("mailTokenKey") : config.get("authTokenKey");
+//   const jwtOptions = options.useMailKey ? { expiresIn: '30m' } : undefined;
+//   const token = jwt.sign({ _id: this._id, rollNumber: this.rollNumber, email: this.email }, key, jwtOptions);
+//   return token;
+// };
 
 // Validate student login info
 function validate(studentLoginInfo) {
