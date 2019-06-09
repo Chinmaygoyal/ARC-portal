@@ -37,10 +37,7 @@ const projectSchema = new mongoose.Schema({
     default: Date.now()
   }
 });
-const project = mongoose.model("Project", projectSchema);
+const Project = mongoose.model("Project", projectSchema);
 
-async function createProject(project){
-  let project = project
-}
 
 exports.Project = Project;

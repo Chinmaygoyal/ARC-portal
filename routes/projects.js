@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Project, validateProject } = require("../models/project");
+const { Project} = require("../models/project");
 
 
 
@@ -27,7 +27,9 @@ router.post('/createproject',async (req, res) => {
         const result = await project.save();
     }
     catch(err){
+        res.send("Please fill the complete information");
         console.log(err);
     }
 
 });
+module.exports = router;

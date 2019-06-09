@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('views'));
 app.use('/auth/student', studentRouter);
 app.use('/token', tokenRouter);
-app.use('./project',projectRouter);
+app.use('/project',projectRouter);
 
 // Environment variables
 const PORT = config.get("PORT");
