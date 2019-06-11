@@ -10,6 +10,8 @@ const projectSchema = new mongoose.Schema({
     minlength: 3
   },
   professor: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Professor'
   },
   no_openings: {
       type: Number,
