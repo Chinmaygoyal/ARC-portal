@@ -31,7 +31,9 @@ const projectSchema = new mongoose.Schema({
       type: Boolean,
       default: true
   },
-
+  department:{
+    type: String
+  },
   createdAt: {
     type: Date,
     default: Date.now()
