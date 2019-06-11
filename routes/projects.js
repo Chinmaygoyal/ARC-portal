@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Project} = require("../models/project");
-
+const { Request} = require("../models/request")
 
 router.get('/',async (req, res) => {
     try{
@@ -11,6 +11,28 @@ router.get('/',async (req, res) => {
         console.log(err.message);
     }
 });
+router.get('/requests/view/student', async(req,res)=>{
+//get the student id if student
+const student ="abcdefgh";
+const studentrequests=await Request.find({student:student});
+res.send(studentrequests);
+
+});
+
+router.get('/requests/view/professor',async(req,res)=>{
+//get prof id if prof
+const professor="abcdefgh";
+const profrequests=await Request.find({professor:professor});
+res.send(professor);
+
+});
+
+router.post('/requests/createrequests',async(req,res)=>{
+
+    
+
+});
+
 router.get('/view/:department',async (req,res) => {
     const department = req.params.department;
     try{
