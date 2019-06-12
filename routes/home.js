@@ -7,7 +7,12 @@ router.get('/',async (req, res) => {
     var date = Date.now();
     date = date-(1296000000);
     var recentproject = await Project.find({createdAt:{$gte:date}});
-    res.send(recentproject);
+
+    //get the student id if student
+    const student ="abcdefgh";
+    const studentrequests=await Request.find({student:student});
+    res.send(studentrequests+recentproject);
+    
 });
 
 module.exports = router;

@@ -7,6 +7,8 @@ const tokenRouter = require('./routes/token');
 const app = express();
 const projectRouter=require('./routes/projects');
 const homeRouter=require('./routes/home');
+const requestRouter=require('./routes/requests');
+
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -15,6 +17,8 @@ app.use('/auth/student', studentRouter);
 app.use('/token', tokenRouter);
 app.use('/project',projectRouter);
 app.use('/home',homeRouter);
+app.use('/request',requestRouter);
+
 // Environment variables
 const PORT = config.get("PORT");
 const DB_URL = config.get("DB_URL");
