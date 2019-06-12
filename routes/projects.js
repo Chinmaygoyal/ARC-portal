@@ -43,27 +43,15 @@ router.get('/view/:department/:id',async (req,res) => {
 });
 
 router.post('/createproject',async (req, res) => {
-    let title = req.body.title;
-    // let professor = req.body.professor;
-    let no_openings = req.body.no_openings; 
-    let description = req.body.description; 
-    let eligibility = req.body.eligibility; 
-    let pre_requisites = req.body.pre_requisites; 
-    let duration = req.body.duration; 
-
-    let project = new Project({
-        title: title,
-        // professor: professor,
-        no_openings: no_openings,
-        description: description,
-        eligibility: eligibility,
-        pre_requisites: pre_requisites,
-        duration: duration,
-        available: true,
-    });
+    const title = req.body.title;
+    const no_openings = req.body.no_openings; 
+    const description = req.body.description; 
+    const eligibility = req.body.eligibility; 
+    const pre_requisites = req.body.pre_requisites; 
+    const duration = req.body.duration; 
 
     try{
-        const result = await project.save();
+        const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration);
         res.send(result);
     }
     catch(err){
@@ -71,5 +59,17 @@ router.post('/createproject',async (req, res) => {
         console.log(err.message);
     }
 });
+
+async function createproject(title,no_openings,description,eligibility,pre_requisites,duration){
+    const project = new Project({
+        title: title,
+        no_openings: no_openings,
+        description: description,
+        eligibility: eligibility,
+        pre_requisites: pre_requisites,
+        duration: duration,
+    });
+    project.save();
+};
 
 module.exports = router;

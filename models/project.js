@@ -1,7 +1,4 @@
-// const Joi = require("joi");
 const mongoose = require("mongoose");
-// const jwt = require("jsonwebtoken");
-// const config = require("config");
 
 const projectSchema = new mongoose.Schema({
   title: {
@@ -39,7 +36,11 @@ const projectSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now()
-  }
+  },
+  students: {
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: 'Student'
+  },
 });
 const Project = mongoose.model("Project", projectSchema);
 
