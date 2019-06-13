@@ -15,6 +15,7 @@ app.use('/auth/student', studentRouter);
 app.use('/token', tokenRouter);
 app.use('/project',projectRouter);
 app.use('/home',homeRouter);
+
 // Environment variables
 const PORT = config.get("PORT");
 const DB_URL = config.get("DB_URL");
