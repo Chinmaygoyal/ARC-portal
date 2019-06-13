@@ -1,4 +1,6 @@
-const { Request} = require("../models/request")
+const { Request} = require("../models/request");
+const router = require("express").Router();
+
 
 router.get('/requests/view/professor',async(req,res)=>{
     //get prof id if prof
