@@ -11,7 +11,6 @@ router.get('/',async (req, res) => {
     }
 });
 
-
 router.get('/view/:department',async (req,res) => {
     const department = req.params.department;
     try{
