@@ -1,0 +1,9 @@
+<script>
+var xhttp = new XMLHttpRequest();
+function status(id,val){
+xhttp.open("POST", "http://localhost:3000/request/requests/view/professor/status/", true);
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("id=1&status=true"); 
+}
+</script>
+<button onclick="status(1,1);"> </button>
