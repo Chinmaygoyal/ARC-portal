@@ -11,8 +11,8 @@ const studentSchema = new mongoose.Schema({
   },
   rollNumber: {
     type: String,
-    required: true,
-    unique: true
+    required: true
+    // unique: true
   },
   email: {
     type: String,
@@ -28,7 +28,7 @@ const studentSchema = new mongoose.Schema({
   password: {
     type: String,
     // Password required only when email is verified
-    required: function () {
+    required: function() {
       return this.isVerified;
     },
     minlength: 8,
@@ -38,9 +38,9 @@ const studentSchema = new mongoose.Schema({
     type: Date,
     default: Date.now()
   },
-  role:{
+  role: {
     type: String,
-    default: 'student'
+    default: "student"
   }
 });
 
@@ -48,18 +48,31 @@ const studentSchema = new mongoose.Schema({
 // studentSchema.index({ createdAt: 1 }, { expires: '24h' });
 
 // Generate login auth token
-studentSchema.methods.generateAuthToken = function (options = { useMailKey: true }) {
-  const key = options.useMailKey ? config.get("mailTokenKey") : config.get("authTokenKey");
-  const jwtOptions = options.useMailKey ? { expiresIn: '30m' } : undefined;
-  const token = jwt.sign({ _id: this._id, rollNumber: this.rollNumber, email: this.email }, key, jwtOptions);
+studentSchema.methods.generateAuthToken = function(
+  options = { useMailKey: true }
+) {
+  const key = options.useMailKey
+    ? config.get("mailTokenKey")
+    : config.get("authTokenKey");
+  const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
+  const token = jwt.sign(
+    { _id: this._id, rollNumber: this.rollNumber, email: this.email },
+    key,
+    jwtOptions
+  );
   return token;
 };
 
 // Validate student login info
 function validate(studentLoginInfo) {
   const schema = {
-    email: Joi.string().required().email(),
-    password: Joi.string().min(8).max(255).required()
+    email: Joi.string()
+      .required()
+      .email(),
+    password: Joi.string()
+      .min(8)
+      .max(255)
+      .required()
   };
   return Joi.validate(studentLoginInfo, schema);
 }
