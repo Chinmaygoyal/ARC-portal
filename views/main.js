@@ -18,6 +18,7 @@ sliderButtons.forEach(button =>
 const signinForm = document.querySelector("#signin-form");
 const signupForm = document.querySelector("#signup-form");
 
+// Sign-in form
 signinForm.addEventListener("submit", function(e) {
   e.preventDefault();
   $.ajax({
@@ -25,6 +26,7 @@ signinForm.addEventListener("submit", function(e) {
     method: "POST",
     data: $(this).serialize(),
     success: (data, status, jqXHR) => {
+      // Save token cookie and redirect to dash
       Cookies.set("auth_token", jqXHR.getResponseHeader("x-auth-token"));
       document.location.replace("http://localhost:3000/dash");
     },
@@ -39,7 +41,8 @@ signupForm.addEventListener("submit", function(e) {
     method: "POST",
     data: $(this).serialize(),
     success: (data, status, jqXHR) => {
-      // TODO: Inform about mail, and maybe show the resend button
+      // Inform about verification mail sent
+      alert("Verification mail has been sent. Please check your mail.");
     },
     error: jqXHR => alert(jqXHR.responseText)
   });

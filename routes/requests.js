@@ -7,13 +7,14 @@ router.get('/requests/view/professor',async(req,res)=>{
     const professor = "abcdefgh";
     const profrequest = await Request
         .find({professor:professor});
-        res.send(profrequests);
+        res.send(profrequest);
 });
 
 router.put('/requests/view/professor/:id',async(req,res)=>{
     //get the id of requests;
-    const id = req.params.id;
+    const id = req.id;
     const request = await Course.findById(id);
+    const response= req.val;
     if (!request) return;
     //
     if(response == true){
