@@ -7,7 +7,7 @@ router.get('/requests/view/professor',async(req,res)=>{
     const professor = "abcdefgh";
     const profrequest = await Request
         .find({professor:professor});
-        res.send(profrequests);
+        res.send(profrequest);
 });
 
 router.put('/requests/view/professor/:id',async(req,res)=>{
