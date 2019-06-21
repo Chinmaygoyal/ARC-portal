@@ -1,9 +1,8 @@
-console.log("Working")
+console.log("Working");
 // SLIDER CODE
 const container = document.getElementById("container");
 const fpButtons = document.querySelectorAll(".fp");
 const sliderButtons = document.querySelectorAll(".slider");
-
 fpButtons.forEach(button =>
   button.addEventListener("click", () =>
     container.classList.toggle("forgot-p-active")
@@ -35,7 +34,6 @@ signinForm.addEventListener("submit", function(e) {
   });
 });
 
-// Registration form
 signupForm.addEventListener("submit", function(e) {
   e.preventDefault();
   $.ajax({
