@@ -46,7 +46,7 @@ router.post('/createproject',async (req, res) => {
     const no_openings = req.body.no_openings; 
     const description = req.body.description; 
     const eligibility = req.body.eligibility; 
-    const pre_requisites = req.body.pre_requisites; 
+    const pre_requisites = req.body.pre_requisites;
     const duration = req.body.duration; 
 
     try{
