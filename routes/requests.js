@@ -2,15 +2,26 @@ const { Request} = require("../models/request");
 const router = require("express").Router();
 
 
-router.get('/requests/view/professor',async(req,res)=>{
+router.get('/view/professor',async(req,res)=>{
     //get prof id if prof
-    const professor = "abcdefgh";
+    var app = express();
+    app.use(cookieParser());
+    function getCookie(name)
+    {
+        var re = new RegExp(name + "=([^;]+)");
+        var value = re.exec(req.headers.cookie);
+        return (value != null) ? unescape(value[1]) : null;
+    }
+    var user = jwt.decode(getCookie("auth_token"));
+    if(!user)
+        res.send("Not logged in");
+    var profuser = await Professor.findOne({_id: user._id});
     const profrequest = await Request
-        .find({professor:professor});
+        .find({professor:profuser});
         res.send(profrequest);
 });
 
-router.put('/requests/view/professor/:id',async(req,res)=>{
+router.post('/view/professor/',async(req,res)=>{
     //get the id of requests;
     const id = req.id;
     const request = await Course.findById(id);
