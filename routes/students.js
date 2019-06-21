@@ -4,43 +4,69 @@ const config = require("config");
 const mailer = require("../libs/mail");
 const tokenAuth = require("../middleware/tokenAuth");
 const { Student, validateStudent } = require("../models/student");
+const { Professor } = require("../models/professor");
+
+//Regex has been changed for testing
+//Added method of professor verification
+
 
 // Initial registration route
 router.post("/register", async (req, res) => {
   const email = req.body.email;
   // Check if email is an IITK email id
-  const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
+  // const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
+  const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[a-zA-Z0-9]/;
+ 
   if (!email.match(regex))
     return res.status(400).send("Send valid IITK email id (*@iitk.ac.in)");
-  // Check if student is already registered
+  // Check if student/professor is already registered
+  const professorInDB = await Professor.findOne({ email: email });
   const studentInDB = await Student.findOne({ email: email });
-  if (studentInDB) {
+  if (professorInDB){
+    if (professorInDB.isVerified)
+      return res.status(400).send("Account already exists. Please log in.");
+    else{
+      try {
+        const token = professorInDB.generateAuthToken({ useMailKey: true });
+        mailer.sendVerificationMail(
+          email,
+          "Verify your email ID",
+          `${config.get("domain")}/verify.html?token=${token}`
+        );
+        res.status(200).send("Verification mail sent");
+      } catch (ex) {
+        res.status(500).send("Email ID does not exist");
+      }
+    }
+  }
+  else if (studentInDB) {
     if (studentInDB.isVerified)
       return res.status(400).send("Account already exists. Please log in.");
     else
       return res
         .status(400)
-        .send("Already registered: check your mail for verification link.");
-  }
-  // Create student in database
-  const student = new Student({
-    name: "SampleName",
-    rollNumber: "123456",
-    email: email,
-    isVerified: false
-  });
-  // Save the student, send verification mail
-  try {
-    await student.save();
-    const token = student.generateAuthToken({ useMailKey: true });
-    mailer.sendVerificationMail(
-      email,
-      "Verify your email ID",
-      `${config.get("domain")}/verify.html?token=${token}`
-    );
-    res.status(200).send("Verification mail sent");
-  } catch (ex) {
-    res.status(500).send("Email ID does not exist");
+        .send("Verification mail already sent. Check your mail for verification.");
+  }else{
+    // Create student in database
+    const student = new Student({
+      name: "SampleName",
+      rollNumber: "123456",
+      email: email,
+      isVerified: false
+    });
+    // Save the student, send verification mail
+    try {
+      await student.save();
+      const token = student.generateAuthToken({ useMailKey: true });
+      mailer.sendVerificationMail(
+        email,
+        "Verify your email ID",
+        `${config.get("domain")}/verify.html?token=${token}`
+      );
+      res.status(200).send("Verification mail sent");
+    } catch (ex) {
+      res.status(500).send("Email ID does not exist");
+    }
   }
 });
 

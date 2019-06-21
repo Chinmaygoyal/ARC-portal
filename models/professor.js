@@ -40,25 +40,25 @@ const professorSchema = new mongoose.Schema({
 });
 
 // Delete unverified accounts after 24 hrs
-// studentSchema.index({ createdAt: 1 }, { expires: '24h' });
+professorSchema.index({ createdAt: 1 }, { expires: '24h' });
 
 // Generate login auth token
-// studentSchema.methods.generateAuthToken = function (options = { useMailKey: true }) {
-//   const key = options.useMailKey ? config.get("mailTokenKey") : config.get("authTokenKey");
-//   const jwtOptions = options.useMailKey ? { expiresIn: '30m' } : undefined;
-//   const token = jwt.sign({ _id: this._id, rollNumber: this.rollNumber, email: this.email }, key, jwtOptions);
-//   return token;
-// };
+professorSchema.methods.generateAuthToken = function (options = { useMailKey: true }) {
+  const key = options.useMailKey ? config.get("mailTokenKey") : config.get("authTokenKey");
+  const jwtOptions = options.useMailKey ? { expiresIn: '30m' } : undefined;
+  const token = jwt.sign({ _id: this._id, department: this.department, email: this.email ,is_prof:true}, key, jwtOptions);
+  return token;
+};
 
-// Validate student login info
-function validate(studentLoginInfo) {
+// Validate professor login info
+function validate(professorLoginInfo) {
   const schema = {
     email: Joi.string().required().email(),
     password: Joi.string().min(8).max(255).required()
   };
-  return Joi.validate(studentLoginInfo, schema);
+  return Joi.validate(professorLoginInfo, schema);
 }
 
-const Student = mongoose.model("Student", studentSchema);
-exports.Student = Student;
-exports.validateStudent = validate;
+const Professor = mongoose.model("Professor", professorSchema);
+exports.Professor = Professor;
+exports.validateProfessor = validate;

@@ -51,8 +51,7 @@ router.post('/createproject',async (req, res) => {
 
     try{
         const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration);
-        res.send(result);
-    }
+        res.send(result)    }
     catch(err){
         res.send("Please fill the complete information");
         console.log(err.message);
@@ -69,6 +68,7 @@ async function createproject(title,no_openings,description,eligibility,pre_requi
         duration: duration,
     });
     project.save();
+    return project;
 };
 
 module.exports = router;
