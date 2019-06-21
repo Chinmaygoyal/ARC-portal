@@ -21,7 +21,7 @@ app.use('/request',requestRouter);
 
 // Environment variables
 const PORT = config.get("PORT");
-const DB_URL = "mongodb+srv://new_user1:Arciitk@arcportal-z5xml.mongodb.net/test?retryWrites=true&w=majority"
+const DB_URL = config.get('DB_URL');
 
 // Connect to MongoDB
 mongoose.connect(DB_URL, { useNewUrlParser: true }, (err, result) => {
