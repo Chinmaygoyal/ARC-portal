@@ -1,6 +1,9 @@
 const { Request} = require("../models/request");
 const router = require("express").Router();
-
+const { Project} = require("../models/project");
+const { Student, validateStudent } = require("../models/student");
+const { Professor, validateProfessor } = require("../models/professor");
+const jwt = require("jsonwebtoken");
 
 router.get('/view/professor',async(req,res)=>{
     //get prof id if prof
@@ -20,37 +23,63 @@ router.get('/view/professor',async(req,res)=>{
         .find({professor:profuser});
         res.send(profrequest);
 });
-
+//for prof
 router.post('/view/professor/',async(req,res)=>{
     //get the id of requests;
-    const id = req.id;
-    const request = await Course.findById(id);
-    const response= req.val;
+    const id = req.body.id;
+    const request = await Request.findById(id);
+    const result= req.body.status;
+    
+    //res.send("ok");
+
     if (!request) return;
-    //
-    if(response == true){
-        request.set({
-            status: true,
+   
+    if(result == "true"){
+        await request.set({
+            status: "true",
+            
         });
-        const project = await Course.findById(id);
-        if (!project) return;
-        const student = await Course.findById(id);
-        if (!student) return;
-        project.students.push(student._id);
-        project.save();
+        // const project = await Project.findById(id);
+        // if (!project) return;
+        // const student = await Project.findById(id);
+        // if (!student) return;
+        // project.students.push(student._id);
+        // project.save();
+        
     }else{
-        request.set({
-            status: false,
+        await request.set({
+            status: "false",
         });
+            
     }
+    await request.save();
+    res.send("done");
 });
 
-router.post('/requests/createrequests/:id',async(req,res)=>{
+
+//for student
+router.post('/createrequests/:id',async(req,res)=>{
     const id = req.params.id;
-    const project = await Course.findById(id);
+    
+    var express = require('express');
+    var cookieParser = require('cookie-parser');
+    var app = express();
+    app.use(cookieParser());
+    function getCookie(name)
+    {
+        var re = new RegExp(name + "=([^;]+)");
+        var value = re.exec(req.headers.cookie);
+        return (value != null) ? unescape(value[1]) : null;
+    }
+    var user = jwt.decode(getCookie("auth_token"));
+    if(!user)
+        res.send("Not logged in");
+    var studentuser = await Student.findOne({_id: user._id});
+
+    const project = await Project.findById(id);
     if(!project) return res.status(404).send("No project found");
     try{
-    const result = await createrequest(project.professor._id,id,student._id);
+    const result = await createrequest(project.professor,project,studentuser);
     }
     catch(err){
         console.log(err);
@@ -59,9 +88,9 @@ router.post('/requests/createrequests/:id',async(req,res)=>{
 
 async function createrequest(professor,project,student){
     const request = new Request({
-        project,
-        professor,
-        student
+        project:project,
+        professor:professor,
+        student:student,
     });
     request.save();
 };

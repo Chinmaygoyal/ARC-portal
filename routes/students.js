@@ -78,7 +78,13 @@ router.post("/login", async (req, res) => {
   const { error } = validateStudent(req.body);
   if (error) return res.status(400).send(error.details[0].message);
   // Check if email exists
-  const student = await Student.findOne({ email: email });
+  var student = await Student.findOne({ email: email });
+  
+  //testing
+  if(!student)
+     student = await Professor.findOne({email:email});
+  //
+  
   if (!student) return res.status(400).send("Incorrect email ID");
   // Check if the student is verified
   if (!student.isVerified) return res.status(401).send("Account not verified");

@@ -17,7 +17,7 @@ const projectSchema = new mongoose.Schema({
   description: {
       type: String,
       required: true,
-      minlength: 100
+     // minlength: 100
     //   maxlength: 
   },
   eligibility: {

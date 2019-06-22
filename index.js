@@ -19,6 +19,12 @@ app.use('/project',projectRouter);
 app.use('/home',homeRouter);
 app.use('/request',requestRouter);
 
+app.set('view engine', 'ejs');
+
+
+
+
+
 // Environment variables
 const PORT = config.get("PORT");
 const DB_URL = config.get('DB_URL');
