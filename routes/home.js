@@ -4,6 +4,7 @@ const { Request} = require("../models/request");
 const jwt = require("jsonwebtoken");
 const { Student, validateStudent } = require("../models/student");
 const { Professor, validateProfessor } = require("../models/professor");
+
 // api to give the newly added projects
 router.get('/student',async (req, res) => {
     var date = Date.now();
@@ -12,7 +13,7 @@ router.get('/student',async (req, res) => {
 
     //get the student id if student
     const student ="abcdefgh";
-    const studentrequests=await Request.find({student:student});
+    const studentrequests = await Request.find({student:student});
     res.send(studentrequests+recentproject);
     
 });
@@ -30,33 +31,21 @@ router.get('/',async (req, res) => {
         return (value != null) ? unescape(value[1]) : null;
     }
     var user = jwt.decode(getCookie("auth_token"));
-    if(!user)
-        res.send("Not logged in");
-    var studentuser = await Student.findOne({_id: user._id});
-    if(studentuser)
-    {
-    var studentrequest= await Request.find({student:studentuser});
-    res.send(studentrequest);
+    if(!user) return res.send("Not logged in");
+    
+    if(user.is_prof == false){
+        var student = await Student.findOne({_id: user._id});
+        if(student){
+            var request = await Request.find({student:student});
+            res.send(request);
+        }else return res.status(404).send("Not found.");
+    }else{
+        var professor = await Professor.findOne({_id: user._id});
+        if(professor){
+            var profrequest = await Request.find({professor:professor});
+            res.render("professor.ejs",{profrequest:profrequest,});
+        }else return res.status(404).send("Not found.");
     }
-    else
-    {
-    var profuser = await Professor.findOne({_id: user._id});
-    var profrequest = await Request.find({professor:profuser})
-    
-    
-    
-    res.render("professor.ejs",{profrequest:profrequest,});
-
-
-        
-
-
-    }
-    
-
-
-
 });
-
 
 module.exports = router;

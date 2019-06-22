@@ -1,16 +1,15 @@
 <script>
 var xhttp = new XMLHttpRequest();
 function status(id,val){
-xhttp.open("POST", "/request/view/professor/", true);
-xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xhttp.send("id=id&status=val"); 
+    xhttp.open("POST", "/request/view/professor/", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("id=id&status=val"); 
 }
 </script>
 
 
-
 <!-- all request with status here -->
- <% for (var i = 0; i < profrequest.length; i++) { %>
+ <% for (var i = 0; i < profrequest.length; i++){ %>
     <%= profrequest[i].status %>
     &nbsp;
     <%= profrequest[i].dateTime %> </span>
