@@ -1,9 +1,10 @@
 <script>
 var xhttp = new XMLHttpRequest();
 function status(id,val){
-    xhttp.open("POST", "/request/view/professor/", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("id=id&status=val"); 
+xhttp.open("POST", "http://localhost:3000/request/view/professor/", true);
+console.log("a");
+xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.send("id"+ "="+id+"&"+ "status="+val); 
 }
 </script>
 
@@ -12,10 +13,18 @@ function status(id,val){
  <% for (var i = 0; i < profrequest.length; i++){ %>
     <%= profrequest[i].status %>
     &nbsp;
-    <%= profrequest[i].dateTime %> </span>
-
-<button onclick="status( <%= profrequest[i].id %>,true);">Accept </button>
-<button onclick="status( <%= profrequest[i].id %>,false);">Reject </button>
+    <p>
+    <%= profrequest[i].project %> </span>
+    <%= profrequest[i].student %> </span>
+    </p>
+<button onclick="status('<%= profrequest[i]._id %>',true);">Accept </button>
+<button onclick="status('<%= profrequest[i]._id %>',false);">Reject </button>
  <% } %>
 
-<!-- create project redirect -->
+
+
+
+
+
+<!-- create project add redirect -->
+

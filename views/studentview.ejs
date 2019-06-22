@@ -1,0 +1,16 @@
+
+<!-- all request with status here -->
+ <% for (var i = 0; i < projectall.length; i++) { %>
+    <%= projectall[i].title %>
+    &nbsp;
+    <%= projectall[i].description %> </span>
+
+
+
+<form action="/request/createrequests/<%= projectall[i]._id %>" method = "POST">
+<button type = "submit">Apply </button>
+</form>
+
+ <% } %>
+
+
