@@ -1,7 +1,7 @@
 {
   "PORT": 3000,
   "DB_URL": "mongodb://localhost:27017/arcportal",
-  "authTokenKey": "",
-  "mailTokenKey": "",
+  "authTokenKey": "123456",
+  "mailTokenKey": "123456",
   "domain": "localhost:3000"
 }

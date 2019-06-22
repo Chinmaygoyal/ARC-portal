@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 
+
 const professorSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -59,6 +60,6 @@ function validate(studentLoginInfo) {
   return Joi.validate(studentLoginInfo, schema);
 }
 
-const Student = mongoose.model("Student", studentSchema);
-exports.Student = Student;
+const Professor = mongoose.model("Professor", professorSchema);
+exports.Professor = Professor;
 exports.validateStudent = validate;

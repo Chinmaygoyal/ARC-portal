@@ -9,7 +9,8 @@ const { Student, validateStudent } = require("../models/student");
 router.post("/register", async (req, res) => {
   const email = req.body.email;
   // Check if email is an IITK email id
-  const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
+ // const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
+ const regex = /^[a-zA-Z0-9.]/;
   if (!email.match(regex))
     return res.status(400).send("Send valid IITK email id (*@iitk.ac.in)");
   // Check if student is already registered
@@ -40,7 +41,7 @@ router.post("/register", async (req, res) => {
     );
     res.status(200).send("Verification mail sent");
   } catch (ex) {
-    res.status(500).send("Email ID does not exist");
+    res.status(500).send(ex.message);
   }
 });
 
