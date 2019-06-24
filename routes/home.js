@@ -4,7 +4,9 @@ const { Request} = require("../models/request");
 const jwt = require("jsonwebtoken");
 const { Student, validateStudent } = require("../models/student");
 const { Professor, validateProfessor } = require("../models/professor");
-
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+var cookieParser = require('cookie-parser');
 var express = require('express'); 
 var app = express();
 app.set('view engine', 'ejs');
@@ -26,15 +28,15 @@ router.get('/student',async (req, res) => {
     if(!user)
         res.send("Not logged in");
     var studentuser = await Student.findOne({_id: user._id});
+
     const studentrequests=await Request.find({student:studentuser});
-    res.send(studentrequests+recentproject);
+    res.send(studentrequests+'<br><br><br>'+recentproject);
     
 });
 
 router.get('/',async (req, res) => {
     
-    var express = require('express');
-    var cookieParser = require('cookie-parser');
+   
     var app = express();
     app.use(cookieParser());
     function getCookie(name)
@@ -47,7 +49,7 @@ router.get('/',async (req, res) => {
     if(!user)
         res.send("Not logged in");
     var studentuser = await Student.findOne({_id: user._id});
-    if(studentuser)
+    if(studentuser.role=="student")
     {
     var studentrequest= await Request.find({student:studentuser});
     projectall=await Project.find({});
@@ -56,22 +58,20 @@ router.get('/',async (req, res) => {
     }
     else
     {
-    var profuser = await Professor.findOne({_id: user._id});
-    var profrequest = await Request.find({professor:profuser})
     
-    
-    
-    res.render('professorview',{profrequest:profrequest,});
+    await Request.find({professor:studentuser}).populate('project','title').populate('student','name').exec((err,requests)=>{
+        if(err){
+            console.log({success:false,message:err});
+        }
+        else{
+            var profrequest = requests;
+            res.render('professorview',{profrequest:profrequest,});
 
-
-        
-
+        }
+    }); 
 
     }
     
-
-
-
 });
 
 

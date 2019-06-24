@@ -4,6 +4,7 @@ const { Project} = require("../models/project");
 const { Student, validateStudent } = require("../models/student");
 const { Professor, validateProfessor } = require("../models/professor");
 const jwt = require("jsonwebtoken");
+const mongoose = require("mongoose");
 
 router.get('/view/professor',async(req,res)=>{
     //get prof id if prof
@@ -18,10 +19,15 @@ router.get('/view/professor',async(req,res)=>{
     var user = jwt.decode(getCookie("auth_token"));
     if(!user)
         res.send("Not logged in");
+
     var profuser = await Professor.findOne({_id: user._id});
+
     const profrequest = await Request
         .find({professor:profuser});
         res.send(profrequest);
+
+
+
 });
 //for prof
 router.post('/view/professor/',async(req,res)=>{
@@ -35,23 +41,25 @@ router.post('/view/professor/',async(req,res)=>{
     if (!request) return;
    
     if(result == "true"){
-        await request.set({
+         request.set({
             status: "true",
             
         });
+        
         // const project = await Project.findById(id);
         // if (!project) return;
         // const student = await Project.findById(id);
         // if (!student) return;
         // project.students.push(student._id);
-        // project.save();
+        // project.save();  
         
     }else{
-        await request.set({
+         request.set({
             status: "false",
         });
             
     }
+
     await request.save();
     res.send("done");
 });
@@ -84,6 +92,7 @@ router.post('/createrequests/:id',async(req,res)=>{
     catch(err){
         console.log(err);
     }
+    res.send("request posted");
 });
 
 async function createrequest(professor,project,student){

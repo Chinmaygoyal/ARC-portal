@@ -69,11 +69,11 @@ router.post('/createproject',async (req, res) => {
     var user = jwt.decode(getCookie("auth_token"));
     if(!user)
         res.send("Not logged in");
-    var profuser = await Professor.findOne({_id: user._id});    
+    var professor  = await Student.findOne({_id: user._id});    
    
     
     try{
-        const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration,profuser);
+        const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration,professor);
         res.send(result)    }
     catch(err){
         res.send("Please fill the complete information");

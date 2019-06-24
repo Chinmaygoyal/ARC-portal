@@ -1,31 +1,44 @@
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script>
 var xhttp = new XMLHttpRequest();
 function status(id,val){
 xhttp.open("POST", "http://localhost:3000/request/view/professor/", true);
 console.log("a");
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4 && xhttp.status == 200){
+        window.location.reload();
+    }
+}
 xhttp.send("id"+ "="+id+"&"+ "status="+val); 
+// xhttp.on
+// setTimeout(() => {
+// window.location.reload();    
+// }, 2000);
+
+
 }
 </script>
 
-
-
 <!-- all request with status here -->
  <% for (var i = 0; i < profrequest.length; i++) { %>
+    <br>
     <%= profrequest[i].status %>
     &nbsp;
     <p>
-    <%= profrequest[i].project %> </span>
-    <%= profrequest[i].student %> </span>
+    <%= profrequest[i].project.title %> </span>
+    <%= profrequest[i].student.name %> </span>
     </p>
-<button onclick="status('<%= profrequest[i]._id %>',true);">Accept </button>
-<button onclick="status('<%= profrequest[i]._id %>',false);">Reject </button>
+    
+<button type ="submit" onclick="status('<%= profrequest[i]._id %>',true);">Accept </button>
+<button type= "submit" onclick="status('<%= profrequest[i]._id %>',false);">Reject </button>
+    <br>
  <% } %>
+ 
+ <br>
 
-
-
-
-
-
-<!-- create project add redirect -->
+<a href="/project/createproject"><button> create project </button></a>
 
