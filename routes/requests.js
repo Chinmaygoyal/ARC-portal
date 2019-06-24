@@ -3,10 +3,9 @@ const { Student} = require("../models/student");
 const { Professor} = require("../models/professor");
 const router = require("express").Router();
 const { Project} = require("../models/project");
-const { Student, validateStudent } = require("../models/student");
-const { Professor, validateProfessor } = require("../models/professor");
+
 const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 
 router.get('/view/professor',async(req,res)=>{
     //get prof id if prof
@@ -28,12 +27,10 @@ router.get('/view/professor',async(req,res)=>{
 //for prof
 router.post('/view/professor/',async(req,res)=>{
     //get the id of requests;
-    const id = req.id;
+    const id = req.body.id;
     const request = await Request.findById(id);
     const result= req.body.status;
     
-    //res.send("ok");
-
     if (!request) return;
    
     if(result == "true"){
@@ -42,18 +39,32 @@ router.post('/view/professor/',async(req,res)=>{
             
         });
         
-        // const project = await Project.findById(id);
-        // if (!project) return;
-        // const student = await Project.findById(id);
-        // if (!student) return;
-        // project.students.push(student._id);
-        // project.save();  
+        const project = await Project.findById(request.project._id);
+        console.log(project);
+        //if (!project) return;
+        const student = request.student;
+        //if (!student) return;
+        project.students.push(student);
+
+        
+       project.save();  
         
     }else{
          request.set({
             status: "false",
         });
+        const project = await Project.findById(request.project._id);       
+        const student = request.student;
+        const pos= project.students.indexOf({student})
+        if(pos)
+            project.students.splice(pos,1);
             
+
+
+
+
+
+
     }
 
     await request.save();
