@@ -3,8 +3,7 @@ const { Student} = require("../models/student");
 const { Professor} = require("../models/professor");
 const router = require("express").Router();
 const { Project} = require("../models/project");
-const { Student, validateStudent } = require("../models/student");
-const { Professor, validateProfessor } = require("../models/professor");
+
 const jwt = require("jsonwebtoken");
 const mongoose = require("mongoose");
 
