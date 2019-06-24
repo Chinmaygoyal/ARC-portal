@@ -27,9 +27,9 @@ router.get('/student',async (req, res) => {
     var user = jwt.decode(getCookie("auth_token"));
     if(!user)
         res.send("Not logged in");
-    var studentuser = await Student.findOne({_id: user._id});
+    var student = await Student.findOne({_id: user._id});
 
-    const studentrequests=await Request.find({student:studentuser});
+    const studentrequests=await Request.find({student:student});
     res.send(studentrequests+'<br><br><br>'+recentproject);
     
 });
@@ -48,10 +48,10 @@ router.get('/',async (req, res) => {
     var user = jwt.decode(getCookie("auth_token"));
     if(!user)
         res.send("Not logged in");
-    var studentuser = await Student.findOne({_id: user._id});
-    if(studentuser.role=="student")
+    var student = await Student.findOne({_id: user._id});
+    if(student.role=="student")
     {
-    var studentrequest= await Request.find({student:studentuser});
+    var studentrequest= await Request.find({student:student});
     projectall=await Project.find({});
     res.render('studentview',{projectall:projectall,});
     
@@ -59,13 +59,13 @@ router.get('/',async (req, res) => {
     else
     {
     
-    await Request.find({professor:studentuser}).populate('project','title').populate('student','name').exec((err,requests)=>{
+    await Request.find({professor:student}).populate('project','title').populate('student','name').exec((err,requests)=>{
         if(err){
             console.log({success:false,message:err});
         }
         else{
-            var profrequest = requests;
-            res.render('professorview',{profrequest:profrequest,});
+            var prof_request = requests;
+            res.render('professorview',{profrequest:prof_request,});
 
         }
     }); 
@@ -73,6 +73,5 @@ router.get('/',async (req, res) => {
     }
     
 });
-
 
 module.exports = router;
