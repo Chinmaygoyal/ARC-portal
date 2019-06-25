@@ -32,7 +32,7 @@ router.get('/student',async (req, res) => {
     
 });
 
-router. get('/',async (req, res) => {
+router.get('/',async (req, res) => {
     
    
    function getCookie(name)

@@ -104,16 +104,19 @@ router.post('/createrequests/:id',async(req,res)=>{
     if(!user)
         res.send("Not logged in");
     var student = await Student.findOne({_id: user._id});
-
     const project = await Project.findById(id);
     if(!project) return res.status(404).send("No project found");
-    try{
-        project.no_requests++;
-        project.save();
-        const result = await createrequest(project.professor,project,studentuser);
-    }
-    else
-    {
+    
+    const request= await Request.findOne({'project':project,'student':student});
+    
+    if(!request){
+        try{
+        const result = await createrequest(project.professor,project,student);
+        res.send("Request Posted");
+        }catch(err){
+            console.log(err.message);
+        }
+    }else{
         res.send("Already Requested");
     }
 });
@@ -124,6 +127,9 @@ async function createrequest(professor,project,student){
         professor:professor,
         student:student,
     });
+    const project_requested = await Project.findById(project);
+    project_requested.no_requests++;
+    project_requested.save();
     request.save();
 };
 
