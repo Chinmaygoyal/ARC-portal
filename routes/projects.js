@@ -4,10 +4,7 @@ const jwt = require("jsonwebtoken");
 const { Student, validateStudent } = require("../models/student");
 const { Professor, validateProfessor } = require("../models/professor");
 
-
-
-
-
+//all project list
 router.get('/',async (req, res) => {
     try{
         const projects = await Project.find();
@@ -18,6 +15,7 @@ router.get('/',async (req, res) => {
     }
 });
 
+//department wise sorted 
 router.get('/view/:department',async (req,res) => {
     const department = req.params.department;
     try{
@@ -31,6 +29,7 @@ router.get('/view/:department',async (req,res) => {
     }
 });
 
+//detailed view of project
 router.get('/view/:department/:id',async (req,res) => {
     const department = req.params.department;
     const id = req.params.id;
@@ -48,6 +47,7 @@ router.get('/view/:department/:id',async (req,res) => {
     }
 });
 
+//project post request
 router.post('/createproject',async (req, res) => {
     const title = req.body.title;
     const no_openings = req.body.no_openings; 
@@ -73,26 +73,19 @@ router.post('/createproject',async (req, res) => {
    
     
     try{
-        const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration,professor);
-        res.send(result)    }
+        const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration,profuser);
+        res.send("Successfully created project");
+        }
     catch(err){
         res.send("Please fill the complete information");
         console.log(err.message);
     }
 
-
-
-
-
-
-
 });
 
+//request to open create project form
 router.get('/createproject',async (req, res) => {
-
-
 res.render('createproject');
-
 });
 
 async function createproject(title,no_openings,description,eligibility,pre_requisites,duration,profuser){
@@ -109,4 +102,4 @@ async function createproject(title,no_openings,description,eligibility,pre_requi
     return project;
 };
 
-module.exports = router;
+module.exports = router;    

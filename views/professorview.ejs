@@ -24,17 +24,17 @@ xhttp.send("id"+ "="+id+"&"+ "status="+val);
 </script>
 
 <!-- all request with status here -->
- <% for (var i = 0; i < profrequest.length; i++) { %>
+ <% for (var i = 0; i < prof_request.length; i++) { %>
     <br>
-    <%= profrequest[i].status %>
+    <%= prof_request[i].status %>
     &nbsp;
     <p>
-    <%= profrequest[i].project.title %> </span>
-    <%= profrequest[i].student.name %> </span>
+    <%= prof_request[i].project.title %> </span>
+    <%= prof_request[i].student.name %> </span>
     </p>
     
-<button type ="submit" onclick="status('<%= profrequest[i]._id %>',true);">Accept </button>
-<button type= "submit" onclick="status('<%= profrequest[i]._id %>',false);">Reject </button>
+<button type ="submit" onclick="status('<%= prof_request[i]._id %>',true);">Accept </button>
+<button type= "submit" onclick="status('<%= prof_request[i]._id %>',false);">Reject </button>
     <br>
  <% } %>
  

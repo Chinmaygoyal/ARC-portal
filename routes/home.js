@@ -6,10 +6,7 @@ const { Student, validateStudent } = require("../models/student");
 const { Professor, validateProfessor } = require("../models/professor");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-var cookieParser = require('cookie-parser');
-var express = require('express'); 
-var app = express();
-app.set('view engine', 'ejs');
+
 // api to give the newly added projects
 router.get('/student',async (req, res) => {
     var date = Date.now();
@@ -37,15 +34,15 @@ router.get('/student',async (req, res) => {
 router.get('/',async (req, res) => {
     
    
-    var app = express();
-    app.use(cookieParser());
-    function getCookie(name)
+   function getCookie(name)
     {
         var re = new RegExp(name + "=([^;]+)");
         var value = re.exec(req.headers.cookie);
         return (value != null) ? unescape(value[1]) : null;
     }
+    
     var user = jwt.decode(getCookie("auth_token"));
+
     if(!user)
         res.send("Not logged in");
     var student = await Student.findOne({_id: user._id});
@@ -65,7 +62,7 @@ router.get('/',async (req, res) => {
         }
         else{
             var prof_request = requests;
-            res.render('professorview',{profrequest:prof_request,});
+            res.render('professorview',{prof_request:prof_request,});
 
         }
     }); 

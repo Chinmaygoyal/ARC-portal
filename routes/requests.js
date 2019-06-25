@@ -31,7 +31,7 @@ router.post('/view/professor/',async(req,res)=>{
     const request = await Request.findById(id);
     const result= req.body.status;
     
-    if (!request) return;
+    if (!request) res.send("NO requests found");
    
     if(result == "true"){
          request.set({
@@ -41,11 +41,13 @@ router.post('/view/professor/',async(req,res)=>{
         
         const project = await Project.findById(request.project._id);
         console.log(project);
-        //if (!project) return;
+        if (!project) res.send("Request related project not found");
         const student = request.student;
-        //if (!student) return;
-        project.students.push(student);
-
+        if (!student) return;
+        const pos= project.students.indexOf({student})
+        if(!pos)
+            project.students.push(student);
+            
         
        project.save();  
         
@@ -58,13 +60,6 @@ router.post('/view/professor/',async(req,res)=>{
         const pos= project.students.indexOf({student})
         if(pos)
             project.students.splice(pos,1);
-            
-
-
-
-
-
-
     }
 
     await request.save();
@@ -89,17 +84,29 @@ router.post('/createrequests/:id',async(req,res)=>{
     var user = jwt.decode(getCookie("auth_token"));
     if(!user)
         res.send("Not logged in");
-    var studentuser = await Student.findOne({_id: user._id});
+    var student = await Student.findOne({_id: user._id});
 
     const project = await Project.findById(id);
     if(!project) return res.status(404).send("No project found");
-    try{
-    const result = await createrequest(project.professor,project,studentuser);
+    
+    const request= await Request.find({'project':project,'student':student});
+    
+
+
+    if(!request)
+    {
+        try{
+        const result = await createrequest(project.professor,project,student);
+        }
+        catch(err){
+            console.log(err);
+        }
+        res.send("request posted");
     }
-    catch(err){
-        console.log(err);
+    else
+    {
+        res.send("Already Requested");
     }
-    res.send("request posted");
 });
 
 async function createrequest(professor,project,student){
