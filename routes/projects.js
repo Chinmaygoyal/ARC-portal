@@ -108,5 +108,31 @@ async function createproject(title,no_openings,description,eligibility,pre_requi
     await project.save();
     return project;
 };
+//Create Professor START
+router.post('/createprofessor',async (req, res) => {
+    const name = req.body.name;
+    const email = req.body.email; 
+    const department = req.body.department; 
+    console.log(name,email,department)
+    try{
+        const result = await createprofessor(name,department,email);
+        res.send(result)    }
+    catch(err){
+        res.send("Please fill the complete information");
+        console.log(err.message);
+    }
+});
+
+async function createprofessor(name,department,email){
+    const professor = new Professor({
+        name: name,
+        department: department,
+        email: email,
+    });
+    await professor.save();
+    return professor;
+};
+
+//END
 
 module.exports = router;

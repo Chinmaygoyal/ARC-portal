@@ -59,12 +59,6 @@ router.post('/view/professor/',async(req,res)=>{
         if(pos)
             project.students.splice(pos,1);
             
-
-
-
-
-
-
     }
 
     await request.save();
@@ -94,7 +88,9 @@ router.post('/createrequests/:id',async(req,res)=>{
     const project = await Project.findById(id);
     if(!project) return res.status(404).send("No project found");
     try{
-    const result = await createrequest(project.professor,project,studentuser);
+        project.no_requests++;
+        project.save();
+        const result = await createrequest(project.professor,project,studentuser);
     }
     catch(err){
         console.log(err);
