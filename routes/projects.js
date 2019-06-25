@@ -80,18 +80,12 @@ router.post('/createproject',async (req, res) => {
         console.log(err.message);
     }
 
-
-
-
-
-
-
 });
 
 router.get('/createproject',async (req, res) => {
 
 
-res.render('createproject');
+res.render('dash/createproject');
 
 });
 
