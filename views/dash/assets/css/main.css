@@ -1763,3 +1763,18 @@ ul.activity-timeline > li {
     border: 1px solid #CCC; }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+.form-submit-btn {
+  margin-top: 10px;
+}
+
+#create-project-form {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+}
