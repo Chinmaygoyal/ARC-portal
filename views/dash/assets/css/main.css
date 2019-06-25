@@ -1772,4 +1772,12 @@ ul.activity-timeline > li {
   width: 120px;
 }
 
+/* CSS for Tabs on Project Page (Professor) */
+.tab-page {
+  display: none;
+}
+.tab-page.active {
+  display: block;
+}
+
 /*# sourceMappingURL=main.css.map */
