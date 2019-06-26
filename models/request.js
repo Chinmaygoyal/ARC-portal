@@ -15,7 +15,7 @@ const requestSchema = new mongoose.Schema({
   },
   status: {
     type: Boolean,
-    default: false
+    default: null
   },
   createdAt: {
     type: Date,
