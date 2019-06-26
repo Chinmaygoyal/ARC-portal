@@ -1770,6 +1770,24 @@ ul.activity-timeline > li {
   margin-top: 10px;
 }
 
+
+/* CSS for Your Projects Page */
+.proj-data th {
+  width: 150px;
+}
+
+/* CSS for Tabs on Project Page (Professor) */
+.tab-page {
+  display: none;
+}
+.tab-page.active {
+  display: block;
+}
+
+.form-submit-btn {
+  margin-top: 10px
+}
+
 #create-project-form {
   position: relative;
   margin: auto;

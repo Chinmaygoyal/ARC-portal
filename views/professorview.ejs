@@ -1,4 +1,4 @@
-<script
+<script>
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
@@ -6,7 +6,7 @@
 var xhttp = new XMLHttpRequest();
 function status(id,val){
 xhttp.open("POST", "http://localhost:3000/request/view/professor/", true);
-console.log("a");
+
 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhttp.onreadystatechange = function () {
     if (xhttp.readyState == 4 && xhttp.status == 200){
@@ -20,21 +20,22 @@ xhttp.send("id"+ "="+id+"&"+ "status="+val);
 // }, 2000);
 
 
+
 }
 </script>
 
 <!-- all request with status here -->
- <% for (var i = 0; i < profrequest.length; i++) { %>
+ <% for (var i = 0; i < request.length; i++) { %>
     <br>
-    <%= profrequest[i].status %>
+    <%= request[i].status %>
     &nbsp;
     <p>
-    <%= profrequest[i].project.title %> </span>
-    <%= profrequest[i].student.name %> </span>
+    <%= request[i].project.title %> </span>
+    <%= request[i].student.name %> </span>
     </p>
     
-<button type ="submit" onclick="status('<%= profrequest[i]._id %>',true);">Accept </button>
-<button type= "submit" onclick="status('<%= profrequest[i]._id %>',false);">Reject </button>
+<button type ="submit" onclick="status('<%= request[i]._id %>',true);">Accept </button>
+<button type= "submit" onclick="status('<%= request[i]._id %>',false);">Reject </button>
     <br>
  <% } %>
  

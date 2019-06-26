@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>All Projects | Research Portal, IITK</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="/dash/assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/linearicons/style.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="/dash/assets/css/main.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="/dash/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/dash/assets/img/favicon.png">
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html"><img src="/dash/assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+				<div id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+								<i class="lnr lnr-alarm"></i>
+								<span class="badge bg-danger">5</span>
+							</a>
+							<ul class="dropdown-menu notifications">
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
+								<li><a href="#" class="more">See all notifications</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-link"></i> <span>Quick Links</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="https://iitk.ac.in">IITK Home</a></li>
+								<li><a href="https://iitk.ac.in/dosa">DOSA</a></li>
+								<li><a href="https://iitk.ac.in/doaa">DOAA</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/dash/assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="/home/"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="/project" class="active"><i class="lnr lnr-list"></i> <span>All Projects</span></a></li>
+						<li><a href="/project/self" class=""><i class="lnr lnr-pushpin"></i> <span>Your Projects</span></a></li>
+						<li><a href="page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="prj-filter">
+							<div class="col-md-6">	
+									<select class="form-control">
+										<option value="all" selected>All departments</option>
+										<option value="cse">Computer Science and Engineering</option>
+										<option value="ee">Electrical Engineering</option>
+										<option value="mth">Mathematics and Scientific Computing</option>
+										<option value="me">Mechanical Engineering</option>
+										<option value="ce">Civil Engineering</option>
+										<option value="eco">Economics</option>
+										<option value="ae">Aerospace Engineering</option>
+										<option value="che">Chemical Engineering</option>
+										<option value="chm">Chemistry</option>
+										<option value="phy">Physics</option>
+									</select>
+							</div>
+							<div class="col-md-6">
+									<select class="form-control">
+										<option value="all">All</option>
+										<option value="open">Open</option>
+										<option value="closed">Closed</option>
+									</select>
+							</div>
+						</div>
+					</div>
+					<!-- PROJECTS TABLE -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h3 class="panel-title">All Projects</h3>
+									</div>
+									<% if(projects.length == 0 ){ %>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="panel">
+													<div class="panel-heading">
+														<h1 class="panel-title">No Projects Offered</h3>
+													</div>
+												</div>
+											</div>
+										</div>
+									<% }else{ %>
+										<div class="panel-body no-padding">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>Title</th>
+														<th>Professor</th>
+														<th>Department</th>
+														<th>Eligibility</th>                                                    
+														<th>Description</th>
+														<th>Published on</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+										<% for (var i = 0;i<projects.length;i++) { %>
+											<tr>
+												<td><%= projects[i].title %></td>
+												<td><%= projects[i].professor.name %></td>
+												<td><%= projects[i].professor.department %></td>
+												<td><%= projects[i].eligibility %></td>
+												<td>
+													<% if(projects[i].description.length <100){%>
+														<%= projects[i].description %>
+													<% }else{%>
+													<%= projects[i].description.slice(0,100) %>....
+													<% }%>
+												</td>
+												<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
+												<td><a>See more >></a></td>
+											</tr>
+										<% } %>                
+												</tbody>
+											</table>
+										</div>
+									<% } %> 
+								</div>
+							</div>
+						</div>
+					<!-- END PROJECTS TABLE -->
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; Academics and Career Council, IIT Kanpur</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="/dash/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="/dash/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/dash/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="/dash/assets/scripts/klorofil-common.js"></script>
+</body>
+
+</html>

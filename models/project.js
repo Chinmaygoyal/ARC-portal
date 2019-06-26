@@ -30,6 +30,10 @@ const projectSchema = new mongoose.Schema({
       type: Boolean,
       default: true
   },
+  no_requests: {
+    type: Number,
+    default: 0
+  },
   department:{
     type: String
   },

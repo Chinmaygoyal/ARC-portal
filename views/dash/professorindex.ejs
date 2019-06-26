@@ -7,17 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<!-- VENDOR CSS -->
-	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
-	<link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/chartist/css/chartist-custom.css">
 	<!-- MAIN CSS -->
-	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="/dash/assets/css/main.css">
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/dash/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/dash/assets/img/favicon.png">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="index.html"><img src="/dash/assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -57,7 +57,7 @@
 							</ul>
 						</li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/dash/assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
 								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
@@ -75,8 +75,8 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="index.html" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="projects.html" class=""><i class="lnr lnr-list"></i> <span>New Project</span></a></li>
+						<li><a href="/home/" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="/project/createproject" class=""><i class="lnr lnr-list"></i> <span>New Project</span></a></li>
 						<li><a href="page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
 					</ul>
 				</nav>
@@ -89,49 +89,54 @@
 			<div class="main-content">
 				<div class="container-fluid">
 					
-					<!-- RECENT PROJECTS -->
-					<div class="row">
-						<div class="col-md-12">
-								<div class="panel">
+					<!-- PROFESSOR PROJECTS -->
+					<% if(projects.length == 0 ){ %>
+						<div class="row">
+							<div class="col-md-12">
+									<div class="panel">
+											<div class="panel-heading">
+												<h1 class="panel-title">No Project Offered</h3>
+											</div>
+									</div>
+							</div>
+						</div>
+					<% }else{ %>
+						<% for (var i = 0;i<projects.length;i++) { %>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="panel">
 										<div class="panel-heading">
-											<h3 class="panel-title">Backend Web Development</h3>
+											<h2 ><%= projects[i].title %></h2>
 										</div>
 										<div class="panel-body">
 											<table class="proj-data">
 												<tbody>
 													<tr>
 														<th>Prerequisites:</th>
-															<td>Should know Javascript</td>
+															<td><%= projects[i].pre_requisites %></td>
 														</tr>
 														<tr>
 															<th>Eligibility:</th>
-															<td>8.9</td>
+															<td><%= projects[i].eligibility %></td>
 														</tr>
 														<tr>
-															<th>Duration:</th>
-															<td>12 months</td>
+															<th>Duration(in months):</th>
+															<td><%= projects[i].duration %></td>
 														</tr>
 														<tr>
 															<th>Offered on:</th>
-															<td>June 12, 2019</td>
+															<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
 														</tr>
 														<tr>
 															<th>No. of Requests:</th>
-															<td>15</td>
+															<td><%= projects[i].no_requests %></td>
 														</tr>
 												</tbody>
 											</table>
-											<br />
+											<br/>
+											<div><strong>Description</strong></div>
 											<p>
-												Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-												Fugit praesentium dolorum atque ipsa quo, iste aut sit
-												ratione velit accusantium, laborum molestiae. Similique
-												corporis mollitia dolorem iure accusamus cumque
-												aspernatur! Lorem ipsum dolor sit amet, consectetur
-												adipisicing elit. Quia aliquam accusantium dolorem, a
-												molestiae deserunt repellendus earum minus sunt molestias,
-												sint esse natus iste quam quibusdam consequuntur
-												cupiditate, dolore inventore.
+												<%= projects[i].description %>
 											</p>
 										</div>
 										<div class="panel-footer">
@@ -142,9 +147,11 @@
 											</div>
 										</div>
 									</div>
-						</div>
-					</div>
-					<!-- END RECENT PROJECTS -->
+								</div>
+							</div>
+						<% } %>
+					<% } %>
+					<!-- END PROFESSOR PROJECTS -->
 				</div>
 			</div>
 			<!-- END MAIN CONTENT -->
@@ -159,10 +166,10 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
-	<script src="assets/vendor/jquery/jquery.min.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="assets/scripts/klorofil-common.js"></script>
+	<script src="/dash/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="/dash/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/dash/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="/dash/assets/scripts/klorofil-common.js"></script>
 </body>
 
 </html>

@@ -27,8 +27,8 @@ signinForm.addEventListener("submit", function(e) {
     data: $(this).serialize(),
     success: (data, status, jqXHR) => {
       // Save token cookie and redirect to dash
-      Cookies.set("auth_token", jqXHR.getResponseHeader("x-auth-token"));
-      document.location.replace("http://localhost:3000/dash");
+      Cookies.set("x-auth-token", jqXHR.getResponseHeader("x-auth-token"));
+      document.location.replace("http://localhost:3000/home");
     },
     error: jqXHR => alert(jqXHR.responseText)
   });

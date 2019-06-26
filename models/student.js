@@ -35,6 +35,9 @@ const studentSchema = new mongoose.Schema({
     minlength: 8,
     maxlength: 1024
   },
+  department: {
+    type: String,
+  },
   createdAt: {
     type: Date,
     default: Date.now()
