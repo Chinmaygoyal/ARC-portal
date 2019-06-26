@@ -20,6 +20,10 @@ const requestSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now()
+  },
+  description: {
+    type:String,
+    maxlength:500,
   }
 });
 

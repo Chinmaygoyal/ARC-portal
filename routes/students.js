@@ -52,7 +52,9 @@ router.post("/register", async (req, res) => {
       name: "SampleName",
       rollNumber: "123456",
       email: email,
+      department: "ABC",
       isVerified: false
+
     });
     // Save the student, send verification mail
     try {

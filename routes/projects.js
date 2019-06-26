@@ -69,11 +69,11 @@ router.post('/createproject',async (req, res) => {
     var user = jwt.decode(getCookie("auth_token"));
     if(!user)
         res.send("Not logged in");
-    var professor  = await Student.findOne({_id: user._id});    
+    var professor  = await Professor.findOne({_id: user._id});    
    
     
     try{
-        const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration,profuser);
+        const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration,professor);
         res.send("Successfully created project");
         }
     catch(err){
@@ -88,7 +88,7 @@ router.get('/createproject',async (req, res) => {
 res.render('createproject');
 });
 
-async function createproject(title,no_openings,description,eligibility,pre_requisites,duration,profuser){
+async function createproject(title,no_openings,description,eligibility,pre_requisites,duration,professor){
     const project = new Project({
         title: title,
         no_openings: no_openings,
@@ -96,7 +96,7 @@ async function createproject(title,no_openings,description,eligibility,pre_requi
         eligibility: eligibility,
         pre_requisites: pre_requisites,
         duration: duration,
-        professor: profuser,
+        professor: professor,
     });
     await project.save();
     return project;

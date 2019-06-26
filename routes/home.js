@@ -9,6 +9,7 @@ const Schema = mongoose.Schema;
 
 // api to give the newly added projects
 router.get('/student',async (req, res) => {
+
     var date = Date.now();
     date = date-(1296000000);
     var recentproject = await Project.find({createdAt:{$gte:date}});

@@ -3,14 +3,10 @@ const { Student} = require("../models/student");
 const { Professor} = require("../models/professor");
 const router = require("express").Router();
 const { Project} = require("../models/project");
-
 const jwt = require("jsonwebtoken");
-//const mongoose = require("mongoose");
 
 router.get('/view/professor',async(req,res)=>{
     //get prof id if prof
-    var app = express();
-    app.use(cookieParser());
     function getCookie(name){
         var re = new RegExp(name + "=([^;]+)");
         var value = re.exec(req.headers.cookie);
@@ -24,6 +20,24 @@ router.get('/view/professor',async(req,res)=>{
         .find({professor:prof_user});
         res.send(prof_request);
 });
+
+//professor views a request
+
+router.get('/view/:id',async(req,res)=>{
+    //get prof id if prof
+    const id = req.params.id;
+    
+    await Request.findById(id).populate('project','title').populate('student','name department').exec((err,request)=>{
+        if(err){
+            console.log({success:false,message:err});
+        }
+        else{
+            //console.log(request);
+            res.render('dash/requestdetailview',{request:request});
+        }
+        });
+});
+
 //for prof
 router.post('/view/professor/',async(req,res)=>{
     //get the id of requests;
@@ -44,21 +58,25 @@ router.post('/view/professor/',async(req,res)=>{
         if (!project) res.send("Request related project not found");
         const student = request.student;
         if (!student) return;
-        const pos= project.students.indexOf({student})
-        if(!pos)
+        const pos= project.students.indexOf(student);
+
+        if(pos<0)
+        {
             project.students.push(student);
-            
+            //console.log(pos);
+               
+        }
         
        project.save();  
-        
+               
     }else{
          request.set({
             status: "false",
         });
         const project = await Project.findById(request.project._id);       
         const student = request.student;
-        const pos= project.students.indexOf({student})
-        if(pos)
+        const pos= project.students.indexOf(student);
+        if(1)
             project.students.splice(pos,1);
     }
 
@@ -89,10 +107,10 @@ router.post('/createrequests/:id',async(req,res)=>{
     const project = await Project.findById(id);
     if(!project) return res.status(404).send("No project found");
     
-    const request= await Request.find({'project':project,'student':student});
+    const request= await Request.findOne({'project':project,'student':student});
     
 
-
+    console.log(request);
     if(!request)
     {
         try{
