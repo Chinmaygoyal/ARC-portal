@@ -32,7 +32,7 @@ router.get('/student',async (req, res) => {
     
 });
 
-router.get('/',async (req, res) => {
+router. get('/',async (req, res) => {
     
    
    function getCookie(name)
@@ -43,30 +43,21 @@ router.get('/',async (req, res) => {
     }
     
     var user = jwt.decode(getCookie("auth_token"));
-
-    if(!user)
-        res.send("Not logged in");
+    if(!user) return res.send("Not logged in");
     var student = await Student.findOne({_id: user._id});
-    if(student.role=="student")
+    var professor = await Professor.findOne({_id: user._id});
+    if(student)
     {
     var studentrequest= await Request.find({student:student});
-    projectall=await Project.find({});
-    res.render('studentview',{projectall:projectall,});
-    
-    }
-    else
-    {
-    
-    await Request.find({professor:student}).populate('project','title').populate('student','name').exec((err,requests)=>{
-        if(err){
-            console.log({success:false,message:err});
+    projectall = await Project.find({});
+    res.render('studentview',{projectall:projectall});
+    }else{    
+        try{
+         const projects = await Project.find({professor:professor})
+            res.render('dash/professorindex',{projects:projects});
+        }catch(err){
+            res.status(400).send("Invalid User");
         }
-        else{
-            var prof_request = requests;
-            res.render('professorview',{prof_request:prof_request,});
-
-        }
-    }); 
 
     }
     

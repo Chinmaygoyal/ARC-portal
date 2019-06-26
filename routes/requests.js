@@ -78,6 +78,7 @@ router.post('/view/professor/',async(req,res)=>{
         const pos= project.students.indexOf(student);
         if(1)
             project.students.splice(pos,1);
+            
     }
 
     await request.save();
@@ -106,20 +107,10 @@ router.post('/createrequests/:id',async(req,res)=>{
 
     const project = await Project.findById(id);
     if(!project) return res.status(404).send("No project found");
-    
-    const request= await Request.findOne({'project':project,'student':student});
-    
-
-    console.log(request);
-    if(!request)
-    {
-        try{
-        const result = await createrequest(project.professor,project,student);
-        }
-        catch(err){
-            console.log(err);
-        }
-        res.send("request posted");
+    try{
+        project.no_requests++;
+        project.save();
+        const result = await createrequest(project.professor,project,studentuser);
     }
     else
     {
