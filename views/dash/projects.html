@@ -74,11 +74,9 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="index.html" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="charts.html" class=""><i class="lnr lnr-list"></i> <span>All Projects</span></a></li>
+						<li><a href="index.html"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="charts.html" class="active"><i class="lnr lnr-list"></i> <span>All Projects</span></a></li>
 						<li><a href="yrprojs.html" class=""><i class="lnr lnr-pushpin"></i> <span>Your Projects</span></a></li>
-						<li><a href="depts.html" class=""><i class="lnr lnr-apartment"></i> <span>Departments</span></a></li>
-						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
 						<li><a href="page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
 					</ul>
 				</nav>
@@ -91,9 +89,30 @@
 			<div class="main-content">
 				<div class="container-fluid">
 					<div class="row">
-						<form>
-							<input class="form-control" placeholder="Search all projects">
-						</form>
+						<div class="prj-filter">
+							<div class="col-md-6">	
+									<select class="form-control">
+										<option value="all" selected>All departments</option>
+										<option value="cse">Computer Science and Engineering</option>
+										<option value="ee">Electrical Engineering</option>
+										<option value="mth">Mathematics and Scientific Computing</option>
+										<option value="me">Mechanical Engineering</option>
+										<option value="ce">Civil Engineering</option>
+										<option value="eco">Economics</option>
+										<option value="ae">Aerospace Engineering</option>
+										<option value="che">Chemical Engineering</option>
+										<option value="chm">Chemistry</option>
+										<option value="phy">Physics</option>
+									</select>
+							</div>
+							<div class="col-md-6">
+									<select class="form-control">
+										<option value="all">All</option>
+										<option value="open">Open</option>
+										<option value="closed">Closed</option>
+									</select>
+							</div>
+						</div>
 					</div>
 					<!-- PROJECTS TABLE -->
 					<div class="row">
@@ -170,15 +189,69 @@
 												<td><span class="label label-danger">FULL</span></td>
 												<td><a>See more >></a></td>
 											</tr>
+											<tr>
+												<td>Backend Web Development</td>
+												<td>Steve</td>
+												<td>CSE</td>
+												<td>NodeJS, Express</td>
+												<td>Oct 21, 2016</td>
+												<td><span class="label label-success">OPEN</span></td>
+												<td><a>See more >></a></td>
+											</tr>
+											<tr>
+												<td>Power Optimization</td>
+												<td>Robert</td>
+												<td>EE</td>
+												<td>Power</td>
+												<td>Oct 21, 2016</td>
+												<td><span class="label label-danger">FULL</span></td>
+												<td><a>See more >></a></td>
+											</tr>
+											<tr>
+												<td>Bridge Design</td>
+												<td>John</td>
+												<td>CE</td>
+												<td>Material Strength, Structuring</td>
+												<td>Oct 21, 2016</td>
+												<td><span class="label label-danger">FULL</span></td>
+												<td><a>See more >></a></td>
+											</tr>
+											<tr>
+												<td>National Budget Analysis</td>
+												<td>Lucas</td>
+												<td>ECO</td>
+												<td>Analysis</td>
+												<td>Oct 21, 2016</td>
+												<td><span class="label label-success">OPEN</span></td>
+												<td><a>See more >></a></td>
+											</tr>
+											<tr>
+												<td>User Data Profiling</td>
+												<td>Daniel</td>
+												<td>MTH</td>
+												<td>Data Analysis, Big Data</td>
+												<td>Oct 21, 2016</td>
+												<td><span class="label label-success">OPEN</span></td>
+												<td><a>See more >></a></td>
+											</tr>
+											<tr>
+												<td>Powerless Long Distance Gliding</td>
+												<td>Anthony</td>
+												<td>AE</td>
+												<td>Aerodynamic Streamlining</td>
+												<td>Oct 21, 2016</td>
+												<td><span class="label label-danger">FULL</span></td>
+												<td><a>See more >></a></td>
+											</tr>
 										</tbody>
 									</table>
 								</div>
-								<div class="panel-footer">
+								<!-- <div class="panel-footer">
 									<div class="row">
 										<div class="col-md-6"><span class="panel-note"><i class="fa fa-clock-o"></i> Last 14 days</span></div>
 										<div class="col-md-6 text-right"><a href="#" class="btn btn-primary">View All Projects</a></div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>

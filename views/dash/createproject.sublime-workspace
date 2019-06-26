@@ -1,0 +1,476 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-transform\tproperty"
+			],
+			[
+				"a",
+				"auto\tmargin-left"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"backgro",
+				"background-color\tproperty"
+			],
+			[
+				"pro",
+				"profile-photo-3"
+			],
+			[
+				"translate",
+				"translateX()\ttransform"
+			],
+			[
+				"signUp",
+				"signUpButton"
+			],
+			[
+				"trans",
+				"translateX()\ttransform"
+			],
+			[
+				"tansla",
+				"translateX()\ttransform"
+			],
+			[
+				"tran",
+				"translateX()\ttransform"
+			],
+			[
+				"ff",
+				"ff416c"
+			],
+			[
+				"ease",
+				"ease-in-out"
+			],
+			[
+				"padding",
+				"padding-top\tproperty"
+			],
+			[
+				"max",
+				"max-height\tproperty"
+			],
+			[
+				"bor",
+				"border-color\tproperty"
+			],
+			[
+				"align",
+				"align-items\tproperty"
+			],
+			[
+				"flex",
+				"flex-direction\tproperty"
+			],
+			[
+				"box",
+				"box-shadow\tproperty"
+			],
+			[
+				"font",
+				"font-family\tproperty"
+			],
+			[
+				"Http",
+				"HttpResponse"
+			],
+			[
+				"resta",
+				"restaurants"
+			],
+			[
+				"meals",
+				"meals"
+			],
+			[
+				"restura",
+				"restaurants"
+			],
+			[
+				"mea",
+				"meal"
+			],
+			[
+				"sub",
+				"sub_order_details"
+			],
+			[
+				"res",
+				"restaurant_id"
+			],
+			[
+				"restaurant",
+				"restaurant_id"
+			],
+			[
+				"cust",
+				"customer_order_history"
+			],
+			[
+				"Order",
+				"OrderDetails"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"tot",
+				"totalOrder"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"cu",
+				"current_item"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"as",
+				"as_view"
+			],
+			[
+				"custom",
+				"coustomer_account"
+			],
+			[
+				"restaura",
+				"restaurant_id"
+			],
+			[
+				"order",
+				"order_details"
+			],
+			[
+				"rest",
+				"restaurants"
+			],
+			[
+				"customer",
+				"customer_get_latest_order"
+			],
+			[
+				"customer_",
+				"customer_add_order"
+			],
+			[
+				"Crea",
+				"CreateArticle"
+			],
+			[
+				"stat",
+				"staticfiles_urlpatterns"
+			],
+			[
+				"articl",
+				"article_list"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"LiveReload: Self test"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 202.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/karanveer/ARC-portal/views/dash/createproject.ejs",
+		"/home/karanveer/ARC-portal/views/dash/assets/css/main.css",
+		"/home/karanveer/dashboard/template/createproject.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/register/rap-register.component.css",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/rap.component.css",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/register/rap-register.component.html",
+		"/home/karanveer/ARC-portal/views/dash/elements.html",
+		"/home/karanveer/folder/roadtrips/node_modules/less/lib/less/parser/parser.js",
+		"/home/karanveer/dashboard/template/index.html",
+		"/home/karanveer/ARC-portal/views/dash/professorindex.html",
+		"/home/karanveer/ARC-portal/views/createproject.html",
+		"/home/karanveer/ARC-portal/views/index.html",
+		"/home/karanveer/ARC-portal/config/mail-credentials.json",
+		"/home/karanveer/ARC-portal/.gitignore",
+		"/home/karanveer/ARC-portal/config/custom-environment-variables.json",
+		"/home/karanveer/templates/klorofil-free-dashboard-template-v2.0/template/elements.html",
+		"/home/karanveer/ARC-portal/index.html",
+		"/home/karanveer/ARC-portal/style.css",
+		"/home/karanveer/arc/project-2/team.js",
+		"/home/karanveer/arc/project-2/team.html",
+		"/home/karanveer/arc/project-2/team.css",
+		"/home/karanveer/resume-generator/index.html",
+		"/home/karanveer/arc/project-1/form.html",
+		"/home/karanveer/arc/project-1/form.js",
+		"/home/karanveer/arc/project-1/form.css",
+		"/home/karanveer/resume-generator/js/main.js",
+		"/home/karanveer/resume-generator/css/thin_scroll.css",
+		"/home/karanveer/resume-generator/css/main.css",
+		"/home/karanveer/resume-generator/js/jquery.min.js",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/rap.module.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/rap.routing.module.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/rap.component.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/rap.component.ts",
+		"/home/karanveer/roadtrips/src/index.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/sponsors/rap-sponsors.component.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/sponsors/rap-sponsors.component.css",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/sponsors/rap-sponsors.component.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/sponsors/index.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/register/rap-register.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/register/rap-register.component.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/register/index.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/home/rap-home.component.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/home/rap-home.component.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/home/rap-home.component.css",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/home/index.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/contacts/rap-contacts.component.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/contacts/rap-contacts.component.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/contacts/rap-contacts.component.css",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/contacts/index.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/about/rap-about.component.ts",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/about/rap-about.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/about/rap-about.component.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/about/rap-about.component.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/about/rap-about.component.css",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/about/index.ts",
+		"/home/karanveer/folder/roadtrips/src/app/components/roadtrip/roadtrip.component.html",
+		"/home/karanveer/folder/roadtrips/src/app/modules/rap/index.ts",
+		"/home/karanveer/roadtrips/src/app/components/roadtrip/roadtrip.component.html",
+		"/home/karanveer/roadtrips/src/app/modules/rap/rap.component.css",
+		"/home/karanveer/roadtrips/src/app/modules/rap/rap.component.html",
+		"/home/karanveer/roadtrips/src/app/modules/synchronicity/synchronicity.component.html",
+		"/home/karanveer/roadtrips/node_modules/less/test/css/css.css",
+		"/home/karanveer/roadtrips/src/app/app.component.html",
+		"/home/karanveer/roadtrips/src/app/services/rap.service.ts",
+		"/home/karanveer/roadtrips/src/app/services/synchro.service.ts",
+		"/home/karanveer/roadtrips/src/app/modules/junoon/junoon.routing.module.ts",
+		"/home/karanveer/roadtrips/src/app/modules/synchronicity/synchro.routing.module.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/rap.routing.module.ts",
+		"/home/karanveer/roadtrips/src/app/modules/junoon/junoon.module.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/rap.module.ts",
+		"/home/karanveer/roadtrips/src/app/modules/junoon/junoon.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/rap.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/junoon/sponsors/junoon-sponsors.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/sponsors/rap-sponsors.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/junoon/home/junoon-home.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/home/rap-home.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/contacts/rap-contacts.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/junoon/about/junoon-about.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/about/rap-about.component.css",
+		"/home/karanveer/roadtrips/src/app/modules/rap/about/index.ts",
+		"/home/karanveer/roadtrips/src/app/services/junoon.service.ts",
+		"/home/karanveer/roadtrips/src/app/services/dj.service.ts",
+		"/home/karanveer/roadtrips/src/app/modules/synchronicity/synchronicity.component.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/home/rap-home.component.css",
+		"/home/karanveer/roadtrips/src/main.ts",
+		"/home/karanveer/roadtrips/src/app/modules/material.module.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/contacts/index.ts",
+		"/home/karanveer/roadtrips/src/app/modules/rap/contacts/rap-contacts.component.html",
+		"/home/karanveer/roadtrips/src/app/modules/rap/contacts/rap-contacts.component.css",
+		"/home/karanveer/roadtrips/src/app/modules/rap/sponsors/rap-sponsors.component.html",
+		"/home/karanveer/roadtrips/src/app/modules/rap/sponsors/rap-sponsors.component.css",
+		"/home/karanveer/roadtrips/src/app/modules/rap/sponsors/index.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/synchronicity/synchro.module.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/djwar/djwar.module.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/djwar/register/dj-register.component.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/synchronicity/register/synchro-register.component.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/rap.module.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/register/rap-register.component.css",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/register/rap-register.component.html",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/register/rap-register.component.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/synchronicity/register/synchro-register.component.css",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/register/index.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/register/index.html",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/home/rap-home.component.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/synchronicity/home/synchro-home.component.html",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/home/rap-home.component.html",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/synchronicity/home/synchro-home.component.css",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/home/rap-home.component.css",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/home/index.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/about/rap-about.component.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/about/rap-about.component.html",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/about/rap-about.component.css",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/about/index.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/services/rap.service.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/rap.service.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/djwar/index.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/rap.routing.module.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/synchronicity/synchronicity.component.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/rap.component.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/modules/rap/rap.component.html",
+		"/home/karanveer/Antaragni/roadtrips/src/app/services/synchro.service.ts",
+		"/home/karanveer/Antaragni/roadtrips/src/app/services/dj.service.ts",
+		"/home/karanveer/.cache/.fr-YhnO2t/resume.css",
+		"/home/karanveer/.cache/.fr-FiDtkE/srt-resume.html",
+		"/home/karanveer/angular-tour-of-heroes/src/app/heroes/heroes.component.html",
+		"/home/karanveer/angular-tour-of-heroes/src/app/mock-heroes.ts",
+		"/home/karanveer/angular-tour-of-heroes/src/app/app.module.ts",
+		"/home/karanveer/angular-tour-of-heroes/src/app/hero.ts"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 103.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "createproject.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

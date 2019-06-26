@@ -1771,10 +1771,11 @@ ul.activity-timeline > li {
 }
 
 #create-project-form {
-  position: absolute;
+  position: relative;
   margin: auto;
   right: 0;
   bottom: 0;
   left: 0;
   border-radius: 10px;
+  text-transform: uppercase;
 }
