@@ -1,29 +1,29 @@
 const mongoose = require("mongoose");
 
 const requestSchema = new mongoose.Schema({
-  project:{
+  project: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Project'
+    ref: "Project"
   },
   professor: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Professor'
+    ref: "Professor"
   },
-  student:{
+  student: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Student'
+    ref: "Student"
   },
   status: {
-      type: Boolean,
-      default: null
-  },  
+    type: Boolean,
+    default: false
+  },
   createdAt: {
     type: Date,
     default: Date.now()
   },
   description: {
-    type:String,
-    maxlength:500,
+    type: String,
+    maxlength: 500
   }
 });
 
