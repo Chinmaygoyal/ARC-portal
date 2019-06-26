@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Dashboard | Research Portal, IITK</title>
+	<title>All Projects | Research Portal, IITK</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="/dash/assets/vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/dash/assets/vendor/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/dash/assets/vendor/linearicons/style.css">
-	<link rel="stylesheet" href="/dash/assets/vendor/chartist/css/chartist-custom.css">
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="/dash/assets/css/main.css">
 	<!-- GOOGLE FONTS -->
@@ -75,8 +74,9 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="/home/" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="/project/createproject" class=""><i class="lnr lnr-list"></i> <span>New Project</span></a></li>
+                        <li><a href="/home/" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="/project" class=""><i class="lnr lnr-list"></i> <span>All Projects</span></a></li>
+						<li><a href="/project/self" class="active"><i class="lnr lnr-pushpin"></i> <span>Your Projects</span></a></li>
 						<li><a href="page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
 					</ul>
 				</nav>
@@ -88,70 +88,89 @@
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
-					
-					<!-- PROFESSOR PROJECTS -->
-					<% if(projects.length == 0 ){ %>
-						<div class="row">
-							<div class="col-md-12">
-									<div class="panel">
-											<div class="panel-heading">
-												<h1 class="panel-title">No Project Offered</h3>
-											</div>
-									</div>
+					<div class="row">
+						<div class="prj-filter">
+							<div class="col-md-6">	
+									<select class="form-control">
+										<option value="all" selected>All departments</option>
+										<option value="cse">Computer Science and Engineering</option>
+										<option value="ee">Electrical Engineering</option>
+										<option value="mth">Mathematics and Scientific Computing</option>
+										<option value="me">Mechanical Engineering</option>
+										<option value="ce">Civil Engineering</option>
+										<option value="eco">Economics</option>
+										<option value="ae">Aerospace Engineering</option>
+										<option value="che">Chemical Engineering</option>
+										<option value="chm">Chemistry</option>
+										<option value="phy">Physics</option>
+									</select>
+							</div>
+							<div class="col-md-6">
+									<select class="form-control">
+										<option value="all">All</option>
+										<option value="open">Open</option>
+										<option value="closed">Closed</option>
+									</select>
 							</div>
 						</div>
-					<% }else{ %>
-						<% for (var i = 0;i<projects.length;i++) { %>
-							<div class="row">
-								<div class="col-md-12">
-									<div class="panel">
-										<div class="panel-heading">
-											<h2 ><%= projects[i].title %></h2>
-										</div>
-										<div class="panel-body">
-											<table class="proj-data">
-												<tbody>
-													<tr>
-														<th>Prerequisites:</th>
-															<td><%= projects[i].pre_requisites %></td>
-														</tr>
-														<tr>
-															<th>Eligibility:</th>
-															<td><%= projects[i].eligibility %></td>
-														</tr>
-														<tr>
-															<th>Duration(in months):</th>
-															<td><%= projects[i].duration %></td>
-														</tr>
-														<tr>
-															<th>Offered on:</th>
-															<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
-														</tr>
-														<tr>
-															<th>No. of Requests:</th>
-															<td><%= projects[i].no_requests %></td>
-														</tr>
-												</tbody>
-											</table>
-											<br/>
-											<div><strong>Description</strong></div>
-											<p>
-												<%= projects[i].description %>
-											</p>
-										</div>
-										<div class="panel-footer">
-											<div class="row">
-												<div class="col-md-12 text-right">
-													<a href="#" class="btn btn-primary">See Requests</a>
+					</div>
+					<!-- PROJECTS TABLE -->
+						<div class="row">
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h3 class="panel-title">Your Projects</h3>
+									</div>
+									<% if(projects.length == 0 ){ %>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="panel">
+													<div class="panel-heading">
+														<h1 class="panel-title">You don't have any project.</h3>
+													</div>
 												</div>
 											</div>
 										</div>
-									</div>
+									<% }else{ %>
+										<div class="panel-body no-padding">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>Title</th>
+														<th>Professor</th>
+														<th>Department</th>
+														<th>Eligibility</th>                                                    
+														<th>Description</th>
+														<th>Published on</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+										<% for (var i = 0;i<projects.length;i++) { %>
+											<tr>
+												<td><%= projects[i].title %></td>
+												<td><%= projects[i].professor.name %></td>
+												<td><%= projects[i].professor.department %></td>
+												<td><%= projects[i].eligibility %></td>
+												<td>
+													<% if(projects[i].description.length <100){%>
+														<%= projects[i].description %>
+													<% }else{%>
+													<%= projects[i].description.slice(0,100) %>....
+													<% }%>
+												</td>
+												<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
+												<td><a>See more >></a></td>
+											</tr>
+										<% } %>                
+												</tbody>
+											</table>
+										</div>
+									<% } %> 
 								</div>
 							</div>
-						<% } %>
-					<% } %>
-					<!-- END PROFESSOR PROJECTS -->
+						</div>
+					<!-- END PROJECTS TABLE -->
 				</div>
 			</div>
 			<!-- END MAIN CONTENT -->

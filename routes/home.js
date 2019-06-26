@@ -10,10 +10,7 @@ const Schema = mongoose.Schema;
 // api to give the newly added projects
 router.get('/student',async (req, res) => {
 
-    var date = Date.now();
-    date = date-(1296000000);
-    var recentproject = await Project.find({createdAt:{$gte:date}});
-
+    
     var app = express();
     app.use(cookieParser());
     function getCookie(name)
@@ -34,7 +31,6 @@ router.get('/student',async (req, res) => {
 
 router.get('/',async (req, res) => {
     
-   
    function getCookie(name)
     {
         var re = new RegExp(name + "=([^;]+)");
@@ -48,9 +44,17 @@ router.get('/',async (req, res) => {
     var professor = await Professor.findOne({_id: user._id});
     if(student)
     {
-    var studentrequest= await Request.find({student:student});
-    projectall = await Project.find({});
-    res.render('studentview',{projectall:projectall});
+        try{
+            var date = Date.now();
+            date = date-(1296000000);
+            var recentprojects = await Project.find({createdAt:{$gte:date}}).populate('professor','name department');
+            var studentrequests = await Request.find({student:student._id}).populate('professor','name department').populate('project','title description');
+            res.render('dash/studentindex',{recentprojects:recentprojects,studentrequests:studentrequests});
+        }
+        catch(err){
+            res.status(400).send("Invalid User");
+        
+        }
     }else{    
         try{
          const projects = await Project.find({professor:professor})
@@ -58,9 +62,7 @@ router.get('/',async (req, res) => {
         }catch(err){
             res.status(400).send("Invalid User");
         }
-
     }
-    
 });
 
 module.exports = router;

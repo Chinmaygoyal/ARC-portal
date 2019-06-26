@@ -4,18 +4,43 @@ const jwt = require("jsonwebtoken");
 const { Student, validateStudent } = require("../models/student");
 const { Professor, validateProfessor } = require("../models/professor");
 
+
+
 //all project list
 router.get('/',async (req, res) => {
     try{
-        const projects = await Project.find();
-        res.send(projects);   
+        const projects = await Project.find().populate('professor','name department');
+        res.render('dash/projects',{projects:projects});
     }
     catch(err){
         console.log(err.message);
     }
 });
 
-//department wise sorted 
+router.get('/self',async (req, res) => {
+    
+    function getCookie(name)
+    {
+        var re = new RegExp(name + "=([^;]+)");
+        var value = re.exec(req.headers.cookie);
+        return (value != null) ? unescape(value[1]) : null;
+    }
+    
+    var user = jwt.decode(getCookie("auth_token"));
+    if(!user) return res.send("Not logged in");
+    var student = await Student.findOne({_id: user._id});
+    
+    try{
+        const projects = await Project.find({student:student._id}).populate('professor','name department');
+        res.render('dash/projectself',{projects:projects});
+    }
+    catch(err){
+        console.log(err.message);
+    }
+});
+
+
+//department wise sorted
 router.get('/view/:department',async (req,res) => {
     const department = req.params.department;
     try{
@@ -70,11 +95,11 @@ router.post('/createproject',async (req, res) => {
     if(!user)
         res.send("Not logged in");
     var professor  = await Professor.findOne({_id: user._id});    
-   
+
     
     try{
         const result = await createproject(title,no_openings,description,eligibility,pre_requisites,duration,professor);
-        res.send("Successfully created project");
+        res.redirect("/home");
         }
     catch(err){
         res.send("Please fill the complete information");
@@ -85,10 +110,7 @@ router.post('/createproject',async (req, res) => {
 
 //request to open create project form
 router.get('/createproject',async (req, res) => {
-
-
-res.render('dash/createproject');
-
+    res.render('dash/createproject');
 });
 
 async function createproject(title,no_openings,description,eligibility,pre_requisites,duration,professor){
