@@ -11,6 +11,7 @@ const homeRouter = require("./routes/home");
 const requestRouter = require("./routes/requests");
 
 // Middleware
+app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static("views"));
@@ -19,7 +20,10 @@ app.use("/token", tokenRouter);
 app.use("/project", projectRouter);
 app.use("/home", homeRouter);
 app.use("/request", requestRouter);
-app.set("view engine", "ejs");
+// 404 route
+app.use((req, res) => {
+  res.status(404).sendFile("/views/dash/404.html", { root: __dirname });
+});
 
 // Environment variables
 const PORT = config.get("PORT");
