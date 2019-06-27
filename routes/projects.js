@@ -35,7 +35,7 @@ router.get("/self", tokenAuth, isStudent, async (req, res) => {
 });
 
 //department wise sorted
-router.get("/view/department/:department", tokenAuth, async (req, res) => {
+router.get("/view/dept/:department", tokenAuth, async (req, res) => {
   const department = req.params.department;
   try {
     const projects = await Project.find({ department: department });

@@ -39,7 +39,6 @@ router.get("/", tokenAuth, async (req, res) => {
       const professor = await Professor.findOne({ _id: req.user._id });
       const projects = await Project.find({ professor: professor });
       res.render("dash/professorindex", { projects: projects });
-      
     } catch (err) {
       res.status(400).send(err.message);
     }
