@@ -215,9 +215,14 @@ html.fullscreen-bg #wrapper {
 }
 .navbar-default .brand {
   float: left;
-  padding: 30px 39px;
+  padding: 10px 39px;
   background-color: #fff;
 }
+
+.navbar-default .brand img {
+  width: 139px;
+}
+
 @media screen and (max-width: 1024px) {
   .navbar-default .brand {
     padding-left: 30px;
