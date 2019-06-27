@@ -1,47 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dashboard | Research Portal, IITK</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
-    <!-- VENDOR CSS -->
-    <link
-      rel="stylesheet"
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/font-awesome/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="assets/vendor/linearicons/style.css" />
-    <link
-      rel="stylesheet"
-      href="assets/vendor/chartist/css/chartist-custom.css"
-    />
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <!-- GOOGLE FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"
-      rel="stylesheet"
-    />
-    <!-- ICONS -->
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="assets/img/apple-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="assets/img/favicon.png"
-    />
-  </head>
+	<title>Dashboard | Research Portal, IITK</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="/dash/assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="/dash/assets/css/main.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="/dash/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/dash/assets/img/favicon.png">
+</head>
 
   <body>
     <!-- WRAPPER -->
@@ -161,7 +137,7 @@
           <nav>
             <ul class="nav">
               <li>
-                <a href="index.html" class="active"
+                <a href="../home/" class="active"
                   ><i class="lnr lnr-home"></i> <span>Dashboard</span></a
                 >
               </li>
@@ -187,26 +163,26 @@
           <div class="container-fluid">
             <div class="panel">
               <div class="panel-heading">
-                <h3 class="panel-title">Backend Web Development</h3>
+                <h3 class="panel-title"><%=project.title%></h3>
               </div>
               <div class="panel-body">
                 <table class="proj-data">
                   <tbody>
                     <tr>
                       <th>Prerequisites:</th>
-                      <td>Should know Javascript</td>
+                      <td><%=project.pre_requisites%></td>
                     </tr>
                     <tr>
                       <th>Eligibility:</th>
-                      <td>8.9</td>
+                      <td><%=project.eligibility%></td>
                     </tr>
                     <tr>
                       <th>Duration:</th>
-                      <td>12 months</td>
+                      <td><%=project.duration%>&nbsp;months</td>
                     </tr>
                     <tr>
                       <th>Offered on:</th>
-                      <td>June 12, 2019</td>
+                      <td><%=project.createdAt%></td>
                     </tr>
                   </tbody>
                 </table>
@@ -241,20 +217,18 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>John Doe</td>
-                          <td>187878</td>
-                          <td>CSE</td>
-                          <td>June 14, 2019</td>
-                          <td><a>See more >></a></td>
-                        </tr>
-                        <tr>
-                          <td>Joe Dohn</td>
-                          <td>178787</td>
-                          <td>EE</td>
-                          <td>June 15, 2019</td>
-                          <td><a>See more >></a></td>
-                        </tr>
+                       
+                          <% for (var i = 0;i<requests.length;i++) { %>
+                                       <%if (requests[i].status == null){%> 
+                                        <tr>
+                                            <td><%= requests[i].student.name %></td>
+                                            <td><%= requests[i].student.rollNumber %></td>
+                                            <td><%= requests[i].student.department %></td>
+                                            <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
+                                            <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
+                                        </tr>
+                                    <% } %>
+                                    <% } %>                
                       </tbody>
                     </table>
                   </div>
@@ -275,20 +249,17 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>John Wick</td>
-                          <td>187878</td>
-                          <td>CSE</td>
-                          <td>June 14, 2019</td>
-                          <td><a>See more >></a></td>
-                        </tr>
-                        <tr>
-                          <td>Wohn Jik</td>
-                          <td>178787</td>
-                          <td>EE</td>
-                          <td>June 15, 2019</td>
-                          <td><a>See more >></a></td>
-                        </tr>
+                        <% for (var i = 0;i<requests.length;i++) { %>
+                                       <%if (requests[i].status == true){%> 
+                                        <tr>
+                                            <td><%= requests[i].student.name %></td>
+                                            <td><%= requests[i].student.rollNumber %></td>
+                                            <td><%= requests[i].student.department %></td>
+                                            <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
+                                            <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
+                                        </tr>
+                                    <% } %>
+                                    <% } %>  
                       </tbody>
                     </table>
                   </div>
@@ -309,20 +280,17 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>Samuel Heff</td>
-                          <td>187878</td>
-                          <td>CSE</td>
-                          <td>June 14, 2019</td>
-                          <td><a>See more >></a></td>
-                        </tr>
-                        <tr>
-                          <td>John Ederson</td>
-                          <td>178787</td>
-                          <td>EE</td>
-                          <td>June 15, 2019</td>
-                          <td><a>See more >></a></td>
-                        </tr>
+                        <% for (var i = 0;i<requests.length;i++) { %>
+                                       <%if (requests[i].status == false){%> 
+                                        <tr>
+                                            <td><%= requests[i].student.name %></td>
+                                            <td><%= requests[i].student.rollNumber %></td>
+                                            <td><%= requests[i].student.department %></td>
+                                            <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
+                                            <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
+                                        </tr>
+                                    <% } %>
+                                    <% } %>  
                       </tbody>
                     </table>
                   </div>

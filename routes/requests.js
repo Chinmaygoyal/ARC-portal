@@ -69,7 +69,8 @@ router.post("/createrequests/:id", tokenAuth, isStudent, async (req, res) => {
     const request = new Request({
       project: project,
       professor: project.professor,
-      student: student
+      student: student,
+      description: req.body.description,
     });
     project.no_requests++;
     await project.save();

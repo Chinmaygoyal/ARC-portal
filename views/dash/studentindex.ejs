@@ -125,8 +125,8 @@
                                     <% for (var i = 0;i<recentprojects.length;i++) { %>
                                         <tr>
                                             <td><%= recentprojects[i].title %></td>
-                                            <td><%= recentprojects[i].professor.name %></td>
-                                            <td><%= recentprojects[i].professor.department %></td>
+                                            <td><%= recentprojects[i].professor %></td>
+                                            <td><%= recentprojects[i].professor %></td>
                                             <td><%= recentprojects[i].eligibility %></td>
                                             <td>
                                                 <% if(recentprojects[i].description.length <100){%>
@@ -136,7 +136,7 @@
                                                 <% }%>
                                             </td>
                                             <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= recentprojects[i].createdAt.getDate()%> - <%= months[recentprojects[i].createdAt.getMonth()]%> - <%= recentprojects[i].createdAt.getFullYear()%></td>
-                                            <td><a>See more >></a></td>
+                                            <td><a href = "../project/view/<%=recentprojects[i]._id%>">See more >></a></td>
                                         </tr>
                                     <% } %>                
                                             </tbody>

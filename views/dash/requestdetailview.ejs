@@ -39,37 +39,124 @@
 	</script>		  
 </head>
 
-<br>
-<div class="panel panel-headline">
-		<div class="panel-heading">
-			<h3 class="panel-title"><%=request.project.title%></h3>
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html"><img src="/dash/assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+				<div id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+								<i class="lnr lnr-alarm"></i>
+								<span class="badge bg-danger">5</span>
+							</a>
+							<ul class="dropdown-menu notifications">
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
+								<li><a href="#" class="more">See all notifications</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-link"></i> <span>Quick Links</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="https://iitk.ac.in">IITK Home</a></li>
+								<li><a href="https://iitk.ac.in/dosa">DOSA</a></li>
+								<li><a href="https://iitk.ac.in/doaa">DOAA</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/dash/assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="../../home/" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="../../project/createproject" class=""><i class="lnr lnr-list"></i> <span>New Project</span></a></li>
+						<li><a href="../../page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
-		<div class="panel-body">
-			<h4>Name:</h4> <%=request.student.name%> <h4>Dept:</h4> <%=request.student.department%><br>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<br>
+			<div class="panel panel-headline">
+					<div class="panel-heading">
+						<h3 class="panel-title"><%=request.project.title%></h3>
+					</div>
+					<div class="panel-body">
+						<h4>Name:</h4> <%=request.student.name%> <h4>Dept:</h4> <%=request.student.department%><br>
 
-			<h4> Remarks: </h4>
-			<%=request.description%>
-		
-			<h4>Status:</h4>
-			<% if(request.status == true){ %>
-			<span class="label label-success">Accepted</span>
-			<%} else if (request.status == false) { %>
-			<span class="label label-danger">Rejected</span>
-			<% } else { %>
-			<span class="label label-default">Pending..</span>
-			<%}%>
-			<br>
-			<br>
-			<br>
-			<button type="button" class="btn btn-success"onclick="status('<%= request._id %>',true);">Accept</button>
-			<button type="button" class="btn btn-danger"onclick="status('<%= request._id %>',false);">Reject</button>
+						<h4> Remarks: </h4>
+						<%=request.description%>
+					
+						<h4>Status:</h4>
+						<% if(request.status == true){ %>
+						<span class="label label-success">Accepted</span>
+						<%} else if (request.status == false) { %>
+						<span class="label label-danger">Rejected</span>
+						<% } else { %>
+						<span class="label label-default">Pending..</span>
+						<%}%>
+						<br>
+						<br>
+						<br>
+						<button type="button" class="btn btn-success"onclick="status('<%= request._id %>',true);">Accept</button>
+						<button type="button" class="btn btn-danger"onclick="status('<%= request._id %>',false);">Reject</button>
+					</div>
+				<a href="../../project/<%=request.project._id%>"><button class ="btn btn-primary" style="margin-left: 20px;">Go back </button>
+				<br>
+				&nbsp;
+				</div>
+
+			
+
+
+			</div>
+
+
+			<!-- END MAIN CONTENT -->
 		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; Academics and Career Council, IIT Kanpur</p>
+			</div>
+		</footer>
 	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="/dash/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="/dash/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/dash/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="/dash/assets/scripts/klorofil-common.js"></script>
+</body>
 
-
-
-
-</div>
-
-
-
+</html>
