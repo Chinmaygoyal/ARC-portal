@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>All Projects | Research Portal, IITK</title>
+	<title>Dashboard | Research Portal, IITK</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -10,13 +10,33 @@
 	<link rel="stylesheet" href="/dash/assets/vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/dash/assets/vendor/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/dash/assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="/dash/assets/vendor/chartist/css/chartist-custom.css">
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="/dash/assets/css/main.css">
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
-	<link rel="apple-touch-icon" sizes="76x76" href="/dash/assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/dash/assets/img/favicon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<script>
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous">
+	</script>
+	<script>
+		  var xhttp = new XMLHttpRequest();
+		  function status(id,val){
+		  xhttp.open("POST", "/request/view/professor/", true);
+		  
+		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		  xhttp.onreadystatechange = function () {
+			  if (xhttp.readyState == 4 && xhttp.status == 200){
+				  window.location.reload();
+			  }
+		  }
+		  xhttp.send("id"+ "="+id+"&"+ "status="+val); 
+		  }
+	</script>		  
 </head>
 
 <body>
@@ -74,10 +94,9 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="/home/"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="/project" class="active"><i class="lnr lnr-list"></i> <span>All Projects</span></a></li>
-						<li><a href="/project/self" class=""><i class="lnr lnr-pushpin"></i> <span>Your Projects</span></a></li>
-						<li><a href="page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
+						<li><a href="../../home/" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="../../project/createproject" class=""><i class="lnr lnr-list"></i> <span>New Project</span></a></li>
+						<li><a href="../../page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -86,93 +105,41 @@
 		<!-- MAIN -->
 		<div class="main">
 			<!-- MAIN CONTENT -->
-			<div class="main-content">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="prj-filter">
-							<div class="col-md-6">	
-									<select class="form-control">
-										<option value="all" selected>All departments</option>
-										<option value="cse">Computer Science and Engineering</option>
-										<option value="ee">Electrical Engineering</option>
-										<option value="mth">Mathematics and Scientific Computing</option>
-										<option value="me">Mechanical Engineering</option>
-										<option value="ce">Civil Engineering</option>
-										<option value="eco">Economics</option>
-										<option value="ae">Aerospace Engineering</option>
-										<option value="che">Chemical Engineering</option>
-										<option value="chm">Chemistry</option>
-										<option value="phy">Physics</option>
-									</select>
-							</div>
-							<div class="col-md-6">
-									<select class="form-control">
-										<option value="all">All</option>
-										<option value="open">Open</option>
-										<option value="closed">Closed</option>
-									</select>
-							</div>
-						</div>
+			<br>
+			<div class="panel panel-headline">
+					<div class="panel-heading">
+						<h3 class="panel-title"><%=request.project.title%></h3>
 					</div>
-					<!-- PROJECTS TABLE -->
-						<div class="row">
-							<div class="col-md-12">
-								<div class="panel">
-									<div class="panel-heading">
-										<h3 class="panel-title">All Projects</h3>
-									</div>
-									<% if(projects.length == 0 ){ %>
-										<div class="row">
-											<div class="col-md-12">
-												<div class="panel">
-													<div class="panel-heading">
-														<h1 class="panel-title">No Projects Offered</h3>
-													</div>
-												</div>
-											</div>
-										</div>
-									<% }else{ %>
-										<div class="panel-body no-padding">
-											<table class="table table-striped">
-												<thead>
-													<tr>
-														<th>Title</th>
-														<th>Professor</th>
-														<th>Department</th>
-														<th>Eligibility</th>                                                    
-														<th>Description</th>
-														<th>Published on</th>
-														<th></th>
-													</tr>
-												</thead>
-												<tbody>
-										<% for (var i = 0;i<projects.length;i++) { %>
-											<tr>
-												<td><%= projects[i].title %></td>
-												<td><%= projects[i].professor.name %></td>
-												<td><%= projects[i].professor.department %></td>
-												<td><%= projects[i].eligibility %></td>
-												<td>
-													<% if(projects[i].description.length <100){%>
-														<%= projects[i].description %>
-													<% }else{%>
-													<%= projects[i].description.slice(0,100) %>....
-													<% }%>
-												</td>
-												<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
-												<td><a href = "../project/view/<%=projects[i]._id%>">See more >></a></td>
-											</tr>
-										<% } %>                
-												</tbody>
-											</table>
-										</div>
-									<% } %> 
-								</div>
-							</div>
-						</div>
-					<!-- END PROJECTS TABLE -->
+					<div class="panel-body">
+						<h4>Name:</h4> <%=request.professor.name%> <h4>Dept:</h4> <%=request.professor.department%><br>
+
+						<h4> Remarks: </h4>
+						<%=request.description%>
+					
+						<h4>Status:</h4>
+						<% if(request.status == true){ %>
+						<span class="label label-success">Accepted</span>
+						<%} else if (request.status == false) { %>
+						<span class="label label-danger">Rejected</span>
+						<% } else { %>
+						<span class="label label-default">Pending..</span>
+						<%}%>
+						<br>
+						<br>
+						<br>
+						
+					</div>
+				<a href="../../home/"><button class ="btn btn-primary" style="margin-left: 20px;">Go back </button>
+				<br>
+				&nbsp;
 				</div>
+
+			
+
+
 			</div>
+
+
 			<!-- END MAIN CONTENT -->
 		</div>
 		<!-- END MAIN -->

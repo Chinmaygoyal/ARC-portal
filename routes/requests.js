@@ -81,5 +81,20 @@ router.post("/createrequests/:id", tokenAuth, isStudent, async (req, res) => {
     console.log(error.message);
   }
 });
+//STUDENT SIDE : See a request and its status 
+router.get("/:id",tokenAuth,isStudent,async(req,res) =>{
+const request = await Request.findById(req.params.id).populate("project","title").populate("professor","name department");
+if(request)
+{
+res.render("dash/studentrequestview",{request:request});
+//console.log(request);
+}
+else
+res.send("NO request found");
+
+
+
+
+});
 
 module.exports = router;

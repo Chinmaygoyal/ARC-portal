@@ -38,10 +38,10 @@ router.get("/", tokenAuth, async (req, res) => {
     try {
       const professor = await Professor.findOne({ _id: req.user._id });
       const projects = await Project.find({ professor: professor });
-      //res.render("dash/professorindex", { projects: projects });
-      res.send(recentprojects[0].professor);
+      res.render("dash/professorindex", { projects: projects });
+      
     } catch (err) {
-      res.status(400).send("Invalid User");
+      res.status(400).send(err.message);
     }
   }
 });

@@ -23,7 +23,7 @@ router.get("/", tokenAuth, isStudent, async (req, res) => {
 // STUDENT SIDE: See student's current projects
 router.get("/self", tokenAuth, isStudent, async (req, res) => {
   try {
-    const projects = await Project.find({ student: req.user._id }).populate(
+    const projects = await Project.find({ students: req.user._id }).populate(
       "professor",
       "name department"
     );
@@ -79,6 +79,7 @@ router.get("/createproject", tokenAuth, isProf, async (req, res) => {
 
 // Create new professor (FOR DEV ONLY)
 router.post("/createprofessor", async (req, res) => {
+  console.log("hh");
   const name = req.body.name;
   const email = req.body.email;
   const department = req.body.department;
