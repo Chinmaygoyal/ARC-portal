@@ -33,7 +33,7 @@ router.get("/self", tokenAuth, isStudent, async (req, res) => {
 });
 
 //department wise sorted
-router.get("/view/:department", tokenAuth, async (req, res) => {
+router.get("/view/dept/:department", tokenAuth, async (req, res) => {
   const department = req.params.department;
   try {
     const projects = await Project.find({ department: department });
@@ -46,7 +46,7 @@ router.get("/view/:department", tokenAuth, async (req, res) => {
 });
 
 // STUDENT SIDE (API): Get project
-router.get("/view/:department/:id", tokenAuth, isStudent, async (req, res) => {
+router.get("/view/:id", tokenAuth, isStudent, async (req, res) => {
   try {
     const project = await Project.findOne({ _id: req.params.id });
     if (!project) return res.status(404).send("Project not found");
