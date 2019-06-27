@@ -59,8 +59,8 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/dash/assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
 							<ul class="dropdown-menu">
-								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="/home/"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="/project"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
 								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
 								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
 							</ul>
@@ -76,7 +76,8 @@
 				<nav>
 					<ul class="nav">
 						<li><a href="/home/" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="/project/createproject" class=""><i class="lnr lnr-list"></i> <span>New Project</span></a></li>
+						<li><a href="/project" class=""><i class="lnr lnr-list"></i> <span>All Projects</span></a></li>
+						<li><a href="/project/self" class=""><i class="lnr lnr-pushpin"></i> <span>Your Projects</span></a></li>
 						<li><a href="page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
 					</ul>
 				</nav>
@@ -87,54 +88,135 @@
 		<div class="main">
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
-                    <div class="container-fluid" >
-                        
-                        <!--CRAETE PROJECT -->
-                        <div class="row">
-                            <div class="col-md-4" id="create-project-form">
-                                <div class="panel">
-                                    <div class="panel-heading">
-                                        <h2>Create a new project</h2>
-                                    </div>
-            
-                                    <div class="panel-body">
-                                        <div class="form">
-                                            <form class="row" action="/project/createproject" method="POST">
-                                                <div class="form-group col-md-12">
-                                                    <label>Name</label>
-                                                    <input type="text" class="form-control"  placeholder="" name="title" required>
+				<div class="container-fluid">
+					<!-- RECENT PROJECTS -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Recent Projects</h3>
+								</div>
+                                <% if(recentprojects.length == 0 ){ %>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-heading">
+                                                    <h1 class="panel-title">No  New Projects Offered</h3>
                                                 </div>
-                                                <div class="form-group col-md-12" >
-                                                    <label>Number Of Openings</label>
-                                                    <input type="text" class="form-control" placeholder="" 
-                                                    name="no_openings" required>
-                                                </div>
-                                                <div class="form-group col-md-12">
-                                                    <label>Description</label>
-                                                    <input type="text" class="form-control" placeholder="" name="description" required>
-                                                </div>                                            
-                                                <div class="form-group col-md-12">
-                                                    <label>Pre Requisites </label>
-                                                    <input type="text" class="form-control" placeholder="" name="pre_requisites" required>
-                                                </div>
-                                                <div class="form-group col-md-12">
-                                                    <label>CPI Eligibility Criteria</label>
-                                                    <input type="text" class="form-control" placeholder="" name="eligibility" required>
-                                                </div>
-                                                <div class="form-group col-md-12">
-                                                    <label>Duration (In months)</label>
-                                                    <input type="text" class="form-control" placeholder="" name="duration" required>
-                                                </div>
-                                                <center><button type="submit" class="btn btn-primary mx-auto form-submit-btn"/>Submit</button></center>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
+            					<% }else{ %>
+
+                                    <div class="panel-body no-padding">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Title</th>
+                                                    <th>Professor</th>
+                                                    <th>Department</th>
+                                                    <th>Eligibility</th>                                                    
+                                                    <th>Description</th>
+                                                    <th>Published on</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                    <% for (var i = 0;i<recentprojects.length;i++) { %>
+                                        <tr>
+                                            <td><%= recentprojects[i].title %></td>
+                                            <td><%= recentprojects[i].professor.name %></td>
+                                            <td><%= recentprojects[i].professor.department %></td>
+                                            <td><%= recentprojects[i].eligibility %></td>
+                                            <td>
+                                                <% if(recentprojects[i].description.length <100){%>
+                                                    <%= recentprojects[i].description %>
+                                                <% }else{%>
+                                                   <%= recentprojects[i].description.slice(0,100) %>....
+                                                <% }%>
+                                            </td>
+                                            <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= recentprojects[i].createdAt.getDate()%> - <%= months[recentprojects[i].createdAt.getMonth()]%> - <%= recentprojects[i].createdAt.getFullYear()%></td>
+                                            <td><a>See more >></a></td>
+                                        </tr>
+                                    <% } %>                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                <% } %>     
+								<div class="panel-footer">
+									<div class="row">
+										<div class="col-md-6"><span class="panel-note"><i class="fa fa-clock-o"></i> Last 14 days</span></div>
+										<div class="col-md-6 text-right"><a href="projects.html" class="btn btn-primary">View All Projects</a></div>
+									</div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- CREATE PROJECT -->
-                    </div>
+							</div>
+						</div>
+					</div>
+					<!-- END RECENT PROJECTS -->
                 </div>
+
+                <!-- START ALL REQUESTS -->
+                <div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Your Requests</h3>
+                                </div>
+                                <% if(studentrequests.length == 0 ){ %>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel">
+                                                <div class="panel-heading">
+                                                    <h3 >You haven't made any requests.</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            					<% }else{ %>
+                                    <div class="panel">
+                                        <div class="panel-body no-padding">
+                                            <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                <th>Title</th>
+                                                <th>Professor</th>
+                                                <th>Department</th>
+                                                <th>Status</th>
+                                                <th>Applied On</th>
+                                                <th></th>
+                                                </tr>
+                                            </thead>
+                                             <% for (var i = 0;i<studentrequests.length;i++) { %>
+                                                <tbody>
+                                                    <tr>
+                                                    <td><%= studentrequests[i].project.title%></td>
+                                                    <td><%= studentrequests[i].professor.name%></td>
+                                                    <td><%= studentrequests[i].professor.department%></td>
+                                                    <td>
+                                                        <% if(studentrequests[i].status == true){ %>
+                                                        <span class="label label-success">Accepted</span>
+                                                        <%} else if (studentrequests[i].status == false) { %>
+                                                        <span class="label label-danger">Rejected</span>
+                                                        <% } else { %>
+                                                        <span class="label label-default">Pending..</span>
+                                                        <%}%>
+                                                    </td>
+                                                    <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= studentrequests[i].createdAt.getDate()%> - <%= months[studentrequests[i].createdAt.getMonth()]%> - <%= studentrequests[i].createdAt.getFullYear()%></td>
+                                                    <td><a>See more >></a></td>
+                                                    </tr>
+                                                </tbody>
+                                                </table>
+                                            <%}%>
+                                        </div>
+                                    </div>
+                                <%}%>
+							</div>
+						</div>
+					</div>
+                </div>
+                <!-- END ALL REQUESTS -->                
+			</div>
 			<!-- END MAIN CONTENT -->
 		</div>
 		<!-- END MAIN -->
