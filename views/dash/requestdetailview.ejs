@@ -104,44 +104,55 @@
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
 		<div class="main">
-			<!-- MAIN CONTENT -->
-			<br>
-			<div class="panel panel-headline">
-					<div class="panel-heading">
-						<h3 class="panel-title"><%=request.project.title%></h3>
-					</div>
-					<div class="panel-body">
-						<h4>Name:</h4> <%=request.student.name%> <h4>Dept:</h4> <%=request.student.department%><br>
+			<div class="main-content">
+				<div class="container-fluid">
+					<!-- MAIN CONTENT -->
+					<div class="panel panel-headline">
+							<div class="panel-heading">
+								<h3 class="panel-title"><%=request.project.title%></h3>
+							</div>
+							<div class="panel-body">
+								<table class="proj-data">
+									<tr>
+										<th>Name:</th>
+										<td><%=request.student.name%></td>
+									</tr>
+									<tr>
+										<th>Department:</th>
+										<td><%=request.student.department%></td>
+									</tr>
+									<tr>
+										<th>Status:</th>
+										<td>
+											<% if(request.status == true){ %>
+												<span class="label label-success">Accepted</span>
+											<%} else if (request.status == false) { %>
+												<span class="label label-danger">Rejected</span>
+											<% } else { %>
+												<span class="label label-default">Pending..</span>
+											<%}%>
+										</td>
+									</tr>
+								</table>
+								<br>
+								<p><strong>Request Description:</strong></p>
+								<p><%= request.description %></p><br>
+								<button type="button" class="btn btn-success"onclick="status('<%= request._id %>',true);">Accept</button>
+								<button type="button" class="btn btn-danger"onclick="status('<%= request._id %>',false);">Reject</button>
+							</div>
+						<div class="panel-footer text-right"><a href="../../project/<%=request.project._id%>"><button class ="btn btn-primary" style="margin-left: 20px;">Go back </button></a></div>
 
-						<h4> Remarks: </h4>
-						<%=request.description%>
+						</div>
+		
 					
-						<h4>Status:</h4>
-						<% if(request.status == true){ %>
-						<span class="label label-success">Accepted</span>
-						<%} else if (request.status == false) { %>
-						<span class="label label-danger">Rejected</span>
-						<% } else { %>
-						<span class="label label-default">Pending..</span>
-						<%}%>
-						<br>
-						<br>
-						<br>
-						<button type="button" class="btn btn-success"onclick="status('<%= request._id %>',true);">Accept</button>
-						<button type="button" class="btn btn-danger"onclick="status('<%= request._id %>',false);">Reject</button>
+		
+		
 					</div>
-				<a href="../../project/<%=request.project._id%>"><button class ="btn btn-primary" style="margin-left: 20px;">Go back </button>
-				<br>
-				&nbsp;
+		
+		
+					<!-- END MAIN CONTENT -->
 				</div>
-
-			
-
-
 			</div>
-
-
-			<!-- END MAIN CONTENT -->
 		</div>
 		<!-- END MAIN -->
 		<div class="clearfix"></div>
