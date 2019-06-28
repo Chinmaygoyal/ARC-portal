@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 
-
 const professorSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -17,8 +16,8 @@ const professorSchema = new mongoose.Schema({
     lowercase: true
   },
   department: {
-      type: String,
-      required: true
+    type: String,
+    required: true
   },
   isVerified: {
     type: Boolean,
@@ -28,7 +27,7 @@ const professorSchema = new mongoose.Schema({
   password: {
     type: String,
     // Password required only when email is verified
-    required: function () {
+    required: function() {
       return this.isVerified;
     },
     minlength: 8,
@@ -41,21 +40,39 @@ const professorSchema = new mongoose.Schema({
 });
 
 // Delete unverified accounts after 24 hrs
-professorSchema.index({ createdAt: 1 }, { expires: '24h' });
+// professorSchema.index({ createdAt: 1 }, { expires: '24h' });
 
 // Generate login auth token
-professorSchema.methods.generateAuthToken = function (options = { useMailKey: true }) {
-  const key = options.useMailKey ? config.get("mailTokenKey") : config.get("authTokenKey");
-  const jwtOptions = options.useMailKey ? { expiresIn: '30m' } : undefined;
-  const token = jwt.sign({ _id: this._id, department: this.department, email: this.email ,is_prof:true}, key, jwtOptions);
+professorSchema.methods.generateAuthToken = function(
+  options = { useMailKey: true }
+) {
+  const key = options.useMailKey
+    ? config.get("mailTokenKey")
+    : config.get("authTokenKey");
+  const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
+  const token = jwt.sign(
+    {
+      _id: this._id,
+      department: this.department,
+      email: this.email,
+      is_prof: true
+    },
+    key,
+    jwtOptions
+  );
   return token;
 };
 
 // Validate professor login info
 function validate(professorLoginInfo) {
   const schema = {
-    email: Joi.string().required().email(),
-    password: Joi.string().min(8).max(255).required()
+    email: Joi.string()
+      .required()
+      .email(),
+    password: Joi.string()
+      .min(8)
+      .max(255)
+      .required()
   };
   return Joi.validate(professorLoginInfo, schema);
 }
