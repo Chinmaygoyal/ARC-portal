@@ -1,146 +1,337 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Dashboard | Research Portal, IITK</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <!-- VENDOR CSS -->
+    <link
+      rel="stylesheet"
+      href="/dash/assets/vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/dash/assets/vendor/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/dash/assets/vendor/linearicons/style.css" />
+    <link
+      rel="stylesheet"
+      href="/dash/assets/vendor/chartist/css/chartist-custom.css"
+    />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/dash/assets/css/main.css" />
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"
+      rel="stylesheet"
+    />
+    <!-- ICONS -->
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/dash/assets/img/apple-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/dash/assets/img/favicon.png"
+    />
+  </head>
 
-<head>
-	<title>Dashboard | Research Portal, IITK</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<!-- VENDOR CSS -->
-	<link rel="stylesheet" href="/dash/assets/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/dash/assets/vendor/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/dash/assets/vendor/linearicons/style.css">
-	<link rel="stylesheet" href="/dash/assets/vendor/chartist/css/chartist-custom.css">
-	<!-- MAIN CSS -->
-	<link rel="stylesheet" href="/dash/assets/css/main.css">
-	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-	<!-- ICONS -->
-	<link rel="apple-touch-icon" sizes="76x76" href="/dash/assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/dash/assets/img/favicon.png">
-</head>
+  <body>
+    <!-- WRAPPER -->
+    <div id="wrapper">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="brand">
+          <a href="index.html"
+            ><img
+              src="/dash/assets/img/logo-dark.png"
+              alt="Klorofil Logo"
+              class="img-responsive logo"
+          /></a>
+        </div>
+        <div class="container-fluid">
+          <div class="navbar-btn">
+            <button type="button" class="btn-toggle-fullwidth">
+              <i class="lnr lnr-arrow-left-circle"></i>
+            </button>
+          </div>
+          <div id="navbar-menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a
+                  href="#"
+                  class="dropdown-toggle icon-menu"
+                  data-toggle="dropdown"
+                >
+                  <i class="lnr lnr-alarm"></i>
+                  <span class="badge bg-danger">5</span>
+                </a>
+                <ul class="dropdown-menu notifications">
+                  <li>
+                    <a href="#" class="notification-item"
+                      ><span class="dot bg-warning"></span>System space is
+                      almost full</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="notification-item"
+                      ><span class="dot bg-danger"></span>You have 9 unfinished
+                      tasks</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="notification-item"
+                      ><span class="dot bg-success"></span>Monthly report is
+                      available</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="notification-item"
+                      ><span class="dot bg-warning"></span>Weekly meeting in 1
+                      hour</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="notification-item"
+                      ><span class="dot bg-success"></span>Your request has been
+                      approved</a
+                    >
+                  </li>
+                  <li><a href="#" class="more">See all notifications</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                  ><i class="lnr lnr-link"></i> <span>Quick Links</span>
+                  <i class="icon-submenu lnr lnr-chevron-down"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://iitk.ac.in">IITK Home</a></li>
+                  <li><a href="https://iitk.ac.in/dosa">DOSA</a></li>
+                  <li><a href="https://iitk.ac.in/doaa">DOAA</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                  ><img
+                    src="/dash/assets/img/user.png"
+                    class="img-circle"
+                    alt="Avatar"/>
+                  <span>Samuel</span>
+                  <i class="icon-submenu lnr lnr-chevron-down"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="/home/"
+                      ><i class="lnr lnr-user"></i> <span>My Profile</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="/project"
+                      ><i class="lnr lnr-envelope"></i> <span>Message</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="lnr lnr-cog"></i> <span>Settings</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="lnr lnr-exit"></i> <span>Logout</span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- END NAVBAR -->
+      <!-- LEFT SIDEBAR -->
+      <div id="sidebar-nav" class="sidebar">
+        <div class="sidebar-scroll">
+          <nav>
+            <ul class="nav">
+              <li>
+                <a href="/home/" class="active"
+                  ><i class="lnr lnr-home"></i> <span>Dashboard</span></a
+                >
+              </li>
+              <li>
+                <a href="/project" class=""
+                  ><i class="lnr lnr-list"></i> <span>All Projects</span></a
+                >
+              </li>
+              <li>
+                <a href="/project/self" class=""
+                  ><i class="lnr lnr-pushpin"></i> <span>Your Projects</span></a
+                >
+              </li>
+              <li>
+                <a href="page-profile.html" class=""
+                  ><i class="lnr lnr-user"></i><span>Profile</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- END LEFT SIDEBAR -->
+      <!-- MAIN -->
+      <div class="main">
+        <div class="main-content">
+          <div class="container-fluid" id="notif-pos">
+            <!-- Success notification -->
+            <!-- <div class="alert alert-success alert-dismissible" role="alert">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <i class="fa fa-check-circle"></i> Project requested successfully
+            </div> -->
+            <!-- Already requested notification -->
+            <!-- <div class="alert alert-info alert-dismissible" role="alert">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <i class="fa fa-info-circle"></i> You have already requested this
+              project
+            </div> -->
+            <div class="panel">
+              <div class="panel-heading">
+                <h3><%= project.title %></h3>
+              </div>
 
-<body>
-	<!-- WRAPPER -->
-	<div id="wrapper">
-		<!-- NAVBAR -->
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="brand">
-				<a href="index.html"><img src="/dash/assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
-			</div>
-			<div class="container-fluid">
-				<div class="navbar-btn">
-					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
-				</div>
-				<div id="navbar-menu">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-								<i class="lnr lnr-alarm"></i>
-								<span class="badge bg-danger">5</span>
-							</a>
-							<ul class="dropdown-menu notifications">
-								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
-								<li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
-								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
-								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
-								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
-								<li><a href="#" class="more">See all notifications</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-link"></i> <span>Quick Links</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href="https://iitk.ac.in">IITK Home</a></li>
-								<li><a href="https://iitk.ac.in/dosa">DOSA</a></li>
-								<li><a href="https://iitk.ac.in/doaa">DOAA</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/dash/assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href="/home/"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-								<li><a href="/project"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
-								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
-								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- END NAVBAR -->
-		<!-- LEFT SIDEBAR -->
-		<div id="sidebar-nav" class="sidebar">
-			<div class="sidebar-scroll">
-				<nav>
-					<ul class="nav">
-						<li><a href="/home/" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="/project" class=""><i class="lnr lnr-list"></i> <span>All Projects</span></a></li>
-						<li><a href="/project/self" class=""><i class="lnr lnr-pushpin"></i> <span>Your Projects</span></a></li>
-						<li><a href="page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<!-- END LEFT SIDEBAR -->
-		<!-- MAIN -->
-                <div class="main">
-                        <div class="panel " style="margin-left:10px; padding-left:20px;">
-                        <div class ="panel-heading">
-                                    
-                                <h3> <%= project.title %></h3>
-                        </div>
-                                
-                                <h4>Prerequisites:</h4>
-                                
-                                    <%= project.pre_requisites %>
-                                <br>   
-                                
-                                    <h4>Eligibility:</h4>
-                                    <%= project.eligibility %>
-                                <br>  
-                                
-                                    <h4>Duration(in months):</h4>
-                                    <%= project.duration %>
-                                <br>    
-                                
-                                    <h4>Offered on:</h4>
-                                    <%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= project.createdAt.getDate()%> - <%= months[project.createdAt.getMonth()]%> - <%= project.createdAt.getFullYear()%>
-                                    
-                                <br>
-                                <h4> No. of Requests:</h4>
-                                    <%= project.no_requests %>             
-                        <div><strong>Description</strong></div>
-                        <p>
-                            <%= project.description %>
-                        </p>
-                    </div>
-                    <div class= "panel " style="padding-left: 10px;">
-                    <div class="panel-heading"><h4>Apply for this project</h4></div>
-                    <form method="POST" action="../../request/createrequests/<%= project._id%>">
-                        <textarea style="width: 25%; height: 100px;" name="description" placeholder= "Remarks.."></textarea>
-                        <br>
-                        <button type="submit" class="btn btn-success">Apply</button>
-                    </form>   
+              <div class="panel-body">
+                <table class="proj-data">
+                  <tr>
+                    <th>Prerequisites:</th>
+                    <td><%= project.pre_requisites %></td>
+                  </tr>
+                  <tr>
+                    <th>CPI Eligibility:</th>
+                    <td><%= project.eligibility %></td>
+                  </tr>
+                  <tr>
+                    <th>Duration:</th>
+                    <td><%= project.duration %> months</td>
+                  </tr>
+                  <tr>
+                    <th>Offered on:</th>
+                    <td><%= project.createdAt %></td>
+                  </tr>
+                </table>
+              </div>
+              <br />
+              <div class="panel-footer">
+                <p><%= project.description %></p>
+              </div>
+              <!-- <h4>Prerequisites:</h4>
 
+                <%= project.pre_requisites %>
+                <br />
 
-                    </div>	
-                </div>            	
-		<!-- END MAIN -->
-		<div class="clearfix"></div>
-		<footer>
-			<div class="container-fluid">
-				<p class="copyright">&copy; Academics and Career Council, IIT Kanpur</p>
-			</div>
-		</footer>
-	</div>
-	<!-- END WRAPPER -->
-	<!-- Javascript -->
-	<script src="/dash/assets/vendor/jquery/jquery.min.js"></script>
-	<script src="/dash/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="/dash/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="/dash/assets/scripts/klorofil-common.js"></script>
-</body>
+                <h4>Eligibility:</h4>
+                <%= project.eligibility %>
+                <br />
 
+                <h4>Duration(in months):</h4>
+                <%= project.duration %>
+                <br />
+
+                <h4>Offered on:</h4>
+                <%var months = ["January", "February", "March", "April", "May",
+                "June", "July", "August", "September", "October", "November",
+                "December"];%><%= project.createdAt.getDate()%> - <%=
+                months[project.createdAt.getMonth()]%> - <%=
+                project.createdAt.getFullYear()%>
+
+                <br />
+                <h4>No. of Requests:</h4>
+                <%= project.no_requests %>
+                <div><strong>Description</strong></div>
+                <p>
+                  <%= project.description %>
+                </p> -->
+            </div>
+            <div class="panel">
+              <div class="panel-heading">
+                <h3>Apply for this project</h3>
+              </div>
+              <div class="panel-body">
+                <form
+                  id="request-proj"
+                  method="POST"
+                  action="../../request/createrequests/<%= project._id%>"
+                >
+                  <textarea
+                    class="form-control"
+                    name="description"
+                    style="max-width: 500px; height: 150px;"
+                    placeholder="Enter your request description here"
+                  ></textarea>
+                  <br />
+                  <button type="submit" class="btn btn-success">Apply</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END MAIN -->
+      <div class="clearfix"></div>
+      <footer>
+        <div class="container-fluid">
+          <p class="copyright">
+            &copy; Academics and Career Council, IIT Kanpur
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- END WRAPPER -->
+    <!-- Javascript -->
+    <script src="/dash/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/dash/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/dash/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/dash/assets/scripts/klorofil-common.js"></script>
+    <script>
+      const successAlert = `<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><i class="fa fa-check-circle"></i> Project requested successfully</div>`;
+
+      const infoAlert = `<div class="alert alert-info alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><i class="fa fa-info-circle"></i> You have already requested this project</div>`;
+
+      const form = document.querySelector("#request-proj");
+      const container = document.querySelector("#notif-pos");
+
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        $.ajax({
+          url: "../../request/createrequests/<%= project._id%>",
+          method: "POST",
+          success: (data, status, xhr) => {
+            $(container).prepend(successAlert);
+          },
+          error: xhr => {
+            $(container).prepend(infoAlert);
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

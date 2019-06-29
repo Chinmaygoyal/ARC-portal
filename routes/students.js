@@ -31,7 +31,9 @@ router.post("/register", async (req, res) => {
         mailer.sendVerificationMail(
           email,
           "Verify your email ID",
-          `${config.get("domain")}/verify.html?token=${token}`
+          `${process.env.domain}:${config.get(
+            "PORT"
+          )}/verify.html?token=${token}`
         );
         res.status(200).send("Verification mail sent");
       } catch (ex) {
@@ -64,7 +66,7 @@ router.post("/register", async (req, res) => {
       mailer.sendVerificationMail(
         email,
         "Verify your email ID",
-        `${config.get("domain")}/verify.html?token=${token}`
+        `${process.env.domain}:${config.get("PORT")}/verify.html?token=${token}`
       );
       res.status(200).send("Verification mail sent");
     } catch (ex) {

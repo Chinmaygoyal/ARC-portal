@@ -96,124 +96,113 @@
 								<div class="panel-heading">
 									<h3 class="panel-title">Recent Projects</h3>
 								</div>
-                                <% if(recentprojects.length == 0 ){ %>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="panel">
-                                                <div class="panel-heading">
-                                                    <h1 class="panel-title">No  New Projects Offered</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            					<% }else{ %>
-
-                                    <div class="panel-body no-padding">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Title</th>
-                                                    <th>Professor</th>
-                                                    <th>Department</th>
-                                                    <th>Eligibility</th>                                                    
-                                                    <th>Description</th>
-                                                    <th>Published on</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                    <% for (var i = 0;i<recentprojects.length;i++) { %>
-                                        <tr>
-                                            <td><%= recentprojects[i].title %></td>
-                                            <td><%= recentprojects[i].professor.name %></td>
-                                            <td><%= recentprojects[i].professor.department %></td>
-                                            <td><%= recentprojects[i].eligibility %></td>
-                                            <td>
-                                                <% if(recentprojects[i].description.length <100){%>
-                                                    <%= recentprojects[i].description %>
-                                                <% }else{%>
-                                                   <%= recentprojects[i].description.slice(0,100) %>....
-                                                <% }%>
-                                            </td>
-                                            <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= recentprojects[i].createdAt.getDate()%> - <%= months[recentprojects[i].createdAt.getMonth()]%> - <%= recentprojects[i].createdAt.getFullYear()%></td>
-                                            <td><a href = "../project/view/<%=recentprojects[i]._id%>">See more >></a></td>
-                                        </tr>
-                                    <% } %>                
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                <% } %>     
+                <% if(recentprojects.length == 0 ){ %>
+									<!-- <div class="panel"> -->
+											<div class="panel-heading">
+													<h1 class="panel-title">No  New Projects Offered</h3>
+											</div>
+									<!-- </div> -->
+            		<% }else{ %>
+									<div class="panel-body no-padding">
+										<table class="table table-striped">
+											<thead>
+												<tr>
+														<th>Title</th>
+														<th>Professor</th>
+														<th>Department</th>
+														<th>Eligibility</th>                                                    
+														<th>Description</th>
+														<th>Published on</th>
+														<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<% for (var i = 0;i<recentprojects.length;i++) { %>
+													<tr>
+														<td><%= recentprojects[i].title %></td>
+														<td><%= recentprojects[i].professor.name %></td>
+														<td><%= recentprojects[i].professor.department %></td>
+														<td><%= recentprojects[i].eligibility %></td>
+														<td>
+																<% if(recentprojects[i].description.length <100){%>
+																		<%= recentprojects[i].description %>
+																<% }else{%>
+																		<%= recentprojects[i].description.slice(0,100) %>....
+																<% }%>
+														</td>
+														<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= recentprojects[i].createdAt.getDate()%> - <%= months[recentprojects[i].createdAt.getMonth()]%> - <%= recentprojects[i].createdAt.getFullYear()%></td>
+														<td><a href = "../project/view/<%=recentprojects[i]._id%>">See more >></a></td>
+													</tr>
+												<% } %>                
+											</tbody>
+										</table>
+									</div>
+								<% } %>     
 								<div class="panel-footer">
 									<div class="row">
-										<div class="col-md-6"><span class="panel-note"><i class="fa fa-clock-o"></i> Last 14 days</span></div>
-										<div class="col-md-6 text-right"><a href="../project" class="btn btn-primary">View All Projects</a></div>
+										<div class="col-md-6">
+											<span class="panel-note"><i class="fa fa-clock-o"></i>Last 14 days</span>
+										</div>
+										<div class="col-md-6 text-right">
+											<a href="../project" class="btn btn-primary">View All Projects</a>
+										</div>
 									</div>
-                                </div>
+                </div>
 							</div>
 						</div>
 					</div>
 					<!-- END RECENT PROJECTS -->
-                </div>
-
-                <!-- START ALL REQUESTS -->
-                <div class="container-fluid">
-					<div class="row">
-						<div class="col-md-12">
+				</div>
+				<!-- START ALL REQUESTS -->
+				<div class="container-fluid">
 							<div class="panel">
 								<div class="panel-heading">
 									<h3 class="panel-title">Your Requests</h3>
-                                </div>
-                                <% if(studentrequests.length == 0 ){ %>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="panel">
-                                                <div class="panel-heading">
-                                                    <h3 >You haven't made any requests.</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-            					<% }else{ %>
-                                    <div class="panel">
-                                        <div class="panel-body no-padding">
-                                            <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                <th>Title</th>
-                                                <th>Professor</th>
-                                                <th>Department</th>
-                                                <th>Status</th>
-                                                <th>Applied On</th>
-                                                <th></th>
-                                                </tr>
-                                            </thead>
-                                             <% for (var i = 0;i<studentrequests.length;i++) { %>
-                                                <tbody>
-                                                    <tr>
-                                                    <td><%= studentrequests[i].project.title%></td>
-                                                    <td><%= studentrequests[i].professor.name%></td>
-                                                    <td><%= studentrequests[i].professor.department%></td>
-                                                    <td>
-                                                        <% if(studentrequests[i].status == true){ %>
-                                                        <span class="label label-success">Accepted</span>
-                                                        <%} else if (studentrequests[i].status == false) { %>
-                                                        <span class="label label-danger">Rejected</span>
-                                                        <% } else { %>
-                                                        <span class="label label-default">Pending..</span>
-                                                        <%}%>
-                                                    </td>
-                                                    <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= studentrequests[i].createdAt.getDate()%> - <%= months[studentrequests[i].createdAt.getMonth()]%> - <%= studentrequests[i].createdAt.getFullYear()%></td>
-                                                    <td><a href="../request/<%=studentrequests[i]._id%>">See more >></a></td>
-                                                    </tr>
-                                                </tbody>
-                                                </table>
-                                            <%}%>
-                                        </div>
-                                    </div>
-                                <%}%>
-							</div>
-						</div>
-					</div>
+								</div>
+								<% if(studentrequests.length == 0 ){ %>
+									<div class="panel-body">
+										<h3 >You haven't made any requests.</h3>
+									</div>
+								<% }else{ %>
+									
+										<div class="panel-body no-padding">
+											<table class="table table-striped">
+												<thead>
+													<tr>
+														<th>Title</th>
+														<th>Professor</th>
+														<th>Department</th>
+														<th>Status</th>
+														<th>Applied On</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													<% for (var i = 0;i<studentrequests.length;i++) { %>
+														<tr>
+															<td><%= studentrequests[i].project.title%></td>
+															<td><%= studentrequests[i].professor.name%></td>
+															<td><%= studentrequests[i].professor.department%></td>
+															<td>
+																	<% if(studentrequests[i].status == true){ %>
+																	<span class="label label-success">Accepted</span>
+																	<%} else if (studentrequests[i].status == false) { %>
+																	<span class="label label-danger">Rejected</span>
+																	<% } else { %>
+																	<span class="label label-default">Pending..</span>
+																	<%}%>
+															</td>
+															<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= studentrequests[i].createdAt.getDate()%> - <%= months[studentrequests[i].createdAt.getMonth()]%> - <%= studentrequests[i].createdAt.getFullYear()%></td>
+															<td><a href="../request/<%=studentrequests[i]._id%>">See more >></a></td>
+														</tr>
+													<%}%>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								<%}%>
+							
+					
                 </div>
                 <!-- END ALL REQUESTS -->                
 			</div>

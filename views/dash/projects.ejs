@@ -88,10 +88,10 @@
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
-					<div class="row">
-						<div class="prj-filter">
-							<div class="col-md-6">	
-									<select class="form-control">
+					<div class="prj-filter">
+						<div class="row">
+							<div class="col-md-4">
+									<select class="form-control" id="dept-select">
 										<option value="all" selected>All departments</option>
 										<option value="cse">Computer Science and Engineering</option>
 										<option value="ee">Electrical Engineering</option>
@@ -103,13 +103,6 @@
 										<option value="che">Chemical Engineering</option>
 										<option value="chm">Chemistry</option>
 										<option value="phy">Physics</option>
-									</select>
-							</div>
-							<div class="col-md-6">
-									<select class="form-control">
-										<option value="all">All</option>
-										<option value="open">Open</option>
-										<option value="closed">Closed</option>
 									</select>
 							</div>
 						</div>
@@ -126,7 +119,7 @@
 											<div class="col-md-12">
 												<div class="panel">
 													<div class="panel-heading">
-														<h1 class="panel-title">No Projects Offered</h3>
+														<h1 class="panel-title">No Projects Offered</h1>
 													</div>
 												</div>
 											</div>
@@ -147,7 +140,7 @@
 												</thead>
 												<tbody>
 										<% for (var i = 0;i<projects.length;i++) { %>
-											<tr>
+											<tr class="prj-row">
 												<td><%= projects[i].title %></td>
 												<td><%= projects[i].professor.name %></td>
 												<td><%= projects[i].professor.department %></td>
@@ -165,6 +158,9 @@
 										<% } %>                
 												</tbody>
 											</table>
+											<div class="text-center tbl-empty">
+												<h4>No project found</h4>
+											</div>
 										</div>
 									<% } %> 
 								</div>
@@ -185,6 +181,24 @@
 	</div>
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
+	<script>
+		const projectRows = document.querySelectorAll(".prj-row");
+		const filter = document.querySelector("#dept-select");
+		const tblEmpty = document.querySelector(".tbl-empty");
+		filter.addEventListener('change', function(){
+			const dept = this.value;
+			let nonEmpty = false;
+			projectRows.forEach(row => {
+				if (dept === 'all' || row.children[2].innerHTML === dept.toUpperCase()) {
+					row.style.display = '';
+					nonEmpty = true;
+				}
+				else row.style.display = 'none';
+			})
+			if (nonEmpty) tblEmpty.style.display = 'none';
+			else tblEmpty.style.display = 'block';
+		})
+	</script>
 	<script src="/dash/assets/vendor/jquery/jquery.min.js"></script>
 	<script src="/dash/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/dash/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>

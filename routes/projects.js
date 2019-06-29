@@ -5,7 +5,6 @@ const { Professor } = require("../models/professor");
 const { isProf, isStudent } = require("../middleware/userCheck");
 const { Request } = require("../models/request");
 
-
 // STUDENT SIDE: See all projects
 router.get("/", tokenAuth, isStudent, async (req, res) => {
   try {
@@ -52,7 +51,7 @@ router.get("/view/:id", tokenAuth, isStudent, async (req, res) => {
   try {
     const project = await Project.findOne({ _id: req.params.id });
     if (!project) return res.status(404).send("Project not found");
-    res.render('dash/studentprojectview',{project:project});
+    res.render("dash/studentprojectview", { project: project });
   } catch (err) {
     res.status(500).send("Internal server error");
     console.log(err.message);
@@ -99,13 +98,12 @@ router.get("/:id", tokenAuth, isProf, async (req, res) => {
   const id = req.params.id;
 
   const project = await Project.findById(id);
-  const requests = await Request.find({project:project}).populate("student", "name department rollNumber");
-  
-  console.log(requests);
-  res.render("dash/projectpage",{project:project,requests:requests});
-});
-router.get("/user/logout", tokenAuth, async (req, res) => {
-  cookies.set('auth_token', {expires: Date.now()});
+  const requests = await Request.find({ project: project }).populate(
+    "student",
+    "name department rollNumber"
+  );
+
+  res.render("dash/projectpage", { project: project, requests: requests });
 });
 
 module.exports = router;

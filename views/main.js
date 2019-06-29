@@ -1,4 +1,3 @@
-console.log("Working");
 // SLIDER CODE
 const container = document.getElementById("container");
 const fpButtons = document.querySelectorAll(".fp");
@@ -22,13 +21,13 @@ const signupForm = document.querySelector("#signup-form");
 signinForm.addEventListener("submit", function(e) {
   e.preventDefault();
   $.ajax({
-    url: "http://localhost:3000/auth/student/login",
+    url: "/auth/student/login",
     method: "POST",
     data: $(this).serialize(),
     success: (data, status, jqXHR) => {
       // Save token cookie and redirect to dash
       Cookies.set("x-auth-token", jqXHR.getResponseHeader("x-auth-token"));
-      document.location.replace("http://localhost:3000/home");
+      document.location.replace("/home");
     },
     error: jqXHR => alert(jqXHR.responseText)
   });
@@ -37,7 +36,7 @@ signinForm.addEventListener("submit", function(e) {
 signupForm.addEventListener("submit", function(e) {
   e.preventDefault();
   $.ajax({
-    url: "http://localhost:3000/auth/student/register",
+    url: "/auth/student/register",
     method: "POST",
     data: $(this).serialize(),
     success: (data, status, jqXHR) => {
