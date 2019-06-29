@@ -78,11 +78,6 @@ router.get("/createproject", tokenAuth, isProf, async (req, res) => {
 
 // Create new professor (FOR DEV ONLY)
 router.post("/createprofessor", async (req, res) => {
-  console.log("hh");
-  const name = req.body.name;
-  const email = req.body.email;
-  const department = req.body.department;
-  console.log(name, email, department);
   try {
     const prof = new Professor(req.body);
     await prof.save();
