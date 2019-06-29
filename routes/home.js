@@ -5,7 +5,8 @@ const tokenAuth = require("../middleware/tokenAuth");
 const { isStudent } = require("../middleware/userCheck");
 const { Student } = require("../models/student");
 const { Professor } = require("../models/professor");
-
+var request=require('request');
+var https = require('https');
 // STUDENT SIDE: Get student's requests
 router.get("/student", tokenAuth, isStudent, async (req, res) => {
   var student = await Student.findOne({ _id: req.user._id });
@@ -44,5 +45,41 @@ router.get("/", tokenAuth, async (req, res) => {
     }
   }
 });
+//LOGOUT
+router.get("/user/logout", tokenAuth, async (req, res) => {
+  console.log(res.headers);
+  res.render('dash/logout');
+});
+
+//TESTING... PCLUB SEARCH ROUTE
+router.get("/STUDENTDATA/",async(req,res) => {
+  
+  var agent;
+  agentOptions = {
+    host: 'search.pclub.in'
+  , port: '443'
+  , path: '/'
+  , rejectUnauthorized: false
+  };
+  
+  agent = new https.Agent(agentOptions);
+  var data;
+  await request({
+    url: "https://search.pclub.in/api/students"
+  , method: 'GET'
+  , agent: agent
+  }, function (err, resp, body) {
+  console.log(typeof(body));
+    
+
+
+
+    
+});
+
+
+
+});
+
 
 module.exports = router;

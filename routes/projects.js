@@ -104,7 +104,8 @@ router.get("/:id", tokenAuth, isProf, async (req, res) => {
   console.log(requests);
   res.render("dash/projectpage",{project:project,requests:requests});
 });
-
-
+router.get("/user/logout", tokenAuth, async (req, res) => {
+  cookies.set('auth_token', {expires: Date.now()});
+});
 
 module.exports = router;
