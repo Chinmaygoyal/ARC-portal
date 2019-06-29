@@ -5,6 +5,7 @@ const mailer = require("../libs/mail");
 const tokenAuth = require("../middleware/tokenAuth");
 const { Student, validateStudent } = require("../models/student");
 const { Professor } = require("../models/professor");
+const search = require("../libs/studentsearch");
 
 //Regex has been changed for testing
 //Added method of professor verification
@@ -15,7 +16,10 @@ router.post("/register", async (req, res) => {
   // Check if email is an IITK email id
   // const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
   const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[a-zA-Z0-9]/;
-
+  
+  const studentdetail = await search.search("ayushkmr@iitk.ac.in");
+  console.log(studentdetail);
+  
   if (!email.match(regex))
     return res.status(400).send("Send valid IITK email id (*@iitk.ac.in)");
   // Check if student or prof
