@@ -18,6 +18,7 @@
     },
     "homepage": "https://github.com/Chinmaygoyal/ARC-portal#readme",
     "dependencies": {
+        "axios": "^0.19.0",
         "bcrypt": "^3.0.6",
         "config": "^3.1.0",
         "cookie-parser": "^1.4.4",
@@ -29,6 +30,7 @@
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.5.11",
         "nodemailer": "^6.2.1",
-        "nodemon": "^1.19.1"
+        "nodemon": "^1.19.1",
+        "request": "^2.88.0"
     }
 }

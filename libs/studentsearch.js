@@ -1,34 +1,19 @@
-var https = require('https');
-var request=require('request');
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+const axios = require("axios");
+const fs = require("fs");
+const data = require("../config/student.json");
 
-function search(email){
-var username = email.split("@")[0];
-    var agent;
-    agentOptions = {
-      host: 'search.pclub.in'
-    , port: '443'
-    , path: '/'
-    , rejectUnauthorized: false
-    };
-    agent = new https.Agent(agentOptions);
-      request({
-      url: "https://search.pclub.in/api/students"
-    , method: 'GET'
-    , agent: agent
-    }, function (err, resp, body) {
-    var bodyjson = JSON.parse(body);
-    var filteredObj = bodyjson.find(function(item, i){
-      if(item.u == username){
-        index = i;
-        return i;
-      }
-        });
-    
-    return filteredObj;   
-        
-        
-
-        
+async function updateStudentData() {
+  const { data } = await axios.get("https://search.pclub.in/api/students");
+  fs.writeFileSync("../config/student.json", JSON.stringify(data), {
+    flag: "w"
   });
 }
-exports.search = search;
+
+function getData(email) {
+  const username = email.split("@")[0];
+  const studentData = data.find(student => student.u === username);
+  return studentData;
+}
+
+module.exports = getData;
