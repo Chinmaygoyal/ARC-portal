@@ -115,14 +115,8 @@
 										<h3 class="panel-title">All Projects</h3>
 									</div>
 									<% if(projects.length == 0 ){ %>
-										<div class="row">
-											<div class="col-md-12">
-												<div class="panel">
-													<div class="panel-heading">
-														<h1 class="panel-title">No Projects Offered</h1>
-													</div>
-												</div>
-											</div>
+										<div class="panel-heading">
+											<h1 class="panel-title">No Projects Offered</h1>
 										</div>
 									<% }else{ %>
 										<div class="panel-body no-padding">
@@ -153,7 +147,7 @@
 													<% }%>
 												</td>
 												<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
-												<td><a href = "../project/view/<%=projects[i]._id%>">See more >></a></td>
+												<td><a href = "../project/view/<%=projects[i]._id%>"><i class="fa fa-chevron-circle-right see-more"></i></a></td>
 											</tr>
 										<% } %>                
 												</tbody>
