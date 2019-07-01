@@ -45,7 +45,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="/dash/assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="/home/"><img src="/dash/assets/img/logo-dark.png" alt="AnC Logo" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -122,6 +122,10 @@
 										<td><%=request.student.department%></td>
 									</tr>
 									<tr>
+										<th>Email:</th>
+										<td><%=request.student.email%></td>
+									</tr>
+									<tr>
 										<th>Status:</th>
 										<td>
 											<% if(request.status == true){ %>
@@ -135,8 +139,11 @@
 									</tr>
 								</table>
 								<br>
-								<p><strong>Request Description:</strong></p>
-								<p><%= request.description %></p><br>
+								<% if(request.description){ %>
+									<p><strong>Request Description:</strong></p>
+									<p><%= request.description %></p>
+								<%}%>
+								<br>
 								<button type="button" class="btn btn-success"onclick="status('<%= request._id %>',true);">Accept</button>
 								<button type="button" class="btn btn-danger"onclick="status('<%= request._id %>',false);">Reject</button>
 							</div>

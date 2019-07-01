@@ -179,12 +179,16 @@
                       <td><%=project.eligibility%></td>
                     </tr>
                     <tr>
-                      <th>Duration:</th>
-                      <td><%=project.duration%>&nbsp;months</td>
+                      <th>Duration (in months):</th>
+                      <td><%=project.duration%></td>
                     </tr>
                     <tr>
                       <th>Offered on:</th>
                       <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= project.createdAt.getDate()%> - <%= months[project.createdAt.getMonth()]%> - <%= project.createdAt.getFullYear()%></td>
+                    </tr>
+                    <tr>
+                      <th>Number of Openings:</th>
+                      <td><%=project.no_openings%></td>
                     </tr>
                     <tr>
                       <th>Status:</th>

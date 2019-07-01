@@ -17,7 +17,7 @@ router.get("/view/:id", tokenAuth, isProf, async (req, res) => {
   try {
     const request = await Request.findById(req.params.id)
       .populate("project", "title")
-      .populate("student", "name department");
+      .populate("student", "name department email");
     res.render("dash/requestdetailview", { request: request });
   } catch (error) {
     res.status(404).send("Request not found");
@@ -60,7 +60,6 @@ router.post("/createrequests/:id", tokenAuth, isStudent, async (req, res) => {
   const student = await Student.findOne({ _id: req.user._id });
   const project = await Project.findById(req.params.id);
   if (!project) return res.status(404).send("No project found");
-  if(!project.available) return res.status(400).send("You cannot request this project.");
   // Check if request already exists
   const request = await Request.findOne({ project: project, student: student });
   if (request) return res.status(400).send("Already requested");
