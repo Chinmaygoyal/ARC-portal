@@ -84,7 +84,7 @@ router.post("/createprofessor", async (req, res) => {
     res.send(prof);
   } catch (err) {
     res.send("Please fill the complete information");
-    console.log(err.message);
+    console.log(req.body);
   }
 });
 

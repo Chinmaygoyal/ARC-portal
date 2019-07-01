@@ -16,4 +16,4 @@ function getData(email) {
   return studentData;
 }
 
-module.exports = getData;
+exports.getData = getData;

@@ -17,8 +17,8 @@ router.post("/register", async (req, res) => {
   // const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
   const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[a-zA-Z0-9]/;
   
-  const studentdetail = await search.search("ayushkmr@iitk.ac.in");
-  console.log(studentdetail);
+  const studentdetail = await search.getData("ayushkmr@iitk.ac.in");
+  //console.log(studentdetail);
   
   if (!email.match(regex))
     return res.status(400).send("Send valid IITK email id (*@iitk.ac.in)");
@@ -63,6 +63,18 @@ router.post("/register", async (req, res) => {
       department: "ABC",
       isVerified: false
     });
+
+    //if student data available push it into student    
+    
+    if(studentdetail)
+    {
+        student.set({
+        name: studentdetail.n,
+        rollNumber: studentdetail.i,
+        email: email,
+        department: studentdetail.d,
+      });
+    }
     // Save the student, send verification mail
     try {
       await student.save();
