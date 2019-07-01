@@ -23,7 +23,8 @@ router.get("/", tokenAuth, async (req, res) => {
     try {
       const date = Date.now() - 15 * 24 * 60 * 60 * 1000; // 15 days
       const recentprojects = await Project.find({
-        createdAt: { $gte: date }
+        createdAt: { $gte: date },
+        available: true,
       }).populate("professor", "name department");
       const studentrequests = await Request.find({ student: req.user._id })
         .populate("professor", "name department")

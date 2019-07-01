@@ -17,6 +17,20 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="/dash/assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/dash/assets/img/favicon.png">
+  <script>
+		  var xhttp = new XMLHttpRequest();
+		  function status(id,val){
+		  xhttp.open("POST", "/project/view/professor/", true);
+		  
+		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		  xhttp.onreadystatechange = function () {
+			  if (xhttp.readyState == 4 && xhttp.status == 200){
+				  window.location.reload();
+			  }
+		  }
+		  xhttp.send("id"+ "="+id+"&"+ "status="+val);
+		  }
+	</script>
 </head>
 
   <body>
@@ -25,12 +39,7 @@
       <!-- NAVBAR -->
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="brand">
-          <a href="index.html"
-            ><img
-              src="assets/img/logo-dark.png"
-              alt="Klorofil Logo"
-              class="img-responsive logo"
-          /></a>
+          <a href="/home/"><img src="/dash/assets/img/logo-dark.png" alt="AnC Logo" class="img-responsive logo"></a>
         </div>
         <div class="container-fluid">
           <div class="navbar-btn">
@@ -77,8 +86,7 @@
                   <li>
                     <a href="#" class="notification-item"
                       ><span class="dot bg-success"></span>Your request has been
-                      approved</a
-                    >
+                      approved</a>
                   </li>
                   <li><a href="#" class="more">See all notifications</a></li>
                 </ul>
@@ -137,19 +145,13 @@
           <nav>
             <ul class="nav">
               <li>
-                <a href="../home/" class="active"
-                  ><i class="lnr lnr-home"></i> <span>Dashboard</span></a
-                >
+                <a href="../home/" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a>
               </li>
               <li>
-                <a href="projects.html" class=""
-                  ><i class="lnr lnr-list"></i> <span>New Project</span></a
-                >
+                <a href="projects.html" class=""><i class="lnr lnr-list"></i> <span>New Project</span></a>
               </li>
               <li>
-                <a href="page-profile.html" class=""
-                  ><i class="lnr lnr-user"></i><span>Profile</span></a
-                >
+                <a href="page-profile.html" class=""><i class="lnr lnr-user"></i><span>Profile</span></a>
               </li>
             </ul>
           </nav>
@@ -177,27 +179,46 @@
                       <td><%=project.eligibility%></td>
                     </tr>
                     <tr>
-                      <th>Duration:</th>
-                      <td><%=project.duration%>&nbsp;months</td>
+                      <th>Duration (in months):</th>
+                      <td><%=project.duration%></td>
                     </tr>
                     <tr>
                       <th>Offered on:</th>
-                      <td><%=project.createdAt%></td>
+                      <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= project.createdAt.getDate()%> - <%= months[project.createdAt.getMonth()]%> - <%= project.createdAt.getFullYear()%></td>
+                    </tr>
+                    <tr>
+                      <th>Number of Openings:</th>
+                      <td><%=project.no_openings%></td>
+                    </tr>
+                    <tr>
+                      <th>Status:</th>
+                      <td>
+                        <% if (project.available){%>
+                          <span class="label label-success">Open</span>
+                        <% }else{%>
+                          <span class="label label-danger">Close  </span>
+                        <% }%>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
                 <br />
+                <% if (project.available){%>
+  								<button type="button" class="btn btn-danger"onclick="status('<%= project._id %>',false);">Close</button>
+                <% }else{%>
+                  <button type="button" class="btn btn-success"onclick="status('<%= project._id %>',true);">Open</button>
+                <% }%>
               </div>
             </div>
             <ul class="nav nav-pills" id="tablist">
               <li role="presentation" class="active">
-                <a href="#">Waiting</a>
+                <a href="#">Waiting <strong>(<%=requests.filter(request => request.status == null).length%>)</strong></a>
               </li>
               <li role="presentation">
-                <a href="#">Accepted</a>
+                <a href="#">Accepted <strong>(<%=requests.filter(request => request.status == true).length%>)</strong></a>
               </li>
               <li role="presentation">
-                <a href="#">Rejected</a>
+                <a href="#">Rejected <strong>(<%=requests.filter(request => request.status == false).length%>)</strong></a>
               </li>
             </ul>
             <br />

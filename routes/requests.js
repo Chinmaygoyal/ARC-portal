@@ -17,7 +17,7 @@ router.get("/view/:id", tokenAuth, isProf, async (req, res) => {
   try {
     const request = await Request.findById(req.params.id)
       .populate("project", "title")
-      .populate("student", "name department");
+      .populate("student", "name department email");
     res.render("dash/requestdetailview", { request: request });
   } catch (error) {
     res.status(404).send("Request not found");

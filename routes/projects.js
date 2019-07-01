@@ -8,7 +8,7 @@ const { Request } = require("../models/request");
 // STUDENT SIDE: See all projects
 router.get("/", tokenAuth, isStudent, async (req, res) => {
   try {
-    const projects = await Project.find().populate(
+    const projects = await Project.find({ available: true}).populate(
       "professor",
       "name department"
     );
@@ -51,6 +51,7 @@ router.get("/view/:id", tokenAuth, isStudent, async (req, res) => {
   try {
     const project = await Project.findOne({ _id: req.params.id });
     if (!project) return res.status(404).send("Project not found");
+    if(!project.available) return res.status(400).send("You cannot request this project.");
     res.render("dash/studentprojectview", { project: project });
   } catch (err) {
     res.status(500).send("Internal server error");
@@ -100,5 +101,22 @@ router.get("/:id", tokenAuth, isProf, async (req, res) => {
 
   res.render("dash/projectpage", { project: project, requests: requests });
 });
+
+// PROF SIDE: Open or close project
+router.post("/view/professor/", tokenAuth, isProf, async (req, res) => {
+  try{
+    const project = await Project.findById(req.body.id);
+  const result = req.body.status;
+  // If no such project found
+  if (!project) res.status(404).send("No project found");
+  // Set project status as indicated by req.body.status
+  project.set({ available: result });
+  await project.save();
+  res.end();
+  }catch(err){
+    console.log(err.message);
+  }
+});
+
 
 module.exports = router;
