@@ -5,8 +5,9 @@ const tokenAuth = require("../middleware/tokenAuth");
 const { isStudent } = require("../middleware/userCheck");
 const { Student } = require("../models/student");
 const { Professor } = require("../models/professor");
-var request=require('request');
-var https = require('https');
+const multer = require('multer');
+
+
 // STUDENT SIDE: Get student's requests
 router.get("/student", tokenAuth, isStudent, async (req, res) => {
   var student = await Student.findOne({ _id: req.user._id });
@@ -47,39 +48,29 @@ router.get("/", tokenAuth, async (req, res) => {
 });
 //LOGOUT
 router.get("/user/logout", tokenAuth, async (req, res) => {
-  console.log(res.headers);
   res.render('dash/logout');
 });
 
-//TESTING... PCLUB SEARCH ROUTE
-router.get("/STUDENTDATA/",async(req,res) => {
+// STudent profile route
+router.get("/student/profile",tokenAuth,async(req,res) => {
+  var student = await Student.findOne({ _id: req.user._id });
+  res.render("dash/studentprofile",{student:student});
+});
+// STudent profile resume upload route
+router.post("/student/profile",tokenAuth, async(req,res) => {
+  const storage = require('multer-gridfs-storage')({
+    url: 'mongodb+srv://new_user1:Arciitk@arcportal-z5xml.mongodb.net/test?retryWrites=true&w=majority/database'
+ });
   
-  var agent;
-  agentOptions = {
-    host: 'search.pclub.in'
-  , port: '443'
-  , path: '/'
-  , rejectUnauthorized: false
-  };
-  
-  agent = new https.Agent(agentOptions);
-  var data;
-  await request({
-    url: "https://search.pclub.in/api/students"
-  , method: 'GET'
-  , agent: agent
-  }, function (err, resp, body) {
-  console.log(typeof(body));
-    
-
-
-
-    
+  var upload = multer({ storage : storage }).array('resume',1);
+  upload(req,res,function(err) {
+    if(err) {
+        return console.log(err.message);
+    }
+    res.send("File is uploaded");
+});
 });
 
-
-
-});
 
 
 module.exports = router;

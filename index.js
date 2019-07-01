@@ -10,6 +10,7 @@ const app = express();
 const projectRouter = require("./routes/projects");
 const homeRouter = require("./routes/home");
 const requestRouter = require("./routes/requests");
+const bodyParser = require("body-parser");
 
 // Set host IP address environment variable
 process.env.domain = `http://${ip.address()}`;
@@ -24,6 +25,7 @@ app.use("/token", tokenRouter);
 app.use("/project", projectRouter);
 app.use("/home", homeRouter);
 app.use("/request", requestRouter);
+app.use(bodyParser.json());
 // 404 route
 app.use((req, res) => {
   res.status(404).sendFile("/views/dash/404.html", { root: __dirname });
