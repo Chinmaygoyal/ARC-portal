@@ -29,6 +29,7 @@
         "joi": "^14.3.1",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.5.11",
+        "multer": "^1.4.1",
         "nodemailer": "^6.2.1",
         "nodemon": "^1.19.1"
     }
