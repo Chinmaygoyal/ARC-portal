@@ -1,15 +1,8 @@
 <head>
 <script>
 document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
-setTimeout(() => {
- window.location.replace("../../");   
-}, 3000);
+window.location.replace("../../");
 </script>
 </head>
 <body>
-<div>
-<h4>You have been Logged out successfully.
-You will be redirected in few seconds to login page.
-</h4>
-</div>
 </body>

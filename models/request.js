@@ -23,6 +23,7 @@ const requestSchema = new mongoose.Schema({
   },
   description: {
     type: String,
+    default: "",
     maxlength: 500
   }
 });
