@@ -5,7 +5,7 @@ const { Project } = require("../models/project");
 const tokenAuth = require("../middleware/tokenAuth");
 const { isProf, isStudent } = require("../middleware/userCheck");
 const router = require("express").Router();
-
+const mail = require('../libs/mail');
 router.get("/view/professor", tokenAuth, isProf, async (req, res) => {
   var prof_user = await Professor.findOne({ _id: req.user._id });
   const prof_request = await Request.find({ professor: prof_user });
@@ -37,16 +37,23 @@ router.post("/view/professor/", tokenAuth, isProf, async (req, res) => {
   const project = await Project.findById(request.project._id);
   if (!project) return res.status(404).send("Project not found");
   // Get the student
-  const student = request.student;
+  const student = await Student.findById(request.student._id);
   if (!student)
     return res.status(400).send("Bad request: Student is necessary");
-  const pos = project.students.indexOf(student);
-  console.log(project);
+  const pos = project.students.indexOf(student._id);
+  //console.log(project);
   // Add or remove student from project accordingly
   if (result == "true") {
-    if (pos < 0) project.students.push(student);
-  } else {
-    if (pos >= 0) project.students.splice(pos, 1);
+    if (pos < 0) {
+      project.students.push(student);
+      mail.sendStatus(student.email,'Project Status Changed',true,student.name,project.title);
+    }
+  } 
+  else {
+    if (pos >= 0){
+       project.students.splice(pos, 1);
+      mail.sendStatus(student.email,'Project Status Changed',false,student.name,project.title);
+   }
   }
   // Save to DB and respond.
   await project.save();

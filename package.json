@@ -1,35 +1,37 @@
 {
-    "name": "arc-portal",
-    "version": "1.0.0",
-    "description": "Portal for research projects for IIT Kanpur",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Chinmaygoyal/ARC-portal.git"
-    },
-    "author": "Nilay Majorwar, Chinmay Goyal, Ayush Kumar, Karanveer Singh Oberoi",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Chinmaygoyal/ARC-portal/issues"
-    },
-    "homepage": "https://github.com/Chinmaygoyal/ARC-portal#readme",
-    "dependencies": {
-        "axios": "^0.19.0",
-        "bcrypt": "^3.0.6",
-        "config": "^3.1.0",
-        "cookie-parser": "^1.4.4",
-        "ejs": "^2.6.2",
-        "express": "^4.17.1",
-        "https": "^1.0.0",
-        "ip": "^1.1.5",
-        "joi": "^14.3.1",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^5.5.11",
-        "nodemailer": "^6.2.1",
-        "nodemon": "^1.19.1"
-    }
+  "name": "arc-portal",
+  "version": "1.0.0",
+  "description": "Portal for research projects for IIT Kanpur",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chinmaygoyal/ARC-portal.git"
+  },
+  "author": "Nilay Majorwar, Chinmay Goyal, Ayush Kumar, Karanveer Singh Oberoi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chinmaygoyal/ARC-portal/issues"
+  },
+  "homepage": "https://github.com/Chinmaygoyal/ARC-portal#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "config": "^3.1.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "ip": "^1.1.5",
+    "joi": "^14.3.1",
+    "json2csv": "^4.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mail": "^0.2.3",
+    "mongoose": "^5.5.11",
+    "nodemailer": "^6.2.1",
+    "nodemon": "^1.19.1"
+  }
 }

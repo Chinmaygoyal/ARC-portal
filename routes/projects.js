@@ -4,6 +4,8 @@ const { Project } = require("../models/project");
 const { Professor } = require("../models/professor");
 const { isProf, isStudent } = require("../middleware/userCheck");
 const { Request } = require("../models/request");
+const json2csv = require('json2csv').parse;
+
 
 // STUDENT SIDE: See all projects
 router.get("/", tokenAuth, isStudent, async (req, res) => {
@@ -98,14 +100,38 @@ router.get("/:id", tokenAuth, isProf, async (req, res) => {
     "student",
     "name department rollNumber"
   );
-
+    
   res.render("dash/projectpage", { project: project, requests: requests });
+});
+
+router.get("/download/:id/", tokenAuth, isProf, async (req, res) => {
+  const id = req.params.id;
+  const project = await Project.findById(id);
+  const requests = await Request.find({ project: project, status: true }).populate(
+    "student",
+    "name department rollNumber email"
+  );
+  var records = new Array();
+
+  for(var i = 0;i<requests.length;i++){
+    records.push({
+      Name: requests[i].student.name,
+      Department: requests[i].student.department,
+      RollNumber: requests[i].student.rollNumber,
+      Email: requests[i].student.email,
+    });
+  }
+  var today = new Date;
+  const csvString = json2csv(records);
+  res.setHeader('Content-disposition', 'attachment; filename='+project.title+"  "+today+'.csv');
+  res.set('Content-Type', 'text/csv');
+  res.status(200).send(csvString);
 });
 
 // PROF SIDE: Open or close project
 router.post("/view/professor/", tokenAuth, isProf, async (req, res) => {
   try{
-    const project = await Project.findById(req.body.id);
+  const project = await Project.findById(req.body.id);
   const result = req.body.status;
   // If no such project found
   if (!project) res.status(404).send("No project found");
