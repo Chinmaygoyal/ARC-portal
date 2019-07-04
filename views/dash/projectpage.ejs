@@ -20,15 +20,26 @@
   <script>
 		  var xhttp = new XMLHttpRequest();
 		  function status(id,val){
-		  xhttp.open("POST", "/request/view/professor/", true);
-		  
-		  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		  xhttp.onreadystatechange = function () {
-			  if (xhttp.readyState == 4 && xhttp.status == 200){
-				  window.location.reload();
-			  }
-		  }
-		  xhttp.send("id"+ "="+id+"&"+ "status="+val); 
+        xhttp.open("POST", "/request/view/professor/", true);
+        
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.onreadystatechange = function () {
+          if (xhttp.readyState == 4 && xhttp.status == 200){
+            window.location.reload();
+          }
+        }
+        xhttp.send("id"+ "="+id+"&"+ "status="+val); 
+      }
+      function status1(id,val){
+        xhttp.open("POST", "/project/view/professor/", true);
+        
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.onreadystatechange = function () {
+          if (xhttp.readyState == 4 && xhttp.status == 200){
+            window.location.reload();
+          }
+        }
+        xhttp.send("id"+ "="+id+"&"+ "status="+val); 
 		  }
 	</script>	
 </head>
@@ -204,9 +215,9 @@
                 </table>
                 <br />
                 <% if (project.available){%>
-  								<button type="button" class="btn btn-danger"onclick="status('<%= project._id %>',false);">Close</button>
+  								<button type="button" class="btn btn-danger"onclick="status1('<%= project._id %>',false);">Close</button>
                 <% }else{%>
-                  <button type="button" class="btn btn-success"onclick="status('<%= project._id %>',true);">Open</button>
+                  <button type="button" class="btn btn-success"onclick="status1('<%= project._id %>',true);">Open</button>
                 <% }%>
               </div>
             </div>

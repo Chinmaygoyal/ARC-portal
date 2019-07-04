@@ -320,7 +320,6 @@
       const container = document.querySelector("#notif-pos");
 
       form.addEventListener("submit", e => {
-        form.reset();
         e.preventDefault();
         $.ajax({
           url: "../../request/createrequests/<%= project._id%>",
@@ -328,6 +327,7 @@
           data: {description: $("#descr").val()},
           success: (data, status, xhr) => {
             $(container).prepend(successAlert);
+            form.reset();
           },
           error: xhr => {
             $(container).prepend(infoAlert);
