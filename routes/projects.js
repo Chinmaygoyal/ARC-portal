@@ -103,7 +103,7 @@ router.get("/:id", tokenAuth, isProf, async (req, res) => {
     
   res.render("dash/projectpage", { project: project, requests: requests });
 });
-
+//Download route for the project csv
 router.get("/download/:id/", tokenAuth, isProf, async (req, res) => {
   const id = req.params.id;
   const project = await Project.findById(id);
@@ -121,11 +121,16 @@ router.get("/download/:id/", tokenAuth, isProf, async (req, res) => {
       Email: requests[i].student.email,
     });
   }
+  if(records.length==0)
+  res.end("<script>alert('NO students have been selected');window.location.href='../../home';</script>");
   var today = new Date;
+  if(records.length)
+  {
   const csvString = json2csv(records);
   res.setHeader('Content-disposition', 'attachment; filename='+project.title+"  "+today+'.csv');
   res.set('Content-Type', 'text/csv');
   res.status(200).send(csvString);
+  }
 });
 
 // PROF SIDE: Open or close project
