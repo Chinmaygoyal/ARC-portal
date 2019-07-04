@@ -105,72 +105,71 @@
 										<option value="phy">Physics</option>
 									</select>
 							</div>
-							<div class="col-md-6">
-									<select class="form-control">
-										<option value="all">All</option>
-										<option value="open">Open</option>
-										<option value="closed">Closed</option>
-									</select>
-							</div>
 						</div>
 					</div>
-					<!-- PROJECTS TABLE -->
-						<div class="row">
+					<br>
+					<div class="row">
 							<div class="col-md-12">
 								<div class="panel">
 									<div class="panel-heading">
-										<h3 class="panel-title">Your Projects</h3>
+										<h2 class="panel-title">Your Projects</h2>
 									</div>
-									<% if(projects.length == 0 ){ %>
-										<div class="row">
-											<div class="col-md-12">
-												<div class="panel">
-													<div class="panel-heading">
-														<h1 class="panel-title">You don't have any project.</h3>
-													</div>
-												</div>
-											</div>
-										</div>
-									<% }else{ %>
-										<div class="panel-body no-padding">
-											<table class="table table-striped">
-												<thead>
-													<tr>
-														<th>Title</th>
-														<th>Professor</th>
-														<th>Department</th>
-														<th>Eligibility</th>                                                    
-														<th>Description</th>
-														<th>Published on</th>
-														<th></th>
-													</tr>
-												</thead>
-												<tbody>
-										<% for (var i = 0;i<projects.length;i++) { %>
-											<tr>
-												<td><%= projects[i].title %></td>
-												<td><%= projects[i].professor.name %></td>
-												<td><%= projects[i].professor.department %></td>
-												<td><%= projects[i].eligibility %></td>
-												<td>
-													<% if(projects[i].description.length <100){%>
-														<%= projects[i].description %>
-													<% }else{%>
-													<%= projects[i].description.slice(0,100) %>....
-													<% }%>
-												</td>
-												<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
-												<td><a>See more >></a></td>
-											</tr>
-										<% } %>                
-												</tbody>
-											</table>
-										</div>
-									<% } %> 
 								</div>
 							</div>
 						</div>
-					<!-- END PROJECTS TABLE -->
+					<!-- PROJECTS CARDS -->
+						<% if(projects.length == 0 ){ %>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="panel">
+										<div class="panel-heading">
+											<h1 class="panel-title">You don't have any project.</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						<% }else{ %>
+							<% for (var i = 0;i<projects.length;i++) { %>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="panel">
+											<div class="panel-heading">
+												<h2 ><%= projects[i].title %></h2>
+											</div>
+											<div class="panel-body">
+												<table class="proj-data">
+													<tbody>
+														<tr>
+															<th>Professor:</th>
+																<td><%= projects[i].professor.name %></td>
+															</tr>
+															<tr>
+																<th>Department:</th>
+																<td><%= projects[i].professor.department %></td>
+															</tr>
+															<tr>
+																<th>Duration(in months):</th>
+																<td><%= projects[i].duration %></td>
+															</tr>
+															<tr>
+																<th>Offered on:</th>
+																<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
+															</tr>
+													</tbody>
+												</table>
+												<br/>
+												<div><strong>Description</strong></div>
+												<p>
+													<%= projects[i].description %>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br>
+							<% } %>
+						<% } %> 
+					<!-- END PROJECTS CARDS -->
 				</div>
 			</div>
 			<!-- END MAIN CONTENT -->
