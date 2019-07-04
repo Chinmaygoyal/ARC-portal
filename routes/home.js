@@ -25,8 +25,10 @@ router.get("/", tokenAuth, async (req, res) => {
       const recentprojects = await Project.find({
         createdAt: { $gte: date },
         available: true,
-      }).populate("professor", "name department");
+      }).sort({createdAt: 'desc'}).populate("professor", "name department");
+      console.log(recentprojects);
       const studentrequests = await Request.find({ student: req.user._id })
+        .sort({createdAt: 'desc'})
         .populate("professor", "name department")
         .populate("project", "title description");
       res.render("dash/studentindex", {
@@ -40,7 +42,7 @@ router.get("/", tokenAuth, async (req, res) => {
     // User is a professor
     try {
       const professor = await Professor.findOne({ _id: req.user._id });
-      const projects = await Project.find({ professor: professor });
+      const projects = await Project.find({ professor: professor }).sort({createdAt: 'desc'});
       res.render("dash/professorindex", { projects: projects });
     } catch (err) {
       res.status(400).send(err.message);

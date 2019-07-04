@@ -284,12 +284,13 @@
                                             <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
                                         </tr>
                                     <% } %>
-                                    <% } %>  
+                        <% } %>  
                       </tbody>
                     </table>
-                    <button><a href="/project/download/<%= project._id%>">Click to download</a></button>
                   </div>
-                <a href = "/project/download/<%=project._id%>"><button class ="btn btn-primary">Download CSV</button></a>
+                </div>
+                <div class="col-md-6 text-right">
+                  <a href="/project/download/<%=project._id%>" class="btn btn-primary">Download CSV</a>
                 </div>
               </div>
               <!-- Rejected Requests -->
