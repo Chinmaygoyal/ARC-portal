@@ -98,7 +98,7 @@ router.get("/:id", tokenAuth, isProf, async (req, res) => {
   const project = await Project.findById(id);
   const requests = await Request.find({ project: project }).populate(
     "student",
-    "name department rollNumber"
+    "name department rollNumber email"
   );
     
   res.render("dash/projectpage", { project: project, requests: requests });

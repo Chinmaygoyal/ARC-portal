@@ -139,8 +139,8 @@
                     >
                   </li>
                   <li>
-                    <a href="#"
-                      ><i class="lnr lnr-exit"></i> <span>Logout</span></a
+                   <a href="/home/user/logout">
+                      <i class="lnr lnr-exit"></i> <span>Logout</span></a
                     >
                   </li>
                 </ul>
@@ -221,6 +221,23 @@
                 <% }%>
               </div>
             </div>
+            <div class="col-md-4">
+									<select class="form-control" id="dept-select">
+										<option value="all" selected>All departments</option>
+										<option value="Computer Science & Engg.">Computer Science and Engineering</option>
+										<option value="Electrical Engg.">Electrical Engineering</option>
+										<option value="Mathematics">Mathematics and Scientific Computing</option>
+										<option value="Mechanical Engineering">Mechanical Engineering</option>
+										<option value="Civil Engg.">Civil Engineering</option>
+										<option value="Economics">Economics</option>
+										<option value="Aerospace Engg.">Aerospace Engineering</option>
+										<option value="Chemical Engg.">Chemical Engineering</option>
+										<option value="Chemistry">Chemistry</option>
+										<option value="Physics">Physics</option>
+									</select>
+							</div>
+              <br>
+              <br>
             <ul class="nav nav-pills" id="tablist">
               <li role="presentation" class="active">
                 <a href="#">Waiting <strong>(<%=requests.filter(request => request.status == null).length%>)</strong></a>
@@ -240,7 +257,7 @@
                   <div class="panel-body no-padding">
                     <table class="table table-striped">
                       <thead>
-                        <tr>
+                        <tr >
                           <th>Name</th>
                           <th>Roll No</th>
                           <th>Department</th>
@@ -252,7 +269,7 @@
                        
                           <% for (var i = 0;i<requests.length;i++) { %>
                                        <%if (requests[i].status == null){%> 
-                                        <tr>
+                                        <tr class="prj-row">
                                             <td><%= requests[i].student.name %></td>
                                             <td><%= requests[i].student.rollNumber %></td>
                                             <td><%= requests[i].student.department %></td>
@@ -285,15 +302,17 @@
                         </tr>
                       </thead>
                       <tbody>
+                      <% var send= ""%>
                         <% for (var i = 0;i<requests.length;i++) { %>
                                        <%if (requests[i].status == true){%> 
-                                        <tr>
+                                        <tr class="prj-row">
                                             <td><%= requests[i].student.name %></td>
                                             <td><%= requests[i].student.rollNumber %></td>
                                             <td><%= requests[i].student.department %></td>
                                             <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
                                             <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
                                         </tr>
+                                        <%send += requests[i].student.email+';'%>
                                     <% } %>
                         <% } %>  
                       </tbody>
@@ -302,6 +321,9 @@
                 </div>
                 <div class="col-md-6 text-right">
                   <a href="/project/download/<%=project._id%>" class="btn btn-primary">Download CSV</a>
+                  <br>
+                  <br>
+                  <a href="mailto:<%=send%>" id = "sendmail" class="btn btn-primary" >Send Email to all selected Students</a>
                 </div>
               </div>
               <!-- Rejected Requests -->
@@ -310,7 +332,7 @@
                   <div class="panel-body no-padding">
                     <table class="table table-striped">
                       <thead>
-                        <tr>
+                        <tr >
                           <th>Name</th>
                           <th>Roll No</th>
                           <th>Department</th>
@@ -321,7 +343,7 @@
                       <tbody>
                         <% for (var i = 0;i<requests.length;i++) { %>
                                        <%if (requests[i].status == false){%> 
-                                        <tr>
+                                        <tr class="prj-row">
                                             <td><%= requests[i].student.name %></td>
                                             <td><%= requests[i].student.rollNumber %></td>
                                             <td><%= requests[i].student.department %></td>
@@ -368,6 +390,23 @@
         tabpages[tabIndex].classList.add("active");
       }
     </script>
+   <script>
+    const projectRows = document.querySelectorAll(".prj-row");
+    const filter = document.querySelector("#dept-select");
+		const tblEmpty = document.querySelector(".tbl-empty");
+		filter.addEventListener('change', function(){
+			const dept = this.value;
+			let nonEmpty = false;
+			projectRows.forEach(row => {
+        
+        if (dept === 'all' || row.children[2].innerHTML === dept) {
+					row.style.display = '';
+					nonEmpty = true;
+				}
+				else row.style.display = 'none';
+			})
+    })
+	</script>
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
