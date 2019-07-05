@@ -230,7 +230,10 @@
                   </tr>
                   <tr>
                     <th>Offered on:</th>
-                    <td><%= project.createdAt %></td>
+                    <td><% function getdate(date){
+                      var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                      return date.getDate() + '-' + months[date.getMonth()] + '-' + date.getFullYear();
+                    } %> <%= getdate(project.createdAt) %></td>
                   </tr>
                 </table>
               </div>
@@ -324,6 +327,7 @@
           data: {description: $("#descr").val()},
           success: (data, status, xhr) => {
             $(container).prepend(successAlert);
+            form.reset();
           },
           error: xhr => {
             $(container).prepend(infoAlert);

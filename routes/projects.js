@@ -10,7 +10,7 @@ const json2csv = require('json2csv').parse;
 // STUDENT SIDE: See all projects
 router.get("/", tokenAuth, isStudent, async (req, res) => {
   try {
-    const projects = await Project.find({ available: true}).populate(
+    const projects = await Project.find({ available: true}).sort({createdAt: 'desc'}).populate(
       "professor",
       "name department"
     );
@@ -24,7 +24,7 @@ router.get("/", tokenAuth, isStudent, async (req, res) => {
 // STUDENT SIDE: See student's current projects
 router.get("/self", tokenAuth, isStudent, async (req, res) => {
   try {
-    const projects = await Project.find({ students: req.user._id }).populate(
+    const projects = await Project.find({ students: req.user._id }).sort({createdAt: 'desc'}).populate(
       "professor",
       "name department"
     );
@@ -39,7 +39,7 @@ router.get("/self", tokenAuth, isStudent, async (req, res) => {
 router.get("/view/dept/:department", tokenAuth, async (req, res) => {
   const department = req.params.department;
   try {
-    const projects = await Project.find({ department: department });
+    const projects = await Project.find({ department: department }).sort({createdAt: 'desc'});
     if (projects.length == 0) return res.status(200).send("No project found");
     res.send(projects);
   } catch (err) {
