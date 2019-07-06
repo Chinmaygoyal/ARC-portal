@@ -150,11 +150,15 @@
                       <td>
                         <% if (project.available){%>
                           <span class="label label-success">Open</span>
-                        <% }else{%>
-                          <span class="label label-danger">Close  </span>
-                        <% }%>
-                      </td>
-                    </tr>
+                          <% }else{%>
+                            <span class="label label-danger">Close  </span>
+                            <% }%>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Description:</th>
+                          <td><%=project.description%></td>
+                        </tr>
                   </tbody>
                 </table>
                 <br />
