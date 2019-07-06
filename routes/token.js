@@ -87,14 +87,16 @@ router.post('/forgot', mailAuth, async (req, res) => {
             if(!professor)  return res.status(401).send('User not found');
             
             const salt = await bcrypt.genSalt();
-            const match = await bcrypt.compare(password, professor.password);
-            if(match)
-            return res.status(401).send("Old Password cant be set");
 
-            if((decoded.password !== professor.password))
+            const match = await bcrypt.compare(professor.password,decoded.password);
+            const match2 = await bcrypt.compare(password,professor.password);
+            if(match2)
+                return res.status(401).send("OLd password cant be set");
+            if(!match)
             {
                 return res.status(401).send('Token/Link Expired');
             }
+            professor.isVerified = true;
             professor.password = await bcrypt.hash(password, salt);
             professor.save();
         }else{
@@ -102,11 +104,13 @@ router.post('/forgot', mailAuth, async (req, res) => {
             if (!student) return res.status(401).send('User not found');
             
             const salt = await bcrypt.genSalt();
-            const match = await bcrypt.compare(password, student.password);
-            if(match)
-                return res.status(401).send("Old Password cant be set");
 
-            if((decoded.password !== student.password))
+            const match = await bcrypt.compare(student.password,decoded.password);
+            const match2 = await bcrypt.compare(password,student.password);
+            if(match2)
+                return res.status(401).send("OLd password cant be set");
+
+            if(!match)
             {
                 return res.status(401).send('Token/Link Expired');
             }
