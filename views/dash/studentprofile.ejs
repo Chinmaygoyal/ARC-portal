@@ -116,8 +116,7 @@
 								<!-- PROFILE HEADER -->
 								<div class="profile-header">
 										<br>
-										<img src="assets/img/user-medium.png" style ="height:150px;" class= "img-circle"  alt="Avatar">
-										<h3 class="name">Samuel Gold</h3>
+										<img src="https://oa.cc.iitk.ac.in:443/Oa/Jsp/Photo/<%=student.rollNumber%>_0.jpg" style ="height:150px;" class= "img-circle"  alt="No image found">
 								</div>
 								<!-- END PROFILE HEADER -->
 								<!-- PROFILE DETAIL -->
@@ -126,15 +125,15 @@
 									<div class="profile-info">
 										<h4 class="heading">Basic Info</h4>
 										<ul class="list-unstyled list-justify">
-											<li>Name <span>STUDENTNAME	</span></li>
-											<li>Roll Number <span>180180</span></li>
-											<li>Email <span>samuel@mydomain.com</span></li>
-											<li>Department <span>ABCD</span></li>
+											<li>Name <span><%=student.name%></span></li>
+											<li>Roll Number <span><%=student.rollNumber%></span></li>
+											<li>Email <span><%=student.email%></span></li>
+											<li>Department <span><%=student.department%></span></li>
 
 											<li>Resume <span><a href="https://www.themeineed.com">www.themeineed.com</a></span></li>
 											<form id="uploadForm"
 												enctype="multipart/form-data"
-												action="http://localhost:3000/home/student/profile"
+												action="/home/student/profile"
 												method="post">
 											<input type="file" name="resume" required/>
 											<input type="submit" value="Upload resume" name="submit">
