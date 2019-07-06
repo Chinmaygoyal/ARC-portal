@@ -19,8 +19,8 @@ router.post('/verify', mailAuth, async (req, res) => {
         if(decoded.is_prof){
             const professor = await Professor.findById(decoded._id);
             if(!professor)  return res.status(401).send('User not found');
-            if(professor.isVerified==true){
-                res.status(401).send("Already Set the Password")
+            if(professor.isVerified ==true){
+                return res.status(401).send("Already Set the Password")
             }
             professor.isVerified = true;
             const salt = await bcrypt.genSalt();
@@ -30,7 +30,7 @@ router.post('/verify', mailAuth, async (req, res) => {
             const student = await Student.findById(decoded._id);
             if (!student) return res.status(401).send('User not found');
             if(student.isVerified==true){
-                res.status(401).send("Already Set the Password")
+                return res.status(401).send("Already Set the Password")
             }
             student.isVerified = true;
             const salt = await bcrypt.genSalt();
@@ -71,5 +71,64 @@ router.post('/resend', async (req, res) => {
         }    
     }
 });
+
+router.post('/forgot', mailAuth, async (req, res) => {
+    const decoded = req.token;
+    const password = req.body.password;
+
+    // Joi validation
+    const { error } = Joi.validate({ password: password }, { password: Joi.string().required().min(8).max(255) });
+    if (error) return res.status(400).send(error.details[0].message);
+
+    try {
+        // Retrieve the student from database
+        if(decoded.is_prof){
+            const professor = await Professor.findById(decoded._id);
+            if(!professor)  return res.status(401).send('User not found');
+            
+            const salt = await bcrypt.genSalt();
+            const match = await bcrypt.compare(password, professor.password);
+            if(match)
+            return res.status(401).send("Old Password cant be set");
+
+            if((decoded.password !== professor.password))
+            {
+                return res.status(401).send('Token/Link Expired');
+            }
+            professor.password = await bcrypt.hash(password, salt);
+            professor.save();
+        }else{
+            const student = await Student.findById(decoded._id);
+            if (!student) return res.status(401).send('User not found');
+            
+            const salt = await bcrypt.genSalt();
+            const match = await bcrypt.compare(password, student.password);
+            if(match)
+                return res.status(401).send("Old Password cant be set");
+
+            if((decoded.password !== student.password))
+            {
+                return res.status(401).send('Token/Link Expired');
+            }
+            student.isVerified = true;
+            student.password = await bcrypt.hash(password, salt);
+            student.save();
+        }
+        // Send confirmation response
+        res.send('Password set successfully');
+    }catch (error){
+        return res.status(401).send(error.message);
+    };
+});
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router;

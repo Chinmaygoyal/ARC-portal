@@ -6,6 +6,8 @@ const tokenAuth = require("../middleware/tokenAuth");
 const { Student, validateStudent } = require("../models/student");
 const { Professor } = require("../models/professor");
 const search = require("../libs/studentsearch");
+const Joi = require("joi");
+const jwt = require("jsonwebtoken");
 
 //Regex has been changed for testing
 //Added method of professor verification
@@ -17,7 +19,7 @@ router.post("/register", async (req, res) => {
   // const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
   const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[a-zA-Z0-9]/;
   
-  const studentdetail = await search.getData("ayushkmr@iitk.ac.in");
+  const studentdetail = await search.getData(email);
   //console.log(studentdetail);
   
   if (!email.match(regex))
@@ -73,6 +75,7 @@ router.post("/register", async (req, res) => {
         rollNumber: studentdetail.i,
         email: email,
         department: studentdetail.d,
+        isVerified: false,
       });
     }
     // Save the student, send verification mail
@@ -146,4 +149,71 @@ router.post("/changepwd", tokenAuth, async (req, res) => {
   res.send("Password updated successfully");
 });
 
+router.post("/forgot",async (req, res) => {
+const email = req.body.email;
+const student = await Student.findOne({email:email});
+const professor =  await Professor.findOne({email:email});
+
+if(student)
+{
+if(!student.isVerified)
+  return res.send("Not Verified Account");
+
+    options = { useMailKey: true };
+ 
+    const key = options.useMailKey
+      ? config.get("mailTokenKey")
+      : config.get("authTokenKey");
+    const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
+    const token = jwt.sign(
+      { _id: student._id, rollNumber: student.rollNumber, email: student.email, is_prof:false, password:student.password },
+      key,
+      jwtOptions
+    );
+    
+    try {
+      mailer.sendVerificationMail(
+        email,
+        "Verify your email ID",
+        `${process.env.domain}:${config.get("PORT")}/forgot.html?token=${token}`
+      );
+      return res.status(200).send("Verification mail sent");
+    } catch (ex) {
+      return res.status(500).send(ex.message);
+    }
+
+
+}
+else if(professor)
+{
+  if(!professor.isVerified)
+  return res.send("Not Verified Account");
+
+  options = { useMailKey: true };
+ 
+  const key = options.useMailKey
+    ? config.get("mailTokenKey")
+    : config.get("authTokenKey");
+  const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
+  const token = jwt.sign(
+    { _id: professor._id, rollNumber: professor.rollNumber, email: professor.email, is_prof:true, password:professor.password },
+    key,
+    jwtOptions
+  );
+  
+  try {
+    mailer.sendVerificationMail(
+      email,
+      "Verify your email ID",
+      `${process.env.domain}:${config.get("PORT")}/forgot.html?token=${token}`
+    );
+    return res.status(200).send("Verification mail sent");
+  } catch (ex) {
+    return res.status(500).send(ex.message);
+  }
+
+}
+else
+  return res.send("Invalid Email ID");
+});
 module.exports = router;

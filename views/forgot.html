@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="fullscreen-bg">
   <head>
-    <title>Set Password | Research Portal, IIT Kanpur</title>
+    <title>Reset Password | Research Portal, IIT Kanpur</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta
@@ -103,12 +103,12 @@
         label.val("Sending...");
         // Send request
         $.ajax({
-          url: "/token/verify",
+          url: "/token/forgot",
           method: "POST",
           data: { password: pwd },
           headers: { "x-auth-token": token },
           success: () => {
-            alert("Password set successfully");
+            alert("Password reset successfully");
             window.location.href="/";
           },
           error: xhr => {
