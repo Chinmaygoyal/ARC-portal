@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const config = require("config");
 
-
 const studentSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -36,7 +35,7 @@ const studentSchema = new mongoose.Schema({
     maxlength: 1024
   },
   department: {
-    type: String,
+    type: String
   },
   createdAt: {
     type: Date,
@@ -45,6 +44,10 @@ const studentSchema = new mongoose.Schema({
   role: {
     type: String,
     default: "student"
+  },
+  resume: {
+    type: String,
+    default: null
   }
 });
 
@@ -60,7 +63,12 @@ studentSchema.methods.generateAuthToken = function(
     : config.get("authTokenKey");
   const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
   const token = jwt.sign(
-    { _id: this._id, rollNumber: this.rollNumber, email: this.email, is_prof:false },
+    {
+      _id: this._id,
+      rollNumber: this.rollNumber,
+      email: this.email,
+      is_prof: false
+    },
     key,
     jwtOptions
   );

@@ -7,7 +7,9 @@ const { Student } = require("../models/student");
 const { Professor } = require("../models/professor");
 const mongoose = require("mongoose");
 const multer = require("multer");
+const path = require("path");
 const Grid = require("gridfs-stream");
+const crypto = require("crypto");
 const GridFsStorage = require("multer-gridfs-storage");
 const db = mongoose.connection;
 
@@ -16,10 +18,13 @@ db.once("open", function() {
   gfs = Grid(db.db, mongoose.mongo);
 });
 
-router.get("/files", async (req, res) => {
+router.get("/resume", tokenAuth, isStudent, async (req, res) => {
   try {
+    const student = await Student.findOne({ _id: req.user._id });
+    if (!student) return res.status(401).send("You are not logged in.");
+    if (!student.resume) return res.status(404).send("No resume found.");
     var readstream = await gfs.createReadStream({
-      filename: "file",
+      _id: student.resume,
       root: "resume"
     });
     readstream.pipe(res);
@@ -28,6 +33,8 @@ router.get("/files", async (req, res) => {
     res.send(err.message);
   }
 });
+
+//File upload settings
 
 //For development purposes mime type has been changed.
 //It should be 'application/pdf'
@@ -40,10 +47,19 @@ const storage = new GridFsStorage({
   url:
     "mongodb+srv://new_user1:Arciitk@arcportal-z5xml.mongodb.net/test?retryWrites=true&w=majority",
   file: (req, file) => {
-    console.log(file);
-    return {
-      bucketName: "resume"
-    };
+    return new Promise((resolve, reject) => {
+      crypto.randomBytes(16, (err, buf) => {
+        if (err) {
+          return reject(err);
+        }
+        const filename = buf.toString("hex") + path.extname(file.originalname);
+        const fileInfo = {
+          filename: filename,
+          bucketName: "resume"
+        };
+        resolve(fileInfo);
+      });
+    });
   }
 });
 
@@ -57,13 +73,21 @@ const upload = multer({
 
 // STudent profile resume upload route
 router.post("/student/profile", tokenAuth, isStudent, async (req, res) => {
-  upload(req, res, err => {
+  upload(req, res, async err => {
     if (err) {
       // A Multer error occurred when uploading.
       console.log(err.message);
       res.send(err.message);
     } else {
-      console.log(req.file.path);
+      const student = await Student.findOne({ _id: req.user._id });
+      if (student.resume) {
+        gfs.remove({ _id: student.resume, root: "resume" }, function(err) {
+          if (err) return handleError(err);
+          console.log("success");
+        });
+      }
+      student.set({ resume: req.file.id });
+      await student.save();
       // Everything went fine.
       console.log("File uploaded successfully");
       res.send("File uploaded successfully");
@@ -73,7 +97,7 @@ router.post("/student/profile", tokenAuth, isStudent, async (req, res) => {
 
 // STUDENT SIDE: Get student's requests
 router.get("/student", tokenAuth, isStudent, async (req, res) => {
-  var student = await Student.findOne({ _id: req.user._id });
+  const student = await Student.findOne({ _id: req.user._id });
   const studentrequests = await Request.find({ student: student });
   res.send(studentrequests + "<br><br><br>" + recentproject);
 });
