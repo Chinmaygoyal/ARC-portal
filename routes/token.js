@@ -19,6 +19,9 @@ router.post('/verify', mailAuth, async (req, res) => {
         if(decoded.is_prof){
             const professor = await Professor.findById(decoded._id);
             if(!professor)  return res.status(401).send('User not found');
+            if(professor.isVerified==true){
+                res.status(401).send("Already Set the Password")
+            }
             professor.isVerified = true;
             const salt = await bcrypt.genSalt();
             professor.password = await bcrypt.hash(password, salt);
@@ -26,6 +29,9 @@ router.post('/verify', mailAuth, async (req, res) => {
         }else{
             const student = await Student.findById(decoded._id);
             if (!student) return res.status(401).send('User not found');
+            if(student.isVerified==true){
+                res.status(401).send("Already Set the Password")
+            }
             student.isVerified = true;
             const salt = await bcrypt.genSalt();
             student.password = await bcrypt.hash(password, salt);
