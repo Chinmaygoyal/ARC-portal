@@ -46,3 +46,31 @@ signupForm.addEventListener("submit", function(e) {
     error: jqXHR => alert(jqXHR.responseText)
   });
 });
+
+      const wrapper = document.querySelector(".content");
+      $("#setpwd").on("submit", e => {
+        e.preventDefault();
+        // Get the elements
+        const email = $("#email").val();
+        const label = $("#message");
+        // Password length and match check
+        // Retrieve token
+        const token = new URL(document.location).searchParams.get("token");
+        label.val("Sending...");
+        // Send request
+        $.ajax({
+          url: "/auth/student/forgot",
+          method: "POST",
+          data: { email: email },
+          headers: { "x-auth-token": token },
+          success: () => {
+            alert("Verfication Mail has been sent");
+            window.location.href="/";
+          },
+          error: xhr => {
+            addAlert(wrapper, "error", xhr.responseText);
+          }
+        });
+        label.html("");
+      });
+  

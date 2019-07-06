@@ -49,17 +49,47 @@
               maxlength="255"
               required
             />
-            <a class="fp" id="forgotpass" href = "/forgotindex.html">Forgot your password?</a>
+            <a class="fp" id="forgotpass">Forgot your password?</a>
             <button>Sign In</button>
           </form>
         </div>
         <div class="form-container sign-in-container forgot">
-          <form action="#">
+          <form action="/auth/student/forgot" id="setpwd" method="POST">
             <h1>Forgot My password</h1>
 
-            <input type="email" placeholder="Enter your Email" />
-            <button>Continue</button>
-            <a class="fp">Sign In ?</a>
+            <div id="wrapper">
+              <div class="vertical-align-wrap">
+                <div class="vertical-align-middle">
+                  <div class="auth-box lockscreen clearfix">
+                    <div class="content">
+                      <h1 class="sr-only">Research Portal</h1>
+                      <div class="text-center">
+                        <br />
+                        <div style="max-width: 400px; margin: auto;">
+                          <form ></form>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="email"
+                              placeholder="Email"
+                            /><br />
+                            <label id="message"></label>
+                            <br>
+
+                            <a class="fp">Sign In ?</a>
+                            <br>
+                            <br>
+                            <button type="submit" id="submit" class="btn btn-primary">
+                              Submit
+                            </button>
+                             
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
         <div class="overlay-container">
