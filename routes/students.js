@@ -165,8 +165,10 @@ if(!student.isVerified)
       ? config.get("mailTokenKey")
       : config.get("authTokenKey");
     const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
+    const salt = await bcrypt.genSalt();
+    hpass = await bcrypt.hash(student.password, salt);
     const token = jwt.sign(
-      { _id: student._id, rollNumber: student.rollNumber, email: student.email, is_prof:false, password:student.password },
+      { _id: student._id, rollNumber: student.rollNumber, email: student.email, is_prof:false, password:hpass },
       key,
       jwtOptions
     );
@@ -192,25 +194,28 @@ else if(professor)
   options = { useMailKey: true };
  
   const key = options.useMailKey
-    ? config.get("mailTokenKey")
-    : config.get("authTokenKey");
-  const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
-  const token = jwt.sign(
-    { _id: professor._id, rollNumber: professor.rollNumber, email: professor.email, is_prof:true, password:professor.password },
-    key,
-    jwtOptions
-  );
-  
-  try {
-    mailer.sendVerificationMail(
-      email,
-      "Verify your email ID",
-      `${process.env.domain}:${config.get("PORT")}/forgot.html?token=${token}`
+      ? config.get("mailTokenKey")
+      : config.get("authTokenKey");
+    const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
+    const salt = await bcrypt.genSalt();
+    hpass = await bcrypt.hash(professor.password, salt);
+    const token = jwt.sign(
+      { _id: professor._id, email: professor.email, is_prof:true, password:hpass },
+      key,
+      jwtOptions
     );
-    return res.status(200).send("Verification mail sent");
-  } catch (ex) {
-    return res.status(500).send(ex.message);
-  }
+    
+    try {
+      mailer.sendVerificationMail(
+        email,
+        "Verify your email ID",
+        `${process.env.domain}:${config.get("PORT")}/forgot.html?token=${token}`
+      );
+      return res.status(200).send("Verification mail sent");
+    } catch (ex) {
+      return res.status(500).send(ex.message);
+    }
+
 
 }
 else
