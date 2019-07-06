@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Project } = require("../models/project");
 const { Request } = require("../models/request");
 const tokenAuth = require("../middleware/tokenAuth");
-const { isStudent } = require("../middleware/userCheck");
+const { isProf, isStudent } = require("../middleware/userCheck");
 const { Student } = require("../models/student");
 const { Professor } = require("../models/professor");
 const mongoose = require("mongoose");
@@ -22,6 +22,22 @@ router.get("/resume", tokenAuth, isStudent, async (req, res) => {
   try {
     const student = await Student.findOne({ _id: req.user._id });
     if (!student) return res.status(401).send("You are not logged in.");
+    if (!student.resume) return res.status(404).send("No resume found.");
+    var readstream = await gfs.createReadStream({
+      _id: student.resume,
+      root: "resume"
+    });
+    readstream.pipe(res);
+  } catch (err) {
+    console.log(err.message);
+    res.send(err.message);
+  }
+});
+
+router.get("/resume/:id", tokenAuth, isProf, async (req, res) => {
+  try {
+    const student = await Student.findOne({ _id: req.params.id });
+    if (!student) return res.status(404).send("Not found");
     if (!student.resume) return res.status(404).send("No resume found.");
     var readstream = await gfs.createReadStream({
       _id: student.resume,
