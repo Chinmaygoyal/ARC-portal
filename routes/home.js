@@ -5,71 +5,71 @@ const tokenAuth = require("../middleware/tokenAuth");
 const { isStudent } = require("../middleware/userCheck");
 const { Student } = require("../models/student");
 const { Professor } = require("../models/professor");
-const mongoose = require('mongoose');
-const multer = require('multer');
-const Grid = require('gridfs-stream');
-const GridFsStorage = require('multer-gridfs-storage');
+const mongoose = require("mongoose");
+const multer = require("multer");
+const Grid = require("gridfs-stream");
+const GridFsStorage = require("multer-gridfs-storage");
 const db = mongoose.connection;
 
 let gfs;
-db.once('open', function () {
-   gfs = Grid(db.db, mongoose.mongo);
-})
+db.once("open", function() {
+  gfs = Grid(db.db, mongoose.mongo);
+});
 
-router.get("/files", async(req,res) => {
-  
-  try{
-    var readstream = await gfs.createReadStream({filename: 'file',root: 'resume'});
+router.get("/files", async (req, res) => {
+  try {
+    var readstream = await gfs.createReadStream({
+      filename: "file",
+      root: "resume"
+    });
     readstream.pipe(res);
-  }
-  catch(err){
+  } catch (err) {
     console.log(err.message);
     res.send(err.message);
   }
 });
 
-
 //For development purposes mime type has been changed.
 //It should be 'application/pdf'
-const fileFilter = (req,file,cb) => {
-  if(file.mimetype === 'text/plain') cb(null,true);
-  else cb(new Error('Please upload a file in pdf format'),false);
-}
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype === "text/plain") cb(null, true);
+  else cb(new Error("Please upload a file in pdf format"), false);
+};
 
 const storage = new GridFsStorage({
-  url: 'mongodb+srv://new_user1:Arciitk@arcportal-z5xml.mongodb.net/test?retryWrites=true&w=majority',
+  url:
+    "mongodb+srv://new_user1:Arciitk@arcportal-z5xml.mongodb.net/test?retryWrites=true&w=majority",
   file: (req, file) => {
     console.log(file);
     return {
-      bucketName: 'resume'
+      bucketName: "resume"
     };
   }
 });
 
-const upload = multer({ 
-  storage : storage,
+const upload = multer({
+  storage: storage,
   limits: {
-    fileSize: 1024*1024
+    fileSize: 1024 * 1024
   },
-  fileFilter: fileFilter,
-}).single('resume');
+  fileFilter: fileFilter
+}).single("resume");
 
 // STudent profile resume upload route
-router.post("/student/profile", tokenAuth, isStudent, async(req,res) => {
-  upload(req, res, (err) => {
-    if (err){
+router.post("/student/profile", tokenAuth, isStudent, async (req, res) => {
+  upload(req, res, err => {
+    if (err) {
       // A Multer error occurred when uploading.
       console.log(err.message);
       res.send(err.message);
-    }else{
+    } else {
       console.log(req.file.path);
       // Everything went fine.
       console.log("File uploaded successfully");
       res.send("File uploaded successfully");
     }
-  })
+  });
 });
-
 
 // STUDENT SIDE: Get student's requests
 router.get("/student", tokenAuth, isStudent, async (req, res) => {
@@ -87,10 +87,12 @@ router.get("/", tokenAuth, async (req, res) => {
       const date = Date.now() - 15 * 24 * 60 * 60 * 1000; // 15 days
       const recentprojects = await Project.find({
         createdAt: { $gte: date },
-        available: true,
-      }).sort({createdAt: 'desc'}).populate("professor", "name department");
+        available: true
+      })
+        .sort({ createdAt: "desc" })
+        .populate("professor", "name department");
       const studentrequests = await Request.find({ student: req.user._id })
-        .sort({createdAt: 'desc'})
+        .sort({ createdAt: "desc" })
         .populate("professor", "name department")
         .populate("project", "title description");
       res.render("dash/studentindex", {
@@ -104,7 +106,9 @@ router.get("/", tokenAuth, async (req, res) => {
     // User is a professor
     try {
       const professor = await Professor.findOne({ _id: req.user._id });
-      const projects = await Project.find({ professor: professor }).sort({createdAt: 'desc'});
+      const projects = await Project.find({ professor: professor }).sort({
+        createdAt: "desc"
+      });
       res.render("dash/professorindex", { projects: projects });
     } catch (err) {
       res.status(400).send(err.message);
@@ -113,13 +117,13 @@ router.get("/", tokenAuth, async (req, res) => {
 });
 //LOGOUT
 router.get("/user/logout", tokenAuth, async (req, res) => {
-  res.render('dash/logout');
+  res.render("dash/logout");
 });
 
 // STudent profile route
-router.get("/student/profile",tokenAuth,async(req,res) => {
+router.get("/student/profile", tokenAuth, async (req, res) => {
   var student = await Student.findOne({ _id: req.user._id });
-  res.render("dash/studentprofile",{student:student});
+  res.render("dash/studentprofile", { student: student });
 });
 
 module.exports = router;
