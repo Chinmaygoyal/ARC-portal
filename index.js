@@ -32,7 +32,6 @@ app.use((req, res) => {
 });
 
 // Environment variables
-const PORT = config.get("PORT");
 const DB_URL = config.get("DB_URL");
 
 // Connect to MongoDB
@@ -49,6 +48,7 @@ mongoose.connect(
 );
 
 // Start the server
+const PORT = process.env.PORT;
 const server = http.createServer(app);
 server.listen(PORT, () => {
   console.log(`Server live at port ${PORT}.`);

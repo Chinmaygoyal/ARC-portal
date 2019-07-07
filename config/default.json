@@ -1,5 +1,4 @@
 {
-  "PORT": 3000,
   "DB_URL": "mongodb+srv://new_user1:Arciitk@arcportal-z5xml.mongodb.net/test?retryWrites=true&w=majority",
   "authTokenKey": "123456",
   "mailTokenKey": "123456",
