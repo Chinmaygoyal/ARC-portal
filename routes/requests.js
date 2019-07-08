@@ -5,7 +5,7 @@ const { Project } = require("../models/project");
 const tokenAuth = require("../middleware/tokenAuth");
 const { isProf, isStudent } = require("../middleware/userCheck");
 const router = require("express").Router();
-const mail = require('../libs/mail');
+const mail = require("../libs/mail");
 router.get("/view/professor", tokenAuth, isProf, async (req, res) => {
   var prof_user = await Professor.findOne({ _id: req.user._id });
   const prof_request = await Request.find({ professor: prof_user });
@@ -15,10 +15,14 @@ router.get("/view/professor", tokenAuth, isProf, async (req, res) => {
 // PROF SIDE: See a student request
 router.get("/view/:id", tokenAuth, isProf, async (req, res) => {
   try {
+    const professor = await Professor.findOne({ _id: req.user._id });
     const request = await Request.findById(req.params.id)
       .populate("project", "title")
       .populate("student", "name department email");
-    res.render("dash/requestdetailview", { request: request });
+    res.render("dash/requestdetailview", {
+      request: request,
+      name: professor.name
+    });
   } catch (error) {
     res.status(404).send("Request not found");
   }
@@ -46,14 +50,25 @@ router.post("/view/professor/", tokenAuth, isProf, async (req, res) => {
   if (result == "true") {
     if (pos < 0) {
       project.students.push(student);
-      mail.sendStatus(student.email,'Project Status Changed',true,student.name,project.title);
+      mail.sendStatus(
+        student.email,
+        "Project Status Changed",
+        true,
+        student.name,
+        project.title
+      );
     }
-  } 
-  else {
-    if (pos >= 0){
-       project.students.splice(pos, 1);
-      mail.sendStatus(student.email,'Project Status Changed',false,student.name,project.title);
-   }
+  } else {
+    if (pos >= 0) {
+      project.students.splice(pos, 1);
+      mail.sendStatus(
+        student.email,
+        "Project Status Changed",
+        false,
+        student.name,
+        project.title
+      );
+    }
   }
   // Save to DB and respond.
   await project.save();

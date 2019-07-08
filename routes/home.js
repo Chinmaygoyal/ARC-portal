@@ -124,6 +124,9 @@ router.get("/", tokenAuth, async (req, res) => {
   if (!isProf) {
     // User is a student
     try {
+      const student = await Student.findOne({ _id: req.user._id }).select(
+        "name rollNumber"
+      );
       const date = Date.now() - 15 * 24 * 60 * 60 * 1000; // 15 days
       const recentprojects = await Project.find({
         createdAt: { $gte: date },
@@ -137,7 +140,9 @@ router.get("/", tokenAuth, async (req, res) => {
         .populate("project", "title description");
       res.render("dash/studentindex", {
         recentprojects: recentprojects,
-        studentrequests: studentrequests
+        studentrequests: studentrequests,
+        name: student.name,
+        rollNumber: student.rollNumber
       });
     } catch (err) {
       res.status(400).send("Invalid User");
@@ -149,7 +154,10 @@ router.get("/", tokenAuth, async (req, res) => {
       const projects = await Project.find({ professor: professor }).sort({
         createdAt: "desc"
       });
-      res.render("dash/professorindex", { projects: projects });
+      res.render("dash/professorindex", {
+        projects: projects,
+        name: professor.name
+      });
     } catch (err) {
       res.status(400).send(err.message);
     }
