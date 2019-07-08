@@ -18,10 +18,10 @@ router.post("/register", async (req, res) => {
   // Check if email is an IITK email id
   // const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
   const regex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[a-zA-Z0-9]/;
-  
+
   const studentdetail = await search.getData(email);
   //console.log(studentdetail);
-  
+
   if (!email.match(regex))
     return res.status(400).send("Send valid IITK email id (*@iitk.ac.in)");
   // Check if student or prof
@@ -37,9 +37,7 @@ router.post("/register", async (req, res) => {
         mailer.sendVerificationMail(
           email,
           "Verify your email ID",
-          `${process.env.domain}:${config.get(
-            "PORT"
-          )}/verify.html?token=${token}`
+          `${process.env.domain}:${process.env.PORT}/verify.html?token=${token}`
         );
         res.status(200).send("Verification mail sent");
       } catch (ex) {
@@ -66,16 +64,15 @@ router.post("/register", async (req, res) => {
       isVerified: false
     });
 
-    //if student data available push it into student    
-    
-    if(studentdetail)
-    {
-        student.set({
+    //if student data available push it into student
+
+    if (studentdetail) {
+      student.set({
         name: studentdetail.n,
         rollNumber: studentdetail.i,
         email: email,
         department: studentdetail.d,
-        isVerified: false,
+        isVerified: false
       });
     }
     // Save the student, send verification mail
@@ -85,7 +82,7 @@ router.post("/register", async (req, res) => {
       mailer.sendVerificationMail(
         email,
         "Verify your email ID",
-        `${process.env.domain}:${config.get("PORT")}/verify.html?token=${token}`
+        `${process.env.domain}:${process.env.PORT}/verify.html?token=${token}`
       );
       res.status(200).send("Verification mail sent");
     } catch (ex) {
@@ -149,18 +146,16 @@ router.post("/changepwd", tokenAuth, async (req, res) => {
   res.send("Password updated successfully");
 });
 
-router.post("/forgot",async (req, res) => {
-const email = req.body.email;
-const student = await Student.findOne({email:email});
-const professor =  await Professor.findOne({email:email});
+router.post("/forgot", async (req, res) => {
+  const email = req.body.email;
+  const student = await Student.findOne({ email: email });
+  const professor = await Professor.findOne({ email: email });
 
-if(student)
-{
-if(!student.isVerified)
-  return res.send("Not Verified Account");
+  if (student) {
+    if (!student.isVerified) return res.send("Not Verified Account");
 
     options = { useMailKey: true };
- 
+
     const key = options.useMailKey
       ? config.get("mailTokenKey")
       : config.get("authTokenKey");
@@ -168,43 +163,49 @@ if(!student.isVerified)
     const salt = await bcrypt.genSalt();
     hpass = await bcrypt.hash(student.password, salt);
     const token = jwt.sign(
-      { _id: student._id, rollNumber: student.rollNumber, email: student.email, is_prof:false, password:hpass },
+      {
+        _id: student._id,
+        rollNumber: student.rollNumber,
+        email: student.email,
+        is_prof: false,
+        password: hpass
+      },
       key,
       jwtOptions
     );
-    
+
     try {
       mailer.sendVerificationMail(
         email,
         "Verify your email ID",
-        `${process.env.domain}:${config.get("PORT")}/forgot.html?token=${token}`
+        `${process.env.domain}:${process.env.PORT}/forgot.html?token=${token}`
       );
       return res.status(200).send("Verification mail sent");
     } catch (ex) {
       return res.status(500).send(ex.message);
     }
+  } else if (professor) {
+    if (!professor.isVerified) return res.send("Not Verified Account");
 
+    options = { useMailKey: true };
 
-}
-else if(professor)
-{
-  if(!professor.isVerified)
-  return res.send("Not Verified Account");
-
-  options = { useMailKey: true };
- 
-  const key = options.useMailKey
+    const key = options.useMailKey
       ? config.get("mailTokenKey")
       : config.get("authTokenKey");
     const jwtOptions = options.useMailKey ? { expiresIn: "30m" } : undefined;
     const salt = await bcrypt.genSalt();
     hpass = await bcrypt.hash(professor.password, salt);
     const token = jwt.sign(
-      { _id: professor._id, email: professor.email, is_prof:true, password:hpass },
+      {
+        _id: professor._id,
+        email: professor.email,
+        is_prof: true,
+        password: hpass
+      },
       key,
       jwtOptions
     );
-    
+
     try {
       mailer.sendVerificationMail(
         email,
@@ -215,10 +216,6 @@ else if(professor)
     } catch (ex) {
       return res.status(500).send(ex.message);
     }
-
-
-}
-else
-  return res.send("Invalid Email ID");
+  } else return res.send("Invalid Email ID");
 });
 module.exports = router;
