@@ -37,7 +37,7 @@ router.post("/register", async (req, res) => {
         mailer.sendVerificationMail(
           email,
           "Verify your email ID",
-          `${process.env.domain}:${process.env.PORT}/verify.html?token=${token}`
+          `${process.env.domain}/verify.html?token=${token}`
         );
         res.status(200).send("Verification mail sent");
       } catch (ex) {
@@ -82,7 +82,7 @@ router.post("/register", async (req, res) => {
       mailer.sendVerificationMail(
         email,
         "Verify your email ID",
-        `${process.env.domain}:${process.env.PORT}/verify.html?token=${token}`
+        `${process.env.domain}/verify.html?token=${token}`
       );
       res.status(200).send("Verification mail sent");
     } catch (ex) {
@@ -178,7 +178,7 @@ router.post("/forgot", async (req, res) => {
       mailer.sendVerificationMail(
         email,
         "Verify your email ID",
-        `${process.env.domain}:${process.env.PORT}/forgot.html?token=${token}`
+        `${process.env.domain}/forgot.html?token=${token}`
       );
       return res.status(200).send("Verification mail sent");
     } catch (ex) {
@@ -210,7 +210,7 @@ router.post("/forgot", async (req, res) => {
       mailer.sendVerificationMail(
         email,
         "Verify your email ID",
-        `${process.env.domain}:${config.get("PORT")}/forgot.html?token=${token}`
+        `${process.env.domain}/forgot.html?token=${token}`
       );
       return res.status(200).send("Verification mail sent");
     } catch (ex) {
