@@ -14,6 +14,7 @@ const jwt = require("jsonwebtoken");
 
 // Initial registration route
 router.post("/register", async (req, res) => {
+  process.env.domain = req.protocol + '://' + req.get('host');
   const email = req.body.email;
   // Check if email is an IITK email id
   // const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
@@ -147,6 +148,7 @@ router.post("/changepwd", tokenAuth, async (req, res) => {
 });
 
 router.post("/forgot", async (req, res) => {
+  process.env.domain = req.protocol + '://' + req.get('host');
   const email = req.body.email;
   const student = await Student.findOne({ email: email });
   const professor = await Professor.findOne({ email: email });
