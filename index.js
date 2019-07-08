@@ -28,6 +28,7 @@ app.use("/request", requestRouter);
 app.use(bodyParser.json());
 // 404 route
 app.use((req, res) => {
+  process.env.domain = req.protocol + '://' + req.get('host');
   res.status(404).sendFile("/views/dash/404.html", { root: __dirname });
 });
 
