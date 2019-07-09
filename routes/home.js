@@ -179,7 +179,7 @@ router.get("/profile/changepwd", tokenAuth, async (req, res) => {
   var student = await Student.findOne({ _id: req.user._id });
   var professor = await Professor.findOne({ _id: req.user._id });
 if(student)
-  res.render("dash/changepasswordstud", { student: student });
+  res.render("dash/changepasswordstud", { student: student, name:student.name, rollNumber: student.rollNumber});
 if(professor)
   res.render("dash/changepasswordprof", { professor: professor });
 
