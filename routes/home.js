@@ -166,4 +166,19 @@ router.get("/student/profile", tokenAuth, async (req, res) => {
   res.render("dash/studentprofile", { student: student });
 });
 
+//Change Password Route
+router.get("/profile/changepwd", tokenAuth, async (req, res) => {
+  var student = await Student.findOne({ _id: req.user._id });
+  var professor = await Professor.findOne({ _id: req.user._id });
+if(student)
+  res.render("dash/changepasswordstud", { student: student });
+if(professor)
+  res.render("dash/changepasswordprof", { professor: professor });
+
+});
+
+
+
+
+
 module.exports = router;
