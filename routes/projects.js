@@ -87,7 +87,15 @@ router.post("/createproject", tokenAuth, isProf, async (req, res) => {
         if (req.file) {
           project.set({ file: req.file.id });
           // Everything went fine.
+          if (project.description == "")
+            project.set({
+              description: "The project file contains the project description."
+            });
         }
+        if (project.description == "")
+          project.set({
+            description: "No description."
+          });
         await project.save();
       }
     });
