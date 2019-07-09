@@ -1,337 +1,340 @@
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	background: #f6f5f7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
-	/* margin: -20px 0 50px; */
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
 }
 
 h1 {
-	font-weight: bold;
-	margin: 0;
+  font-weight: 500;
+  color: #676a6d;
+  margin: 0;
 }
 
-.mobile-btn{
-	display: none;
+.mobile-btn {
+  display: none;
 }
 h2 {
-	text-align: center;
+  text-align: center;
 }
 
 p {
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 20px;
-	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
-	color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+  color: #ffffff;
 }
 
 span {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 a {
-	color: #333;
-	font-size: 14px;
-	text-decoration: none;
-	margin: 15px 0;
+  color: #676a6d;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
 }
 
 button {
-	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
-	color: #ffffff;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 35px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+  border-radius: 5px;
+  border: 1px solid #566374;
+  background-color: #566374;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 80ms ease-in;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #465161;
 }
 
 button:active {
-	transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 button:focus {
-	outline: none;
+  outline: none;
 }
 
 button.ghost {
-	background-color: transparent;
-	border-color: #FFFFFF;
+  background-color: transparent;
+  border-color: #ffffff;
 }
 
 form {
-	background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
-	text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
 }
 
 input {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
+  background-color: #fcfcfc;
+  border: 1px solid #eaeaea;
+  color: #555555;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  outline: none;
 }
 
 .container {
-	background-color: #fff;
-	border-radius: 10px;
-  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-			0 10px 10px rgba(0,0,0,0.22);
-	position: relative;
-	overflow: hidden;
-	width: 768px;
-	max-width: 100%;
-	min-height: 480px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
 }
 
 .form-container {
-	position: absolute;
-	top: 0;
-	height: 100%;
-	transition: all 0.6s ease-in-out;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
 }
 
 .sign-in-container {
-	left: 0;
-	width: 70%;
-	z-index: 2;
+  left: 0;
+  width: 70%;
+  z-index: 2;
 }
 
 .container.right-panel-active .sign-in-container {
-	transform: translateX(43%);
+  transform: translateX(43%);
 }
 
 .sign-up-container {
-	left: 0;
-	width: 70%;
-	opacity: 0;
-	z-index: 1;
+  left: 0;
+  width: 70%;
+  opacity: 0;
+  z-index: 1;
 }
 
 .container.right-panel-active .sign-up-container {
-	transform: translateX(43%);
-	opacity: 1;
-	z-index: 5;
-	animation: show 0.4s;
+  transform: translateX(43%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.4s;
 }
 
 @keyframes show {
-	0%, 49.99% {
-		opacity: 0;
-		z-index: 1;
-	}
-	
-	50%, 100% {
-		opacity: 1;
-		z-index: 5;
-	}
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
 }
 
 .overlay-container {
-	position: absolute;
-	top: 0;
-	left: 70%;
-	width: 30%;
-	height: 100%;
-	overflow: hidden;
-	transition: transform 0.6s ease-in-out;
-	z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 70%;
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
 }
 
-.container.right-panel-active .overlay-container{
-	transform: translateX(-234%);
+.container.right-panel-active .overlay-container {
+  transform: translateX(-234%);
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 0 0;
-	color: #FFFFFF;
-	position: relative;
-	left: -100%;
-	height: 100%;
-	width: 200%;
-  	/* transform: translateX(-10%);
-	transition: transform 0.6s ease-in-out; */
+  background: #566374;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
 }
 
 .container.right-panel-active .overlay {
-  	transform: translateX(50%);
+  transform: translateX(50%);
 }
 
-
-
 .overlay-panel {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
-	height: 100%;
-	width: 50%;
-	transform: translateX(0);
-	transition: transform 0.6s ease-in-out;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
 }
 
 .overlay-left {
-	transform: translateX(-20%);
+  transform: translateX(-20%);
 }
 
 .container.right-panel-active .overlay-left {
-	transform: translateX(0);
+  transform: translateX(0);
 }
 
 .overlay-right {
-	right: 0;
-	transform: translateX(0);
+  right: 0;
+  transform: translateX(0);
 }
 
 .container.right-panel-active .overlay-right {
-	transform: translateX(20%);
+  transform: translateX(20%);
 }
-.mobile-icon{
-	display: none;
-}
-
-
-.forgot-p-active .signinc{
-	z-index: 2;
-	transform: translateY(200%);
-
+.mobile-icon {
+  display: none;
 }
 
-.forgot{
-z-index: 1;
-transform: translateY(-100%);
+.forgot-p-active .signinc {
+  z-index: 2;
+  transform: translateY(200%);
 }
-.forgot-p-active .forgot{
-	z-index: 3;
-	transform: translateY(0);
+
+.forgot {
+  z-index: 1;
+  transform: translateY(-100%);
+}
+.forgot-p-active .forgot {
+  z-index: 3;
+  transform: translateY(0);
 }
 
 .fp {
-	cursor: pointer;
+  cursor: pointer;
+  transition: transform 0.05s ease-in-out;
 }
 
 .fp:hover {
-	text-decoration: underline;
+  /* text-decoration: underline; */
+  transform: scale(1.03);
 }
 
-@media(max-width: 800px){
-	section{
-		width: 100%;
-	}
-	.container{
-		width: 100%;
-	}
-	.overlay-panel{
-		padding: 0 5px;;
-	}
-	.sign-in-container{
-		width: 80%;
-	}
-	.container.right-panel-active .sign-in-container {
-		transform: translateX(25%);
-	}
-	.sign-up-container {
-		width: 80%;
-	}
-	.container.right-panel-active .sign-up-container {
-		transform: translateX(25%);
-	}
-	.overlay-container {
-		left: 80%;
-		width: 20%;	
-	}
-	.container.right-panel-active .overlay-container{
-		transform: translateX(-400%);
-	}
-	
-	.overlay {
-		left: -100%;
-		height: 100%;
-		width: 200%;
-		/* overflow: hidden; */
-	}
-	
-	.container.right-panel-active .overlay {
-		  transform: translateX(50%);
-	}
-	
-	.overlay-panel {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		padding: 0 40px;
-		text-align: center;
-		top: 0;
-		height: 100%;
-		width: 50%;
-		transform: translateX(0);
-		transition: transform 0.6s ease-in-out;
-	}
-	
-	.overlay-left {
-		transform: translateX(-20%);
-	}
-	
-	.container.right-panel-active .overlay-left {
-		transform: translateX(0);
-	}
-	
-	.overlay-right {
-		right: 0;
-		transform: translateX(0);
-	}
-	
-	.container.right-panel-active .overlay-right {
-		transform: translateX(20%);
-	}
-	.desktop-overlay-content{
-		display: none;
-	}
-	button.ghost{
-		/* padding: 0px; */
-		display: none;
-	}
-	.mobile-icon{
-		display: block;
-		/* background-color:  #FF416C; */
-		border: 2px solid white;
-	}
-	#signUpMobile{
-		background-color:  #FF416C;
-	}
-	#signInMobile{
-		background-color:  #FF4B2B;
-	}
+@media (max-width: 800px) {
+  section {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+  .overlay-panel {
+    padding: 0 5px;
+  }
+  .sign-in-container {
+    width: 80%;
+  }
+  .container.right-panel-active .sign-in-container {
+    transform: translateX(25%);
+  }
+  .sign-up-container {
+    width: 80%;
+  }
+  .container.right-panel-active .sign-up-container {
+    transform: translateX(25%);
+  }
+  .overlay-container {
+    left: 80%;
+    width: 20%;
+  }
+  .container.right-panel-active .overlay-container {
+    transform: translateX(-400%);
+  }
+
+  .overlay {
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    /* overflow: hidden; */
+  }
+
+  .container.right-panel-active .overlay {
+    transform: translateX(50%);
+  }
+
+  .overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .overlay-left {
+    transform: translateX(-20%);
+  }
+
+  .container.right-panel-active .overlay-left {
+    transform: translateX(0);
+  }
+
+  .overlay-right {
+    right: 0;
+    transform: translateX(0);
+  }
+
+  .container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+  }
+  .desktop-overlay-content {
+    display: none;
+  }
+  button.ghost {
+    /* padding: 0px; */
+    display: none;
+  }
+  .mobile-icon {
+    display: block;
+    /* background-color:  #FF416C; */
+    border: 2px solid white;
+  }
+  #signUpMobile {
+    background-color: #2b333e;
+  }
+  #signInMobile {
+    background-color: #2b333e;
+  }
 }
