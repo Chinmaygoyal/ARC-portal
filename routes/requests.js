@@ -106,11 +106,18 @@ router.post("/createrequests/:id", tokenAuth, isStudent, async (req, res) => {
 
 //STUDENT SIDE : See a request and its status
 router.get("/:id", tokenAuth, isStudent, async (req, res) => {
+  const student = await Student.findOne({ _id: req.user._id }).select(
+    "name rollNumber"
+  );
   const request = await Request.findById(req.params.id)
     .populate("project", "title")
     .populate("professor", "name department");
   if (request) {
-    res.render("dash/studentrequestview", { request: request });
+    res.render("dash/studentrequestview", {
+      request: request,
+      name: student.name,
+      rollNumber: student.rollNumber
+    });
     //console.log(request);
   } else res.send("NO request found");
 });
