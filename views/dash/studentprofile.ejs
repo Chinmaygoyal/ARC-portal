@@ -45,13 +45,13 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
     <script>
       $(document).ready(function() {
-        $("#uploadForm").submit(function() {
-          $("#status")
+        $('#uploadForm').submit(function() {
+          $('#status')
             .empty()
-            .text("File is uploading...");
+            .text('File is uploading...');
           $(this).ajaxSubmit({
             error: function(xhr) {
-              status("Error: " + xhr.status);
+              status('Error: ' + xhr.status);
             },
             success: function(response) {
               alert(response);
@@ -105,10 +105,23 @@
                   <i class="icon-submenu lnr lnr-chevron-down"></i
                 ></a>
                 <ul class="dropdown-menu">
-								<li><a href="/home/"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-								<li><a href="/home/profile/changepwd/"><i class="lnr lnr-cog"></i> <span>Change Password</span></a></li>
-								<li><a href="/home/user/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>								
-							</ul>
+                  <li>
+                    <a href="/home/"
+                      ><i class="lnr lnr-user"></i> <span>My Profile</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="/home/profile/changepwd/"
+                      ><i class="lnr lnr-cog"></i>
+                      <span>Change Password</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="/home/user/logout"
+                      ><i class="lnr lnr-exit"></i> <span>Logout</span></a
+                    >
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -153,18 +166,22 @@
             <div class="panel panel-profile">
               <div class="clearfix">
                 <!-- LEFT COLUMN -->
-                <div class="profile-left">
+                <div
+                  class="profile-left"
+                  style="display: flex; align-items: center; justify-content: center"
+                >
                   <!-- PROFILE HEADER -->
-                  <div class="profile-header">
-                    <img
-                      src="https://oa.cc.iitk.ac.in:443/Oa/Jsp/Photo/<%=student.rollNumber%>_0.jpg"
-                      style="height:150px;"
-                      class="img-circle"
-                      alt="No image found"
-                    />
-                  </div>
-                  <!-- END PROFILE HEADER -->
-                  <!-- PROFILE DETAIL -->
+                  <!-- <div class="profile-header"> -->
+                  <img
+                    src="https://oa.cc.iitk.ac.in:443/Oa/Jsp/Photo/<%=student.rollNumber%>_0.jpg"
+                    style="width: 250px; height: 300px"
+                    alt="No image found"
+                  />
+                  <!-- </div> -->
+                </div>
+                <!-- END PROFILE HEADER -->
+                <!-- PROFILE DETAIL -->
+                <div class="profile-right">
                   <div class="profile-detail">
                     <div class="profile-info">
                       <h4 class="heading">Basic Info</h4>
@@ -175,41 +192,43 @@
                         </li>
                         <li>Email <span><%=student.email%></span></li>
                         <li>Department <span><%=student.department%></span></li>
-
-                        <li>
-                          Resume
-                          <span>
-                            <%if(student.resume){%>
-                            <a href="/home/resume" target = "_blank">Your resume</a>
-                            <%}else{%> You have not uploaded your resume. <%}%>
-                          </span>
-                        </li>
-                        <form
-                          id="uploadForm"
-                          enctype="multipart/form-data"
-                          action="/home/student/profile"
-                          method="post"
-                        >
-                          <input type="file" name="resume" required />
-                          <%if(!student.resume){%>
-                          <input
-                            type="submit"
-                            value="Upload resume"
-                            name="submit"
-                          />
-                          <%}else{%>
-                          <input
-                            type="submit"
-                            value="Update resume"
-                            name="submit"
-                          />
-                          <%}%>
-                        </form>
                       </ul>
+                      <br /><br />
+                      <h4 class="heading">Resume</h4>
+                      <span>
+                        <%if(student.resume){%>
+                        <a href="/home/resume">Your resume</a>
+                        <%}else{%>
+                        <strong>You have not uploaded your resume.</strong>
+                        <%}%>
+                      </span>
+                      <br /><br />
+                      <form
+                        id="uploadForm"
+                        enctype="multipart/form-data"
+                        action="/home/student/profile"
+                        method="post"
+                      >
+                        <input type="file" name="resume" required />
+                        <%if(!student.resume){%>
+                        <input
+                          type="submit"
+                          value="Upload resume"
+                          name="submit"
+                        />
+                        <%}else{%>
+                        <input
+                          type="submit"
+                          value="Update resume"
+                          name="submit"
+                        />
+                        <%}%>
+                      </form>
                     </div>
                   </div>
-                  <!-- END PROFILE DETAIL -->
                 </div>
+                <!-- END PROFILE DETAIL -->
+                <!-- </div> -->
                 <!-- END LEFT COLUMN -->
                 <!-- RIGHT COLUMN -->
 
