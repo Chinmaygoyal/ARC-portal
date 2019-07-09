@@ -123,11 +123,16 @@ router.post("/changepwd", tokenAuth, async (req, res) => {
   const oldPassword = req.body.oldPassword;
   const newPassword = req.body.newPassword;
   // Check if student exists
-  const student = Student.findById(req.user._id);
-  if (!student) return res.status(400).send("Student does not exist");
+  const student = await Student.findById(req.user._id);
+  const professor = await Professor.findById(req.user._id);
+  //if (!student) return res.status(400).send("Student does not exist");
   // Check old password
+
+  if(!oldPassword) return res.status(400).send("Invalid password");
+  if(student)
+  {
   const isCorrect = await bcrypt.compare(oldPassword, student.password);
-  if (!isCorrect) res.status(401).send("Old password incorrect");
+  if (!isCorrect) return res.status(400).send("Old password incorrect");
   // Joi validation of new password
   const { error } = Joi.validate(
     { password: newPassword },
@@ -144,7 +149,32 @@ router.post("/changepwd", tokenAuth, async (req, res) => {
   student.password = hash;
   await student.save();
   // Send success response
-  res.send("Password updated successfully");
+  return res.status(200).send("Password updated successfully");
+  }
+  else if(professor)
+  {
+    const isCorrect = await bcrypt.compare(oldPassword, professor.password);
+    if (!isCorrect) return res.status(400).send("Old password incorrect");
+    // Joi validation of new password
+    const { error } = Joi.validate(
+      { password: newPassword },
+      {
+        password: Joi.string()
+          .required()
+          .min(8)
+          .max(255)
+      }
+    );
+    if (error) return res.status(400).send(error.details[0].message);
+    // Update new password
+    const hash = await bcrypt.hash(newPassword, await bcrypt.genSalt());
+    professor.password = hash;
+    await professor.save();
+    // Send success response
+    return res.status(200).send("Password updated successfully");
+  }
+  else
+  return res.status(400).send("Invalid User");
 });
 
 router.post("/forgot", async (req, res) => {
