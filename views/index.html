@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Log in Sign Up</title>
+    <title>Research Portal | Academics and Career Council, IIT Kanpur</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -26,8 +26,9 @@
   <body>
     <script>
       // IF LOGGED IN (cookie found), REDIRECT TO DASH
-      const token = Cookies.get("auth_token");
-      if (token) document.location.replace("http://localhost:3000/dash");
+      const token = Cookies.get('x-auth-token');
+      if (token)
+        document.location.replace(document.location.hostname + '/dash');
     </script>
     <section>
       <div class="container" id="container">
@@ -36,16 +37,16 @@
         </div>
         <div class="form-container sign-up-container">
           <form id="signup-form">
+            <img src="./dash/assets/img/logo-dark.png" /><br /><br />
             <h1>Create Account</h1>
-            <!-- <input type="text" placeholder="Name" /> -->
-            <input type="email" placeholder="Email" name="email" />
-            <!-- <input type="password" placeholder="Password" /> -->
+            <input type="email" placeholder="Email" name="email" /><br />
             <button>Sign Up</button>
           </form>
         </div>
         <div class="form-container sign-in-container signinc">
           <form id="signin-form">
-            <h1>Sign in</h1>
+            <img src="./dash/assets/img/logo-dark.png" /><br /><br />
+            <!-- <h1>Sign in</h1> -->
             <input type="email" placeholder="Email" name="email" required />
             <input
               type="password"
@@ -61,7 +62,7 @@
         </div>
         <div class="form-container sign-in-container forgot">
           <form action="/auth/student/forgot" id="setpwd" method="POST">
-            <h1>Forgot My password</h1>
+            <h1>Forgot Password</h1>
 
             <div id="wrapper">
               <div class="vertical-align-wrap">
@@ -72,23 +73,26 @@
                       <div class="text-center">
                         <br />
                         <div style="max-width: 400px; margin: auto;">
-                          <form ></form>
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="email"
-                              placeholder="Email"
-                            /><br />
-                            <label id="message"></label>
-                            <br>
+                          <form></form>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="email"
+                            placeholder="Email"
+                          /><br />
+                          <label id="message"></label>
+                          <br />
 
-                            <a class="fp">Sign In ?</a>
-                            <br>
-                            <br>
-                            <button type="submit" id="submit" class="btn btn-primary">
-                              Submit
-                            </button>
-                             
+                          <a class="fp">Or sign in instead</a>
+                          <br />
+                          <br />
+                          <button
+                            type="submit"
+                            id="submit"
+                            class="btn btn-primary"
+                          >
+                            Submit
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -103,7 +107,7 @@
             <div class="overlay-panel overlay-left">
               <p><strong>Login</strong></p>
               <p class="desktop-overlay-content">
-                If you have ann account login with your IITK mail.
+                If you already have an account, login with your IITK mail.
               </p>
               <button class="ghost slider">Sign In</button>
               <button class="mobile-icon slider">
@@ -111,10 +115,10 @@
               </button>
             </div>
             <div class="overlay-panel overlay-right">
-              <p class="desktop-overlay-content">
-                If you do not have an account register with you IITK mail.
-              </p>
               <p><strong>Register</strong></p>
+              <p class="desktop-overlay-content">
+                If you do not have an account, register with your IITK mail.
+              </p>
               <button class="ghost slider">Sign Up</button>
               <button class="mobile-icon slider">
                 <i class="fas fa-arrow-left"></i>
