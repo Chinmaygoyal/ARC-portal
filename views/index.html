@@ -27,8 +27,7 @@
     <script>
       // IF LOGGED IN (cookie found), REDIRECT TO DASH
       const token = Cookies.get('x-auth-token');
-      if (token)
-        document.location.replace(document.location.hostname + '/dash');
+      if (token) document.location.replace('/dash');
     </script>
     <section>
       <div class="container" id="container">
