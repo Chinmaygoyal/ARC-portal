@@ -141,7 +141,16 @@
                             <% }%>
                           </td>
                         </tr>
-                        <tr>
+                        
+                        <% if (project.file){%>
+                          <tr>
+                            <th>File:</th>
+                            <td>
+                                <a href="/project/view/file/<%=project._id%>">File</a>
+                            </td>
+                          </tr>
+                        <% }%>
+                          <tr>
                           <th>Description:</th>
                           <td><%=project.description%></td>
                         </tr>

@@ -8,33 +8,33 @@ const projectSchema = new mongoose.Schema({
   },
   professor: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Professor'
+    ref: "Professor"
   },
   no_openings: {
-      type: Number,
-      required: true
+    type: Number,
+    required: true
   },
   description: {
-      type: String,
-      required: true,
-     // minlength: 100
-    //   maxlength: 
+    type: String,
+    default: ""
+    // minlength: 100
+    //   maxlength:
   },
   eligibility: {
-      type: String,
+    type: String
   },
   pre_requisites: String,
   //Duration to be specified in months
   duration: Number,
   available: {
-      type: Boolean,
-      default: true
+    type: Boolean,
+    default: true
   },
   no_requests: {
     type: Number,
     default: 0
   },
-  department:{
+  department: {
     type: String
   },
   createdAt: {
@@ -43,10 +43,13 @@ const projectSchema = new mongoose.Schema({
   },
   students: {
     type: [mongoose.Schema.Types.ObjectId],
-    ref: 'Student'
+    ref: "Student"
   },
+  file: {
+    type: String,
+    default: null
+  }
 });
 const Project = mongoose.model("Project", projectSchema);
-
 
 exports.Project = Project;

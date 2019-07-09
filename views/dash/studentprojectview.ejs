@@ -201,6 +201,14 @@
                       getdate(project.createdAt) %>
                     </td>
                   </tr>
+                  <% if (project.file){%>
+                  <tr>
+                    <th>File:</th>
+                    <td>
+                      <a href="/project/view/file/<%=project._id%>">File</a>
+                    </td>
+                  </tr>
+                  <% }%>
                 </table>
               </div>
               <br />

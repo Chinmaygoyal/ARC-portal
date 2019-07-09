@@ -6,6 +6,97 @@ const { isProf, isStudent } = require("../middleware/userCheck");
 const { Request } = require("../models/request");
 const { Student } = require("../models/student");
 const json2csv = require("json2csv").parse;
+const mongoose = require("mongoose");
+const multer = require("multer");
+const path = require("path");
+const Grid = require("gridfs-stream");
+const crypto = require("crypto");
+const GridFsStorage = require("multer-gridfs-storage");
+const db = mongoose.connection;
+
+let gfs;
+db.once("open", function() {
+  gfs = Grid(db.db, mongoose.mongo);
+});
+
+//See the uploaded file of the project
+router.get("/view/file/:id", tokenAuth, async (req, res) => {
+  try {
+    const project = await Project.findOne({ _id: req.params.id });
+    if (!project) return res.status(404).send("Not found");
+    if (!project.file) return res.status(404).send("No file found.");
+    var readstream = await gfs.createReadStream({
+      _id: project.file,
+      root: "projectfile"
+    });
+    readstream.pipe(res);
+  } catch (err) {
+    console.log(err.message);
+    res.send(err.message);
+  }
+});
+
+//File upload settings
+
+//For development purposes mime type has been changed.
+//It should be 'application/pdf'
+const fileFilter = (req, file, cb) => {
+  if (file.mimetype === "text/plain") cb(null, true);
+  else cb(new Error("Please upload a file in pdf format"), false);
+};
+
+const storage = new GridFsStorage({
+  url:
+    "mongodb+srv://new_user1:Arciitk@arcportal-z5xml.mongodb.net/test?retryWrites=true&w=majority",
+  file: (req, file) => {
+    return new Promise((resolve, reject) => {
+      crypto.randomBytes(16, (err, buf) => {
+        if (err) {
+          return reject(err);
+        }
+        const filename = buf.toString("hex") + path.extname(file.originalname);
+        const fileInfo = {
+          filename: filename,
+          bucketName: "projectfile"
+        };
+        resolve(fileInfo);
+      });
+    });
+  }
+});
+
+const upload = multer({
+  storage: storage,
+  limits: {
+    fileSize: 3 * 1024 * 1024
+  },
+  fileFilter: fileFilter
+}).single("projectfile");
+
+// PROF SIDE (API): Create new project
+router.post("/createproject", tokenAuth, isProf, async (req, res) => {
+  const professor = await Professor.findOne({ _id: req.user._id });
+  try {
+    upload(req, res, async err => {
+      if (err) {
+        // A Multer error occurred when uploading.
+        console.log(err.message);
+        res.send(err.message);
+      } else {
+        const project = new Project({ ...req.body, professor: professor });
+        if (req.file) {
+          project.set({ file: req.file.id });
+          // Everything went fine.
+        }
+        await project.save();
+      }
+    });
+    res.redirect("/home");
+  } catch (err) {
+    res.status(400).send("Please fill the complete information");
+    console.log(err.message);
+  }
+});
 
 // STUDENT SIDE: See all projects
 router.get("/", tokenAuth, isStudent, async (req, res) => {
@@ -79,19 +170,6 @@ router.get("/view/:id", tokenAuth, isStudent, async (req, res) => {
     });
   } catch (err) {
     res.status(500).send("Internal server error");
-    console.log(err.message);
-  }
-});
-
-// PROF SIDE (API): Create new project
-router.post("/createproject", tokenAuth, isProf, async (req, res) => {
-  const professor = await Professor.findOne({ _id: req.user._id });
-  try {
-    const project = new Project({ ...req.body, professor: professor });
-    await project.save();
-    res.redirect("/home");
-  } catch (err) {
-    res.status(400).send("Please fill the complete information");
     console.log(err.message);
   }
 });
