@@ -31,6 +31,7 @@ router.get("/view/:id", tokenAuth, isProf, async (req, res) => {
 // PROF SIDE: Accept or reject request
 router.post("/view/professor/", tokenAuth, isProf, async (req, res) => {
   const request = await Request.findById(req.body.id);
+  if (request.professor._id != req.user._id) return res.send("Invalid access");
   const result = req.body.status;
   // If no such request found
   if (!request) res.status(404).send("No requests found");
