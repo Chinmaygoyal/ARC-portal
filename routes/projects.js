@@ -146,21 +146,6 @@ router.get("/self", tokenAuth, isStudent, async (req, res) => {
   }
 });
 
-//department wise sorted
-router.get("/view/dept/:department", tokenAuth, async (req, res) => {
-  const department = req.params.department;
-  try {
-    const projects = await Project.find({ department: department }).sort({
-      createdAt: "desc"
-    });
-    if (projects.length == 0) return res.status(200).send("No project found");
-    res.send(projects);
-  } catch (err) {
-    res.status(500).send("Internal server error");
-    console.log(err.message);
-  }
-});
-
 // STUDENT SIDE (API): Get project
 router.get("/view/:id", tokenAuth, isStudent, async (req, res) => {
   try {

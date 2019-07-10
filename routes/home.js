@@ -111,13 +111,6 @@ router.post("/student/profile", tokenAuth, isStudent, async (req, res) => {
   });
 });
 
-// STUDENT SIDE: Get student's requests
-router.get("/student", tokenAuth, isStudent, async (req, res) => {
-  const student = await Student.findOne({ _id: req.user._id });
-  const studentrequests = await Request.find({ student: student });
-  res.send(studentrequests + "<br><br><br>" + recentproject);
-});
-
 // BOTH: Home page
 router.get("/", tokenAuth, async (req, res) => {
   const isProf = req.user.is_prof;
@@ -178,15 +171,14 @@ router.get("/student/profile", tokenAuth, async (req, res) => {
 router.get("/profile/changepwd", tokenAuth, async (req, res) => {
   var student = await Student.findOne({ _id: req.user._id });
   var professor = await Professor.findOne({ _id: req.user._id });
-if(student)
-  res.render("dash/changepasswordstud", { student: student, name:student.name, rollNumber: student.rollNumber});
-if(professor)
-  res.render("dash/changepasswordprof", { professor: professor });
-
+  if (student)
+    res.render("dash/changepasswordstud", {
+      student: student,
+      name: student.name,
+      rollNumber: student.rollNumber
+    });
+  if (professor)
+    res.render("dash/changepasswordprof", { professor: professor });
 });
-
-
-
-
 
 module.exports = router;
