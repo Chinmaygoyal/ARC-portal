@@ -10,6 +10,7 @@ const multer = require("multer");
 const path = require("path");
 const Grid = require("gridfs-stream");
 const crypto = require("crypto");
+const config = require("config");
 const GridFsStorage = require("multer-gridfs-storage");
 const db = mongoose.connection;
 
@@ -60,8 +61,7 @@ const fileFilter = (req, file, cb) => {
 };
 
 const storage = new GridFsStorage({
-  url:
-    "mongodb+srv://new_user1:Arciitk@arcportal-z5xml.mongodb.net/test?retryWrites=true&w=majority",
+  url: config.get("DB_URL"),
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
@@ -93,19 +93,17 @@ router.post("/student/profile", tokenAuth, isStudent, async (req, res) => {
     if (err) {
       // A Multer error occurred when uploading.
       console.log(err.message);
-      res.send(err.message);
+      res.status(500).send(err.message);
     } else {
       const student = await Student.findOne({ _id: req.user._id });
       if (student.resume) {
         gfs.remove({ _id: student.resume, root: "resume" }, function(err) {
-          if (err) return handleError(err);
-          console.log("success");
+          if (err) return res.status(500).send(err.message);
         });
       }
       student.set({ resume: req.file.id });
       await student.save();
       // Everything went fine.
-      console.log("File uploaded successfully");
       res.send("File uploaded successfully");
     }
   });

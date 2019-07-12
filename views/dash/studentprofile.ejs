@@ -41,26 +41,25 @@
       sizes="96x96"
       href="/dash/assets/img/favicon.png"
     />
+    <style>
+      #pickFile {
+        background: transparent;
+        color: #00a0f0;
+        border: 1px solid #00a0f0;
+        box-shadow: none;
+        margin-right: 10px;
+        transition: all 0.05s ease-in-out;
+      }
+      #pickFile:hover {
+        transform: scale(1.02);
+      }
+      #nativePick {
+        width: 0;
+        height: 0;
+      }
+    </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        $('#uploadForm').submit(function() {
-          $('#status')
-            .empty()
-            .text('File is uploading...');
-          $(this).ajaxSubmit({
-            error: function(xhr) {
-              status('Error: ' + xhr.status);
-            },
-            success: function(response) {
-              alert(response);
-            }
-          });
-          return false;
-        });
-      });
-    </script>
   </head>
 
   <body>
@@ -162,7 +161,7 @@
       <div class="main">
         <!-- MAIN CONTENT -->
         <div class="main-content">
-          <div class="container-fluid">
+          <div class="container-fluid" id="alert-wrap">
             <div class="panel panel-profile">
               <div class="clearfix">
                 <!-- LEFT COLUMN -->
@@ -202,26 +201,42 @@
                         <strong>You have not uploaded your resume.</strong>
                         <%}%>
                       </span>
-                      <br /><br />
+                      <br />
+                      <br />
                       <form
                         id="uploadForm"
                         enctype="multipart/form-data"
-                        action="/home/student/profile"
                         method="post"
+                        action="/home/student/profile"
                       >
-                        <input type="file" name="resume" required />
-                        <%if(!student.resume){%>
+                        <button class="btn btn-primary" id="pickFile">
+                          Choose File
+                        </button>
+                        <label id="fileName">No file chosen</label>
                         <input
+                          id="nativePick"
+                          type="file"
+                          name="resume"
+                          required
+                        /><br />
+                        <%if(!student.resume){%>
+                        <button
+                          class="btn btn-primary"
                           type="submit"
                           value="Upload resume"
                           name="submit"
-                        />
+                        >
+                          Upload resume
+                        </button>
                         <%}else{%>
-                        <input
+                        <button
+                          class="btn btn-primary"
                           type="submit"
                           value="Update resume"
                           name="submit"
-                        />
+                        >
+                          Update resume
+                        </button>
                         <%}%>
                       </form>
                     </div>
@@ -255,5 +270,38 @@
     <script src="/dash/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="/dash/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <script src="/dash/assets/scripts/klorofil-common.js"></script>
+    <script src="/dash/assets/scripts/alerts.js"></script>
+    <script>
+      const form = document.querySelector('#uploadForm');
+      const customBtn = document.querySelector('#pickFile');
+      const nativeBtn = document.querySelector('#nativePick');
+      const label = document.querySelector('#fileName');
+      const container = document.querySelector('#alert-wrap');
+
+      customBtn.addEventListener('click', () => nativeBtn.click());
+      nativeBtn.addEventListener('change', obj => {
+        const fileName = obj.target.value.split('\\');
+        label.innerHTML = fileName[fileName.length - 1];
+      });
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        $.ajax({
+          url: '/home/student/profile',
+          method: 'POST',
+          processData: false,
+          contentType: false,
+          data: new FormData(form),
+          success: () =>
+            addAlert(container, 'success', 'Resume uploaded successfully!'),
+          error: () =>
+            addAlert(
+              container,
+              'error',
+              'An unexpected error occured. Try again later.'
+            )
+        });
+      });
+    </script>
   </body>
 </html>
