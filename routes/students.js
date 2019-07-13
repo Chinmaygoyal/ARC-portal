@@ -182,23 +182,7 @@ router.post("/forgot", async (req, res) => {
   const email = req.body.email;
   const student = await Student.findOne({ email: email });
   const professor = await Professor.findOne({ email: email });
-  //CAPTCHA VERIFICATION STARTS HERE
-  if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null) {
-    return res.status(400).send("INVALID CAPTCHA");
-  }
-  var secretKey = "6Lf5gq0UAAAAAHHCvh8jaBK67deUHbLUW1-vmkKY";
 
-  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-
-  request(verificationUrl,function(error,response,body) {
-    body = JSON.parse(body);
-    // Success will be true or false depending upon captcha validation.
-    if(body.success !== undefined && !body.success) {
-      return res.status(400).send("INVALID CAPTCHA");
-    }
-  });
-
-  //CAPTCHA VERIFICATION ENDS HERE
   if (student) {
     if (!student.isVerified) return res.send("Not Verified Account");
 
