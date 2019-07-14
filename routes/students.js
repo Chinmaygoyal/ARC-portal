@@ -178,10 +178,32 @@ router.post("/changepwd", tokenAuth, async (req, res) => {
 });
 
 router.post("/forgot", async (req, res) => {
+  
+  //TESTING
+  console.log(req.body);
+  
+  //RECAPTCHA STARTS HERE
+  axios.post('https://www.google.com/recaptcha/api/siteverify', {
+  secret:'6Lf5gq0UAAAAAHHCvh8jaBK67deUHbLUW1-vmkKY',
+  response: req.body['g-recaptcha-response'],
+  remoteip: req.connection.remoteAddress,  
+  })
+  .then((resp) => {
+      if(!resp.body.success)
+      {
+        return res.status(400).send("INVALID CAPTCHA"); 
+      }
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+  //RECAPTCHA ENDS HERE
+
   process.env.domain = req.protocol + '://' + req.get('host');
   const email = req.body.email;
   const student = await Student.findOne({ email: email });
   const professor = await Professor.findOne({ email: email });
+  
 
   if (student) {
     if (!student.isVerified) return res.send("Not Verified Account");
