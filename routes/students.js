@@ -183,7 +183,11 @@ router.post("/forgot", async (req, res) => {
   
   //TESTING
   console.log(req.body);
-  
+  console.log({
+    secret:'6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy',
+    response: req.body['g-recaptcha-response'],
+    remoteip: req.connection.remoteAddress,  
+    });
   //RECAPTCHA STARTS HERE
   axios.post('https://www.google.com/recaptcha/api/siteverify', {
   params :{
