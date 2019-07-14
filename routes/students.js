@@ -206,6 +206,9 @@ router.post("/forgot", async (req, res) => {
   .catch((error) => {
     console.error(error)
   })
+  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + "6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy" + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+  const data = await axios.get(verificationUrl);
+  console.log(data);
   //RECAPTCHA ENDS HERE
 
   process.env.domain = req.protocol + '://' + req.get('host');
