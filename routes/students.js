@@ -181,33 +181,12 @@ router.post("/changepwd", tokenAuth, async (req, res) => {
 
 router.post("/forgot", async (req, res) => {
   
-  //TESTING
-  console.log(req.body);
-  console.log({
-    secret:'6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy',
-    response: req.body['g-recaptcha-response'],
-    remoteip: req.connection.remoteAddress,  
-    });
-  //RECAPTCHA STARTS HERE
-  axios.post('https://www.google.com/recaptcha/api/siteverify', {
-  params :{
-  secret:'6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy',
-  response: req.body['g-recaptcha-response'],
-  remoteip: req.connection.remoteAddress,  
-  }  
-})
-  .then((resp) => {
-      if(!resp.body.success)
-      {
-        return res.status(400).send("INVALID CAPTCHA"); 
-      }
-      console.log(resp)
-  })
-  .catch((error) => {
-    console.error(error)
-  })
+ //RECAPTCHA STARTS HERE
+
   var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + "6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy" + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
   const data = await axios.get(verificationUrl);
+  if(!data.success)
+    return res.status(400).send("INVALID CAPTCHA");
   console.log(data);
   //RECAPTCHA ENDS HERE
 
