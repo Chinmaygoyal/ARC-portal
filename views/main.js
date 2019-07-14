@@ -48,17 +48,20 @@ signupForm.addEventListener('submit', function(e) {
     error: jqXHR => alert(jqXHR.responseText)
   });
 });
+const forgotForm = document.querySelector('#setpwd');
 
-
-  $('#setpwd').submit(function() {
-    $(this).ajaxSubmit({
-      error: function(xhr) {
-        alert('Error: ' + xhr.status);
-      },
-     success: function(response) {
-      alert(response);
-     }
-    });
+forgotForm.addEventListener('submit', function(e) {
+  e.preventDefault();  
+  $.ajax({
+    url: '/auth/student/forgot',
+    method: 'POST',
+    data: $(this).serialize(),
+    success: (data, status, jqXHR) => {
+      // Inform about verification mail sent
+      alert('Verification mail has been sent. Please check your mail.');
+    },
+    error: jqXHR => alert(jqXHR.responseText)
+  });
     //Very important line, it disable the page refresh.
-    return false;
+    
   });
