@@ -185,9 +185,13 @@ router.post("/forgot", async (req, res) => {
   console.log(req.body);
   
   //RECAPTCHA STARTS HERE
-  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + '6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy' + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-  axios.post(verificationUrl, {
-  })
+  axios.post('https://www.google.com/recaptcha/api/siteverify', {
+  params :{
+  secret:'6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy',
+  response: req.body['g-recaptcha-response'],
+  remoteip: req.connection.remoteAddress,  
+  }  
+})
   .then((resp) => {
       if(!resp.body.success)
       {
