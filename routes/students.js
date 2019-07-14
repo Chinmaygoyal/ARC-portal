@@ -184,7 +184,7 @@ router.post("/forgot", async (req, res) => {
  //RECAPTCHA STARTS HERE
 
   var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + "6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy" + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
-  const data = await axios.get(verificationUrl);
+  const {data} = await axios.get(verificationUrl);
   if(!data.success)
     return res.status(400).send("INVALID CAPTCHA");
   console.log(data);
