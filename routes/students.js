@@ -189,23 +189,18 @@ router.post("/forgot", async (req, res) => {
     remoteip: req.connection.remoteAddress,  
     });
   //RECAPTCHA STARTS HERE
-  axios.post('https://www.google.com/recaptcha/api/siteverify', {
-  params :{
-  secret:'6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy',
-  response: req.body['g-recaptcha-response'],
-  remoteip: req.connection.remoteAddress,  
-  }  
-})
-  .then((resp) => {
-      if(!resp.body.success)
-      {
-        return res.status(400).send("INVALID CAPTCHA"); 
-      }
-      console.log(resp)
-  })
-  .catch((error) => {
-    console.error(error)
-  })
+  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + '6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy' + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+  var request = require('request');
+  request.post({
+  headers: {'content-type' : 'application/x-www-form-urlencoded'},
+  url:     verificationUrl,
+    }, function(error, response, body){
+  console.log(body);
+});
+
+  
+  
+  
   //RECAPTCHA ENDS HERE
 
   process.env.domain = req.protocol + '://' + req.get('host');
