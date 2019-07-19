@@ -187,7 +187,7 @@ router.post("/forgot", async (req, res) => {
   const {data} = await axios.get(verificationUrl);
   if(!data.success)
     return res.status(400).send("INVALID CAPTCHA");
-  console.log(data);
+
   //RECAPTCHA ENDS HERE
 
   process.env.domain = req.protocol + '://' + req.get('host');
