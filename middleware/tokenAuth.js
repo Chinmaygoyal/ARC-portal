@@ -14,7 +14,7 @@ function tokenAuth(req, res, next) {
     req.user = decoded;
     next();
   } catch (ex) {
-    res.status(400).send("Invalid token");
+    res.status(400).send("<script> alert('You have been logged out'); window.location.href='/';</script>");
   }
 }
 
