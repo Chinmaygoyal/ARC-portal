@@ -14,8 +14,8 @@ const requestSchema = new mongoose.Schema({
     ref: "Student"
   },
   status: {
-    type: Boolean,
-    default: null
+    type: String,
+    default: "Pending"
   },
   createdAt: {
     type: Date,

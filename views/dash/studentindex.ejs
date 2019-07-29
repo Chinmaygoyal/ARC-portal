@@ -169,12 +169,12 @@
 															<td><%= studentrequests[i].professor.name%></td>
 															<td><%= studentrequests[i].professor.department%></td>
 															<td>
-																	<% if(studentrequests[i].status == true){ %>
+																	<% if(studentrequests[i].status == "Accepted"){ %>
 																	<span class="label label-success">Accepted</span>
-																	<%} else if (studentrequests[i].status == false) { %>
+																	<%} else if (studentrequests[i].status == "Rejected") { %>
 																	<span class="label label-danger">Rejected</span>
 																	<% } else { %>
-																	<span class="label label-default">Pending..</span>
+																	<span class="label label-default"><%=studentrequests[i].status%></span>
 																	<%}%>
 															</td>
 															<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= studentrequests[i].createdAt.getDate()%> - <%= months[studentrequests[i].createdAt.getMonth()]%> - <%= studentrequests[i].createdAt.getFullYear()%></td>

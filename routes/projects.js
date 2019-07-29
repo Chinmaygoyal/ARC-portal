@@ -207,7 +207,7 @@ router.get("/download/:id/", tokenAuth, isProf, async (req, res) => {
   const project = await Project.findById(id);
   const requests = await Request.find({
     project: project,
-    status: true
+    status: "Accepted"
   }).populate("student", "name department rollNumber email");
   var records = new Array();
 

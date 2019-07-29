@@ -70,9 +70,15 @@
                   <i class="icon-submenu lnr lnr-chevron-down"></i
                 ></a>
                 <ul class="dropdown-menu">
-                  <li><a href="https://iitk.ac.in"target="_blank">IITK Home</a></li>
-                  <li><a href="https://iitk.ac.in/dosa"target="_blank">DOSA</a></li>
-                  <li><a href="https://iitk.ac.in/doaa"target="_blank">DOAA</a></li>
+                  <li>
+                    <a href="https://iitk.ac.in" target="_blank">IITK Home</a>
+                  </li>
+                  <li>
+                    <a href="https://iitk.ac.in/dosa" target="_blank">DOSA</a>
+                  </li>
+                  <li>
+                    <a href="https://iitk.ac.in/doaa" target="_blank">DOAA</a>
+                  </li>
                 </ul>
               </li>
               <li class="dropdown">
@@ -85,10 +91,23 @@
                   <i class="icon-submenu lnr lnr-chevron-down"></i
                 ></a>
                 <ul class="dropdown-menu">
-								<li><a href="/home/student/profile/"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-								<li><a href="/home/profile/changepwd/"><i class="lnr lnr-cog"></i> <span>Change Password</span></a></li>
-								<li><a href="/home/user/logout"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>								
-							</ul>
+                  <li>
+                    <a href="/home/student/profile/"
+                      ><i class="lnr lnr-user"></i> <span>My Profile</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="/home/profile/changepwd/"
+                      ><i class="lnr lnr-cog"></i>
+                      <span>Change Password</span></a
+                    >
+                  </li>
+                  <li>
+                    <a href="/home/user/logout"
+                      ><i class="lnr lnr-exit"></i> <span>Logout</span></a
+                    >
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -129,31 +148,6 @@
       <div class="main">
         <div class="main-content">
           <div class="container-fluid" id="notif-pos">
-            <!-- Success notification -->
-            <!-- <div class="alert alert-success alert-dismissible" role="alert">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="alert"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <i class="fa fa-check-circle"></i> Project requested successfully
-            </div> -->
-            <!-- Already requested notification -->
-            <!-- <div class="alert alert-info alert-dismissible" role="alert">
-              <button
-                type="button"
-                class="close"
-                data-dismiss="alert"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <i class="fa fa-info-circle"></i> You have already requested this
-              project
-            </div> -->
             <div class="panel">
               <div class="panel-heading">
                 <h3><%= project.title %></h3>
@@ -188,7 +182,11 @@
                   <tr>
                     <th>File:</th>
                     <td>
-                      <a href="/project/view/file/<%=project._id%>" target="_blank">File</a>
+                      <a
+                        href="/project/view/file/<%=project._id%>"
+                        target="_blank"
+                        >File</a
+                      >
                     </td>
                   </tr>
                   <% }%>
@@ -198,33 +196,6 @@
               <div class="panel-footer">
                 <p><%= project.description %></p>
               </div>
-              <!-- <h4>Prerequisites:</h4>
-
-                <%= project.pre_requisites %>
-                <br />
-
-                <h4>Eligibility:</h4>
-                <%= project.eligibility %>
-                <br />
-
-                <h4>Duration(in months):</h4>
-                <%= project.duration %>
-                <br />
-
-                <h4>Offered on:</h4>
-                <%var months = ["January", "February", "March", "April", "May",
-                "June", "July", "August", "September", "October", "November",
-                "December"];%><%= project.createdAt.getDate()%> - <%=
-                months[project.createdAt.getMonth()]%> - <%=
-                project.createdAt.getFullYear()%>
-
-                <br />
-                <h4>No. of Requests:</h4>
-                <%= project.no_requests %>
-                <div><strong>Description</strong></div>
-                <p>
-                  <%= project.description %>
-                </p> -->
             </div>
             <div class="panel">
               <div class="panel-heading">

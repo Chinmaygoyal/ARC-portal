@@ -113,12 +113,12 @@
 									<tr>
 										<th>Status:</th>
 										<td>
-											<% if(request.status == true){ %>
-												<span class="label label-success">Accepted</span>
-											<%} else if (request.status == false) { %>
-												<span class="label label-danger">Rejected</span>
+											<% if(request.status == "Accepted"){ %>
+											<span class="label label-success">Accepted</span>
+											<%} else if (request.status == "Rejected") { %>
+											<span class="label label-danger">Rejected</span>
 											<% } else { %>
-												<span class="label label-default">Pending..</span>
+											<span class="label label-default"><%=request.status%></span>
 											<%}%>
 										</td>
 									</tr>
@@ -136,8 +136,9 @@
 									<p><%= request.description %></p>
 								<%}%>
 								<br>
-								<button type="button" class="btn btn-success"onclick="status('<%= request._id %>',true);">Accept</button>
-								<button type="button" class="btn btn-danger"onclick="status('<%= request._id %>',false);">Reject</button>
+									<button type="button" class="btn btn-success" onclick="status('<%= request._id %>','Accepted');">Accept</button>
+                                    <button type="button" class="btn btn-danger" onclick="status('<%= request._id %>','Rejected');">Reject</button>
+                                    <button type="button" class="btn btn-secondary" onclick="status('<%= request._id %>','Ask to Meet');">Ask to Meet</button>
 							</div>
 						<div class="panel-footer text-right"><a href="../../project/<%=request.project._id%>"><button class ="btn btn-primary" style="margin-left: 20px;">Go back </button></a></div>
 

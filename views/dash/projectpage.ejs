@@ -182,13 +182,16 @@
               <br>
             <ul class="nav nav-pills" id="tablist">
               <li role="presentation" class="active">
-                <a href="#">Waiting <strong>(<%=requests.filter(request => request.status == null).length%>)</strong></a>
+                <a href="#">Waiting <strong>(<%=requests.filter(request => request.status == "Pending").length%>)</strong></a>
               </li>
               <li role="presentation">
-                <a href="#">Accepted <strong>(<%=requests.filter(request => request.status == true).length%>)</strong></a>
+                <a href="#">Accepted <strong>(<%=requests.filter(request => request.status == "Accepted").length%>)</strong></a>
               </li>
               <li role="presentation">
-                <a href="#">Rejected <strong>(<%=requests.filter(request => request.status == false).length%>)</strong></a>
+                <a href="#">Rejected <strong>(<%=requests.filter(request => request.status == "Rejected").length%>)</strong></a>
+              </li>
+              <li role="presentation">
+                  <a href="#">Ask to Meet <strong>(<%=requests.filter(request => request.status == "Ask to Meet").length%>)</strong></a>
               </li>
             </ul>
             <br />
@@ -208,22 +211,22 @@
                         </tr>
                       </thead>
                       <tbody>
-                       
-                          <% for (var i = 0;i<requests.length;i++) { %>
-                                       <%if (requests[i].status == null){%> 
-                                        <tr class="prj-row">
-                                            <td><%= requests[i].student.name %></td>
-                                            <td><%= requests[i].student.rollNumber %></td>
-                                            <td><%= requests[i].student.department %></td>
-                                            <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
-                                            <td>
-                                              <button type="button" class="btn btn-success" onclick="status('<%= requests[i]._id %>',true);">Accept</button>
-                                              <button type="button" class="btn btn-danger" onclick="status('<%= requests[i]._id %>',false);">Reject</button>
-                                            </td>
-                                            <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
-                                        </tr>
-                                    <% } %>
-                                    <% } %>                
+                        <% for (var i = 0;i<requests.length;i++) { %>
+                          <%if (requests[i].status == "Pending"){%> 
+                            <tr class="prj-row">
+                              <td><%= requests[i].student.name %></td>
+                              <td><%= requests[i].student.rollNumber %></td>
+                                  <td><%= requests[i].student.department %></td>
+                                  <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
+                                  <td>
+                                    <button type="button" class="btn btn-success" onclick="status('<%= requests[i]._id %>','Accepted');">Accept</button>
+                                    <button type="button" class="btn btn-danger" onclick="status('<%= requests[i]._id %>','Rejected');">Reject</button>
+                                    <button type="button" class="btn btn-secondary" onclick="status('<%= requests[i]._id %>','Ask to Meet');">Ask to Meet</button>
+                                  </td>
+                                <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
+                              </tr>
+                          <% } %>
+                        <% } %>                
                       </tbody>
                     </table>
                   </div>
@@ -246,7 +249,7 @@
                       <tbody>
                       <% var send= ""%>
                         <% for (var i = 0;i<requests.length;i++) { %>
-                                       <%if (requests[i].status == true){%> 
+                                       <%if (requests[i].status == "Accepted"){%> 
                                         <tr class="prj-row">
                                             <td><%= requests[i].student.name %></td>
                                             <td><%= requests[i].student.rollNumber %></td>
@@ -284,21 +287,52 @@
                       </thead>
                       <tbody>
                         <% for (var i = 0;i<requests.length;i++) { %>
-                                       <%if (requests[i].status == false){%> 
-                                        <tr class="prj-row">
-                                            <td><%= requests[i].student.name %></td>
-                                            <td><%= requests[i].student.rollNumber %></td>
-                                            <td><%= requests[i].student.department %></td>
-                                            <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
-                                            <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
-                                        </tr>
-                                    <% } %>
-                                    <% } %>  
+                          <%if (requests[i].status == "Rejected"){%> 
+                            <tr class="prj-row">
+                               <td><%= requests[i].student.name %></td>
+                               <td><%= requests[i].student.rollNumber %></td>
+                               <td><%= requests[i].student.department %></td>
+                               <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
+                               <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
+                            </tr>
+                          <% } %>
+                        <% } %>  
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
+              <!-- Ask to Meet -->
+              <div class="tab-page">
+                  <div class="panel">
+                    <div class="panel-body no-padding">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr >
+                            <th>Name</th>
+                            <th>Roll No</th>
+                            <th>Department</th>
+                            <th>Applied On</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% for (var i = 0;i<requests.length;i++) { %>
+                            <%if (requests[i].status == "Ask to Meet"){%> 
+                              <tr class="prj-row">  
+                                 <td><%= requests[i].student.name %></td>
+                                 <td><%= requests[i].student.rollNumber %></td>
+                                 <td><%= requests[i].student.department %></td>
+                                 <td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= requests[i].createdAt.getDate()%> - <%= months[requests[i].createdAt.getMonth()]%> - <%= requests[i].createdAt.getFullYear()%></td>
+                                 <td><a href="../request/view/<%= requests[i]._id %>">See more >></a></td>
+                              </tr>
+                            <% } %>
+                          <% } %>  
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>

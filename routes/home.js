@@ -19,6 +19,7 @@ db.once("open", function() {
   gfs = Grid(db.db, mongoose.mongo);
 });
 
+//Resume student view route
 router.get("/resume", tokenAuth, isStudent, async (req, res) => {
   try {
     const student = await Student.findOne({ _id: req.user._id });
@@ -35,6 +36,7 @@ router.get("/resume", tokenAuth, isStudent, async (req, res) => {
   }
 });
 
+//Resume Professor view route
 router.get("/resume/:id", tokenAuth, isProf, async (req, res) => {
   try {
     const student = await Student.findOne({ _id: req.params.id });
