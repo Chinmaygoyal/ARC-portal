@@ -11,11 +11,14 @@ const projectRouter = require("./routes/projects");
 const homeRouter = require("./routes/home");
 const requestRouter = require("./routes/requests");
 const bodyParser = require("body-parser");
+const helmet = require('helmet');
 
 // Set host IP address environment variable
 process.env.domain = `http://${ip.address()}`;
 
 // Middleware
+app.use(helmet());
+app.use(helmet.noCache());
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
