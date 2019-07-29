@@ -121,6 +121,18 @@
 																<th>Offered on:</th>
 																<td><%var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];%><%= projects[i].createdAt.getDate()%> - <%= months[projects[i].createdAt.getMonth()]%> - <%= projects[i].createdAt.getFullYear()%></td>
 															</tr>
+															<% if (projects[i].file){%>
+																<tr>
+																  <th>File:</th>
+																  <td>
+																	<a
+																	  href="/project/view/file/<%=projects[i]._id%>"
+																	  target="_blank"
+																	  >File</a
+																	>
+																  </td>
+																</tr>
+															<% }%>
 													</tbody>
 												</table>
 												<br/>
