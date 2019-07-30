@@ -17,6 +17,16 @@ const axios = require("axios");
 // Initial registration route
 router.post("/register", async (req, res) => {
   process.env.domain = req.protocol + '://' + req.get('host');
+
+ //RECAPTCHA STARTS HERE
+console.log(req.body);
+ var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + "6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy" + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
+ const {data} = await axios.get(verificationUrl);
+ if(!data.success)
+   return res.status(400).send("INVALID CAPTCHA");
+
+ //RECAPTCHA ENDS HERE 
+ 
   const email = req.body.email;
   // Check if email is an IITK email id
   // const regex = /^[a-zA-Z0-9]+@iitk\.ac\.in$/;
