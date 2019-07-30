@@ -19,7 +19,6 @@ router.post("/register", async (req, res) => {
   process.env.domain = req.protocol + '://' + req.get('host');
 
  //RECAPTCHA STARTS HERE
-console.log(req.body);
  var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + "6Lcrka0UAAAAADVGvK-nCkBrxBuWNrzbiWl3Hlgy" + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
  const {data} = await axios.get(verificationUrl);
  if(!data.success)
