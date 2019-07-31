@@ -238,7 +238,7 @@
     <script>
       const successAlert = `<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><i class="fa fa-check-circle"></i> Project requested successfully</div>`;
 
-      const infoAlert = `<div class="alert alert-info alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><i class="fa fa-info-circle"></i> You have already requested this project</div>`;
+      const infoAlert = `<div class="alert alert-info alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><i class="fa fa-info-circle"></i>`;
 
       const form = document.querySelector("#description");
       const container = document.querySelector("#notif-pos");
@@ -254,7 +254,7 @@
             form.reset();
           },
           error: xhr => {
-            $(container).prepend(infoAlert);
+            $(container).prepend(infoAlert+xhr.responseText+"</div>");
           }
         });
       });

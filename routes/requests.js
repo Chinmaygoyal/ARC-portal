@@ -85,7 +85,8 @@ router.post("/createrequests/:id", tokenAuth, isStudent, async (req, res) => {
   if (!project) return res.status(404).send("No project found");
   // Check if request already exists
   const request = await Request.findOne({ project: project, student: student });
-  if (request) return res.status(400).send("Already requested");
+  if (request) return res.status(400).send("Project already requested");
+  if (student.resume==null) return res.status(400).send("Resume necessary for requesting a project");
 
   // Create new request
   try {
