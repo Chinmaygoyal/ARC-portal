@@ -53,7 +53,7 @@ mongoose.connect(
 
 // Start the server
 const PORT = process.env.PORT;
-const server = http.createServer(app);
+const server =  http.createServer(app);
 server.listen(PORT, () => {
   console.log(`Server live at port ${PORT}.`);
 });
