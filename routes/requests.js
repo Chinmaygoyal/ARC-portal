@@ -22,7 +22,8 @@ router.get("/view/:id", tokenAuth, isProf, async (req, res) => {
       .populate("student", "name department email");
     res.render("dash/requestdetailview", {
       request: request,
-      name: professor.name
+      name: professor.name,
+      PfNo:professor.PfNo
     });
   } catch (error) {
     res.status(404).send("Request not found");

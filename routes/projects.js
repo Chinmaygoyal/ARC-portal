@@ -170,7 +170,7 @@ router.get("/view/:id", tokenAuth, isStudent, async (req, res) => {
 // PROF SIDE: Create new project form
 router.get("/createproject", tokenAuth, isProf, async (req, res) => {
   const professor = await Professor.findOne({ _id: req.user._id });
-  res.render("dash/createproject", { name: professor.name });
+  res.render("dash/createproject", { name: professor.name,PfNo:professor.PfNo });
 });
 
 // Create new professor (FOR DEV ONLY)
@@ -198,7 +198,8 @@ router.get("/:id", tokenAuth, isProf, async (req, res) => {
   res.render("dash/projectpage", {
     project: project,
     requests: requests,
-    name: professor.name
+    name: professor.name,
+    PfNo:professor.PfNo
   });
 });
 //Download route for the project csv

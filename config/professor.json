@@ -1,0 +1,4811 @@
+[
+ {
+   "Pf_No": 130,
+   "Name": "O P  Kapoor",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "ompk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 601,
+   "Name": "R K  Jain",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "rkj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 612,
+   "Name": "R S  Misra",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "misra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 786,
+   "Name": "S K  Gupta",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "skg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2006,
+   "Name": "Y V  Chalapati  Rao",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "yvcrao@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2078,
+   "Name": "U B  Tewari",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "ubtewari@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2153,
+   "Name": "P C  Joshi",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "pcjos@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2154,
+   "Name": "N C  Mathur",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ncmathur@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2204,
+   "Name": "Amitabh  Ghosh",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "amitabha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2217,
+   "Name": "S N  Bandyopadhyay",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "snath@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2265,
+   "Name": "A K  Mallik",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "akmallik@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2278,
+   "Name": "T V S Rammohan  Rao",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "rmrao@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2283,
+   "Name": "M S  Rao",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "musti@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2289,
+   "Name": "J B  Shukla",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "jbs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2290,
+   "Name": "Surendra  Gupta",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "guptass@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2309,
+   "Name": "Malay  Chaudhuri",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "malay@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2312,
+   "Name": "A K  Gupta",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "akgupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2382,
+   "Name": "M C  Bhandari",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "mcb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2391,
+   "Name": "Vishwanath  Sinha",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "vsinha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2394,
+   "Name": "O P  Katyal",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "opk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2395,
+   "Name": "Prabha  Sharma",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "prabha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2396,
+   "Name": "A K  Majumdar",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "akm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2403,
+   "Name": "S S  Prabhu",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sprabhu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2411,
+   "Name": "Divakar  Sharma",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "divakar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2432,
+   "Name": "Anil  Kumar",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "anilk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 2439,
+   "Name": "Birendra  Sahay",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "sahay@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3064,
+   "Name": "J P  Gupta",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "jpg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3082,
+   "Name": "Govind Kumar  Lal",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "EMERITUS PROFESSOR",
+   "Email": "gklal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3112,
+   "Name": "P Gupta  Bhaya",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "pinaki@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3113,
+   "Name": "S K  Gupta",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "skgupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3114,
+   "Name": "Sneh Kumar  Dogra",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "skdogra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3159,
+   "Name": "K  Ghosh",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kunal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3161,
+   "Name": "Krishna  Kumar",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kkumar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3162,
+   "Name": "Vijay  Gupta",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "vg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3195,
+   "Name": "Virendra  Bansal",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "vbansal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3314,
+   "Name": "Deepak  Kunzru",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "dkunzru@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3405,
+   "Name": "D K  Ghosh",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "dkg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3406,
+   "Name": "K E  Hole",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "hole@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3407,
+   "Name": "R K S  Rathore",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "rksr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3419,
+   "Name": "M R  Sridharan",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "mrs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3432,
+   "Name": "A K  Mittal",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "mittal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3462,
+   "Name": "Ashwini  Kumar",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ashwini@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3541,
+   "Name": "Rai Mahesh Kumar  Sinha",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rmk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3545,
+   "Name": "K N  Rai",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "knrai@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3547,
+   "Name": "C Das  Gupta",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "cdgupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3562,
+   "Name": "G S  Upadhyaya",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "gsu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3604,
+   "Name": "D P  Rao",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "dprao@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3738,
+   "Name": "G K  Shukla",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "girja@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3742,
+   "Name": "S R  Doradla",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "doradla@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3752,
+   "Name": "Ranjit Kumar  Ray",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rkray@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3759,
+   "Name": "B N  Banerjee",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "bnb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3762,
+   "Name": "Jitendra  Kumar",
+   "Department": "MATERIALS SCIENCE PROG.",
+   "Designation": "PROFESSOR",
+   "Email": "jk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3763,
+   "Name": "R K  Dube",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rkd@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3764,
+   "Name": "Prashant  Kumar",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "prkumar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3791,
+   "Name": "S  Sarkar",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "abya@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3819,
+   "Name": "Punyatma  Singh",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "punyatma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3824,
+   "Name": "I D  Dhariyal",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "idd@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3825,
+   "Name": "Umesh  Dayal",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "udayal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3827,
+   "Name": "N  Sathyamurthy",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "nsath@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3838,
+   "Name": "Lilavati  Krishnan",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "lk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3839,
+   "Name": "B N  Patnaik",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "patnaik@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3845,
+   "Name": "R C  Sharma",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3873,
+   "Name": "Sumana  Gupta",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sumana@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3989,
+   "Name": "Binayak  Rath",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "brath@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3990,
+   "Name": "B D  Gupta",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "bdg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 3999,
+   "Name": "Joseph  John",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "jjohn@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4008,
+   "Name": "Y D  Vankar",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "vankar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4016,
+   "Name": "Arvind K.  Sinha",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "aks@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4019,
+   "Name": "S D  Joglekar",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "sdj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4040,
+   "Name": "Sanjay K  Bose",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "skb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4041,
+   "Name": "Dayanand  Yadav",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "dy@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4042,
+   "Name": "Arun  P  Sinha",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "asinha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4045,
+   "Name": "Ashok  Khanna",
+   "Department": "NUC. ENGG.& TECH PROG.",
+   "Designation": "PROFESSOR",
+   "Email": "akhanna@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4046,
+   "Name": "K R  Srivathsan",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "krsr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4047,
+   "Name": "N S  Gajbhiye",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "nsg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4058,
+   "Name": "Peeyush  Chandra",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "peeyush@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4061,
+   "Name": "Prabhat  Munshi",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "pmunshi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4064,
+   "Name": "Keshawa  Shahi",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "kshahi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4068,
+   "Name": "P K  Basudhar",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "pkbd@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4074,
+   "Name": "V  Raghavendra",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "vrag@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4093,
+   "Name": "V K  Jain",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "vkjain@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4182,
+   "Name": "Brahma  Deo",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "bdeo@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4184,
+   "Name": "Vijay A  Singh",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "vsingh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4209,
+   "Name": "Sudhir K  Jain",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "skjain@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4224,
+   "Name": "N N  Kishore",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "nnk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4244,
+   "Name": "R P  Chhabra",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "chhabra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4245,
+   "Name": "S C  Koria",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "satishch@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4254,
+   "Name": "Rajendra  Prasad",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "rprasad@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4285,
+   "Name": "Sudhir  Kamle",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kamle@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4286,
+   "Name": "H  Hatwal",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "hhatwal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4288,
+   "Name": "P S  Ghoshdastidar",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "psg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4290,
+   "Name": "Shobha  Madan",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "madan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4293,
+   "Name": "Arindam  Ghosh",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "aghosh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4295,
+   "Name": "Vinod  Tare",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "vinod@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4300,
+   "Name": "R K  Ghosh",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rkg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4303,
+   "Name": "Ramesh P  Singh",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ramesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4315,
+   "Name": "Vishwas N  Kulkarni",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "vnk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4325,
+   "Name": "T K  Chandrashekar",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "tkc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4326,
+   "Name": "M  Sachidananda",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sachi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4345,
+   "Name": "Meena N  Belliappa",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "nbm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4370,
+   "Name": "T V  Prabhakar",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "tvp@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4372,
+   "Name": "Govind  Sharma",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "govind@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4373,
+   "Name": "K K  Saxena",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "kks@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4375,
+   "Name": "Bijoy  H  Boruah",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "boruah@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4380,
+   "Name": "Tapan P  Bagchi",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "bagchi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4382,
+   "Name": "Dipak  Mazumdar",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "dipak@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4385,
+   "Name": "Phalguni  Gupta",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "pg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4394,
+   "Name": "Vadapalli  Chandrasekhar",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "vc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4398,
+   "Name": "K  Muralidhar",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "kmurli@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4449,
+   "Name": "Pravir  Dutt",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "pravir@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4452,
+   "Name": "S K  Choudhury",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "choudhry@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4458,
+   "Name": "E  Rathakrishnan",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "erath@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4459,
+   "Name": "N S  Vyas",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "vyas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4460,
+   "Name": "S  Manogaran",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "sm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4464,
+   "Name": "S K  Chakrabarti",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "chakra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4482,
+   "Name": "Vinayak  Eswaran",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "eswar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4486,
+   "Name": "Prem K  Kalra",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kalra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4488,
+   "Name": "Surajit  Sinha",
+   "Department": "ECONOMICS",
+   "Designation": "PROFESSOR",
+   "Email": "suraji@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4489,
+   "Name": "Rakesh K  Bansal",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rkb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4490,
+   "Name": "Sanjeev  Saxena",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ssax@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4495,
+   "Name": "S C  Srivastava",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "scs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4504,
+   "Name": "V  Ravishankar",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "vravi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4525,
+   "Name": "R R K  Sharma",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rrks@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4527,
+   "Name": "Deshdeep  Sahdev",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "ds@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4537,
+   "Name": "Aparna  Dar",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "adar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4540,
+   "Name": "Pankaj  Jalote",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "jalote@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4546,
+   "Name": "Bithin  Datta",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "bithin@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4547,
+   "Name": "Rajiv Kumar  Varma",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rkvarma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4552,
+   "Name": "Satyendra  Kumar",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "satyen@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4559,
+   "Name": "Y N  Mohapatra",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "ynm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4560,
+   "Name": "Gautam  Biswas",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "gtm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4562,
+   "Name": "Ashutosh  Sharma",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ashutos@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4563,
+   "Name": "Sanjeev K  Aggarwal",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ska@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4565,
+   "Name": "Rajiv  Shekhar",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "vidtan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4566,
+   "Name": "Aloke  Dutta",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "aloke@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4571,
+   "Name": "R  Balasubramaniam",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "bala@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4581,
+   "Name": "T K  Sengupta",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "tksen@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4583,
+   "Name": "Veejendra Kumar  Yadav",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "vijendra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4584,
+   "Name": "Debasis  Kundu",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "kundu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4586,
+   "Name": "Vinay Kumar  Gupta",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "vinaykg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4596,
+   "Name": "V K  Singh",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "vinodks@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4597,
+   "Name": "Sandeep  Sangal",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sangals@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4627,
+   "Name": "Amitabha  Mukerjee",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "amit@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4628,
+   "Name": "Rajat  Moona",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "moona@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4629,
+   "Name": "Raka  Sharan",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "raka@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4642,
+   "Name": "Debashish  Chowdhury",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "debch@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4645,
+   "Name": "Ajai  Jain",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ajain@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4650,
+   "Name": "Kalyanmoy  Deb",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "deb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4651,
+   "Name": "Avinash  Singh",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "avinas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4652,
+   "Name": "Animesh  Biswas",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "abiswas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4653,
+   "Name": "K P  Rajeev",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "kpraj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4656,
+   "Name": "P  Shunmugaraj",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "psraj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4657,
+   "Name": "C V R  Murty",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "cvrm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4660,
+   "Name": "Ashish  Tiwari",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ashtew@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4662,
+   "Name": "Onkar  Dikshit",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "onkar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4663,
+   "Name": "Partha  Chakroborty",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "partha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4664,
+   "Name": "Kamal  Poddar",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kamal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4665,
+   "Name": "B K  Mishra",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "bk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4667,
+   "Name": "Anjan Kumar  Ghosh",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "anjn@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4668,
+   "Name": "Dheeraj  Sanghi",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "dheeraj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4670,
+   "Name": "Baquer  Mazhari",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "baquer@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4676,
+   "Name": "Amalendu  Chandra",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "amalen@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4679,
+   "Name": "Asima  Pradhan",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "asima@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4687,
+   "Name": "Utpal  Das",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "utpal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4688,
+   "Name": "R C  Budhani",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "rcb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4690,
+   "Name": "Sudhir  Misra",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sud@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4692,
+   "Name": "Mahendra Kumar  Verma",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "mkv@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4695,
+   "Name": "Rajiv  Sinha",
+   "Department": "EARTH SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "rsinha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4696,
+   "Name": "Sanjay  Mittal",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "smittal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4699,
+   "Name": "T  Chakraborty",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "tapasc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4700,
+   "Name": "Achla Misri  Raina",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "achla@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4701,
+   "Name": "Rahul  Varman",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rahulv@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4702,
+   "Name": "Shikha  Dixit",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "shikha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4707,
+   "Name": "B V R  Kumar",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "bvrk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4708,
+   "Name": "Pankaj  Jain",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "pkjain@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4709,
+   "Name": "A K  Ghosh",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "akg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4722,
+   "Name": "Deepak  Gupta",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "deepak@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4723,
+   "Name": "H C  Verma",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "hcverma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4724,
+   "Name": "H  Ila",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "hila@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4726,
+   "Name": "Neeraj  Misra",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "neeraj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4729,
+   "Name": "G  Neelakantan",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "gn@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4733,
+   "Name": "D P  Mishra",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "mishra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4734,
+   "Name": "Arbind Kumar  Lal",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "arlal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4745,
+   "Name": "S  Umesh",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sumesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4746,
+   "Name": "Faiz Ahmed  Khan",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "faiz@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4750,
+   "Name": "Goutam  Deo",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "goutam@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4754,
+   "Name": "Manindra  Agrawal",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "manindra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4755,
+   "Name": "V  Subrahmanyam",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "vmani@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4759,
+   "Name": "S Sunder  Manoharan",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "ssundar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4760,
+   "Name": "Keshavamurthy  Srihari",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "srihari@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4762,
+   "Name": "Sumit  Ganguly",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sganguly@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4771,
+   "Name": "Yatindra Nath  Singh",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ynsingh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4773,
+   "Name": "Munmun  Jha",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "mjha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4774,
+   "Name": "C A  Tomy",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "cat@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4775,
+   "Name": "Purnendu  Bose",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "pbose@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4776,
+   "Name": "S P  Das",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "spdas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4779,
+   "Name": "Bhaskar  Dasgupta",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "dasgupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4781,
+   "Name": "Mohua  Banerjee",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "mohua@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4782,
+   "Name": "Dhirendra  Bahuguna",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "dhiren@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4784,
+   "Name": "Saumyen  Guha",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sguha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4785,
+   "Name": "C S  Upadhyay",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "shekhar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4788,
+   "Name": "Subrata  Sarkar",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "subra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4789,
+   "Name": "Sandeep  Verma",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "sverma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4790,
+   "Name": "Deepak  Gupta",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "saboo@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4791,
+   "Name": "Binay  Kumar  Pattnaik",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "binay@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4793,
+   "Name": "Ashu  Jain",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ashujain@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4794,
+   "Name": "Nishith  Verma",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "nishith@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4796,
+   "Name": "Monica  Katiyar",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "mk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4797,
+   "Name": "G Sengupta  .",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "sengupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4798,
+   "Name": "Rajesh  Srivastava",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rajeshs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4799,
+   "Name": "Mukesh  Sharma",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "mukesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4801,
+   "Name": "Pradipta K  Panigrahi",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "panig@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4803,
+   "Name": "Alok Kumar  Maloo",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "akmaloo@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4810,
+   "Name": "B.P.  Pundir",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "pundir@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4816,
+   "Name": "J  Narasimha Moorthy",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "moorthy@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4822,
+   "Name": "G  Santhanam",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "santhana@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4823,
+   "Name": "N Venkata  Reddy",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "nvr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4827,
+   "Name": "A K  Chaturvedi",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "akc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4830,
+   "Name": "Sanjeev  Swami",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sswami@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4831,
+   "Name": "Sreerup  Raychaudhuri",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sreerup@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4832,
+   "Name": "Rama  Rawat",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "rrawat@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4833,
+   "Name": "K S  Venkatesh",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "venkats@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4865,
+   "Name": "Veena  Bansal",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "veena@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4870,
+   "Name": "Saktipada  Ghorai",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "sghorai@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4871,
+   "Name": "Animesh  Das",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "adas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4876,
+   "Name": "R  Gurunath",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "gurunath@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4881,
+   "Name": "M K  Harbola",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "mkh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4890,
+   "Name": "B  Bhattacharya",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "bishakh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4893,
+   "Name": "Harshwardhan  Wanare",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "hwanare@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4919,
+   "Name": "Anish  Upadhyaya",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "anishu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4927,
+   "Name": "Mini  Chandran",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "minic@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4928,
+   "Name": "Kamal K  Kar",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "kamalkk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4930,
+   "Name": "Swagato K  Ray",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "skray@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4931,
+   "Name": "Avinash  Kumar Agarwal",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "akag@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4934,
+   "Name": "Anil  Seth",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "seth@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4938,
+   "Name": "Kasturi  Vasudevan",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "vasu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4956,
+   "Name": "Anupam  Saxena",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "anupams@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4957,
+   "Name": "Suchitra  Mathur",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "suchitra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4958,
+   "Name": "Abhijit  Kushari",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "akushari@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4959,
+   "Name": "Pradip  Sinha",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "pradips@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4961,
+   "Name": "Jayanta  Chatterjee",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "jayanta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4964,
+   "Name": "V V  Sreedhar",
+   "Department": "PHYSICS",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "sreedhar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4968,
+   "Name": "Anoop  Singh",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "anoops@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4976,
+   "Name": "Satyaki  Roy",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "satyaki@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4978,
+   "Name": "Javed N  Malik",
+   "Department": "EARTH SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "javed@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4988,
+   "Name": "Laxmidhar  Behera",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "lbehera@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4993,
+   "Name": "Debopam  Das",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "das@iitk.ac.in"
+ },
+ {
+   "Pf_No": 4995,
+   "Name": "Durgesh C  Rai",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "dcrai@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5003,
+   "Name": "S N  Singh",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "snsingh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5005,
+   "Name": "Ramasubbu  S Ramakrishnan",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rsankar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5009,
+   "Name": "K  Subramaniam",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "subbu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5010,
+   "Name": "Shashank K  Mehta",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "skmehta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5011,
+   "Name": "Viswanathan  Shankar",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "vshankar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5012,
+   "Name": "Parthasarathi  Sensarma",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sensarma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5013,
+   "Name": "A R  Harish",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "arh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5014,
+   "Name": "Sumit  Basu",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "sbasu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5015,
+   "Name": "Nandini  Gupta",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ngupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5016,
+   "Name": "Nitin  Kaistha",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "nkaistha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5018,
+   "Name": "Rohit  Varman",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "rohitv@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5020,
+   "Name": "S  Ganesh",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sganesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5021,
+   "Name": "Sanjeev  Garg",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sgarg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5022,
+   "Name": "Ashish  Dutta",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "adutta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5023,
+   "Name": "Balaji  Prakash",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "bprakash@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5024,
+   "Name": "Manas Kumar  Ghorai",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "mkghorai@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5026,
+   "Name": "Bharat  Lohani",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "blohani@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5028,
+   "Name": "Sutapa  Mukherji",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sutapam@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5029,
+   "Name": "Joydeep  Dutta",
+   "Department": "ECONOMICS",
+   "Designation": "PROFESSOR",
+   "Email": "jdutta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5031,
+   "Name": "Parthasarthy  Ramachandran",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "parthar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5034,
+   "Name": "Ashish  Garg",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ashishg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5035,
+   "Name": "Sivaprakasam  Sivaraman",
+   "Department": "PHYSICS",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "siva@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5036,
+   "Name": "Shalabh  .",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "shalab@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5037,
+   "Name": "Nihar Ranjan  Patra",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "nrpatra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5038,
+   "Name": "Jitendra  Bera",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "jbera@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5040,
+   "Name": "S. Anantha  Ramakrishna",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "sar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5041,
+   "Name": "Amit  Dutta",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "dutta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5046,
+   "Name": "Anjan Kumar  Gupta",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "anjankg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5051,
+   "Name": "Bhaskaran  Raman",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "braman@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5054,
+   "Name": "P  Venkitanarayanan",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "venkit@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5056,
+   "Name": "M. L. N.  Rao",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "maddali@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5057,
+   "Name": "Sachchidanand  Tripathi",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "snt@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5064,
+   "Name": "Rajdip  Bandyopadhyaya",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "rajdip@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5071,
+   "Name": "Debabrata  Goswami",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "dgoswami@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5072,
+   "Name": "Gouthama  .",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "gouthama@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5073,
+   "Name": "Raghu Nandan  Sengupta",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "raghus@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5074,
+   "Name": "Janakarajan  Ramkumar",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "jrkumar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5075,
+   "Name": "P. Murali  Prasad",
+   "Department": "ECONOMICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "pmprasad@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5076,
+   "Name": "T  Ravichandran",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "trc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5077,
+   "Name": "Amman  Madan",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "amman@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5078,
+   "Name": "Sanjay Kumar  Singh",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "sanjay@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5079,
+   "Name": "Pranab Kumar  Mohapatra",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "pranab@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5081,
+   "Name": "Pabitra  Mitra",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "pmitra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5091,
+   "Name": "Anantharaman  Ganapathi",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "garaman@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5102,
+   "Name": "Zakir  Hossain",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "zakir@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5103,
+   "Name": "Dhirendra S  Katti",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "dsk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5106,
+   "Name": "Animangsu  Ghatak",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "aghatak@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5111,
+   "Name": "Adrish  Banerjee",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "adrish@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5112,
+   "Name": "Mainak  Chaudhuri",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "mainakc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5113,
+   "Name": "S Sundar Kumar  Iyer",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sskiyer@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5114,
+   "Name": "Yogesh Moreshwar  Joshi",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "joshi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5115,
+   "Name": "Tapobrata  Sarkar",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "tapo@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5117,
+   "Name": "Satyajit  Banerjee",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "satyajit@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5119,
+   "Name": "Ashok  Kumar",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "ashokkum@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5120,
+   "Name": "Sameer  Khandekar",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "samkhan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5121,
+   "Name": "Nandini  Nilakantan",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "nandini@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5122,
+   "Name": "Arun Kumar  Saha",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "aksaha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5123,
+   "Name": "Sudeep  Bhattacharjee",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "sudeepb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5127,
+   "Name": "Sankar Prasad  Rath",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "sprath@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5129,
+   "Name": "Sivasambu  Mahesh",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "smahesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5130,
+   "Name": "Kameswari  Chebrolu",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "chebrolu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5142,
+   "Name": "Peeyush  Mehta",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "pmehta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5147,
+   "Name": "B.V.  Phani",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "bvphani@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5152,
+   "Name": "Amit  Prashant",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "aprashan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5153,
+   "Name": "Amit  Mitra",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "amitra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5162,
+   "Name": "Ramprasad  Potluri",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "potluri@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5167,
+   "Name": "Rajeev  Gupta",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "guptaraj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5175,
+   "Name": "Jayant K  Singh",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "jayantks@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5181,
+   "Name": "Braj  Bhushan",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "brajb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5182,
+   "Name": "Runa  Sarkar",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "runa@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5183,
+   "Name": "Koumudi  Patil",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "kppatil@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5189,
+   "Name": "Parasar  Mohanty",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "parasar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5191,
+   "Name": "Sumit  Sarkar",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "sumits@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5192,
+   "Name": "Tarun  Gupta",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "tarun@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5193,
+   "Name": "Rajesh  Kumar",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "krajesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5194,
+   "Name": "Anupam  Pal",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "apal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5196,
+   "Name": "Siddhartha  Panda",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "spanda@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5197,
+   "Name": "Surender  Baswana",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sbaswana@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5199,
+   "Name": "Ishan  Sharma",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "ishans@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5200,
+   "Name": "Anil Kumar  Ghosh",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "akghosh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5206,
+   "Name": "Amitabha  Bandyopadhyay",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "abandopa@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5207,
+   "Name": "Jonaki  Sen",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "jonaki@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5208,
+   "Name": "Pankaj  A  Apte",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "papte@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5222,
+   "Name": "Piyush P  Kurur",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "ppk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5229,
+   "Name": "Sharmishtha  Mitra",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "smitra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5230,
+   "Name": "Priyanka  Ghosh",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "priyog@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5231,
+   "Name": "Kumar Ravi  Priya",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "krp@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5234,
+   "Name": "Shantanu  Bhattacharya",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "bhattacs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5235,
+   "Name": "Sudipta  Dutta",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "sudipta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5236,
+   "Name": "Madhav  V  Ranganathan",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "madhavr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5237,
+   "Name": "A V Ravishankar  Sarma",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "avrs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5267,
+   "Name": "Basant Lal  Sharma",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "bls@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5268,
+   "Name": "Arnab  Bhattacharya",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "arnabb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5269,
+   "Name": "Kallol  Mondal",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kallol@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5270,
+   "Name": "Sarani  Saha",
+   "Department": "ECONOMICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sarani@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5273,
+   "Name": "Krishanu  Biswas",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kbiswas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5280,
+   "Name": "Brijesh  Eshpuniyani",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "brijeshe@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5284,
+   "Name": "Tarun Kanti  Ghosh",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "tkghosh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5287,
+   "Name": "Anindita  Chakrabarti",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "aninditac@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5288,
+   "Name": "P. M.  Mohite",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "mohite@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5289,
+   "Name": "Anandh  Subramaniam",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "anandh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5290,
+   "Name": "Kaushik  Bhattacharya",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "kaushikb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5291,
+   "Name": "Malay  Banerjee",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "malayb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5293,
+   "Name": "Santanu Kumar  Mishra",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "santanum@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5294,
+   "Name": "Malay Kumar  Das",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "mkdas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5295,
+   "Name": "Rajesh Mahanand  Hegde",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rhegde@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5296,
+   "Name": "Somesh Kumar  Mathur",
+   "Department": "ECONOMICS",
+   "Designation": "PROFESSOR",
+   "Email": "skmathur@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5297,
+   "Name": "Kantesh  Balani",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kbalani@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5298,
+   "Name": "Raj Ganesh S.  Pala",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "rpala@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5299,
+   "Name": "Pankaj  Wahi",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "wahi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5300,
+   "Name": "Anurag  Gupta",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "ag@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5302,
+   "Name": "Subhas Chandra  Misra",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "subhasm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5303,
+   "Name": "Sri  Sivakumar",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "srisiva@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5304,
+   "Name": "Nisanth N.  Nair",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "nnair@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5305,
+   "Name": "Pratik  Sen",
+   "Department": "CHEMISTRY",
+   "Designation": "PROFESSOR",
+   "Email": "psen@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5306,
+   "Name": "Dipankar  Chakrabarti",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "dipankar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5307,
+   "Name": "Debajyoti  Paul",
+   "Department": "EARTH SCIENCES",
+   "Designation": "PROFESSOR",
+   "Email": "dpaul@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5309,
+   "Name": "Kumar Vaibhav  Srivastava",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "kvs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5310,
+   "Name": "Praveen  Kulshreshtha",
+   "Department": "ECONOMICS",
+   "Designation": "PROFESSOR",
+   "Email": "pravk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5314,
+   "Name": "Sameer Laxman  Chavan",
+   "Department": "MATHEMATICS",
+   "Designation": "PROFESSOR",
+   "Email": "chavan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5321,
+   "Name": "Naren  Naik",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "nnaik@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5326,
+   "Name": "Md. Jaleel  Akhtar",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "mjakhtar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5327,
+   "Name": "Nishchal K  Verma",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "nishchal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5331,
+   "Name": "Shatarupa Thakurta  Roy",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "stroy@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5332,
+   "Name": "Vineet  Sahu",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "vineet@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5333,
+   "Name": "Vimal  Kumar",
+   "Department": "ECONOMICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "vk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5335,
+   "Name": "Prashant Bhalchandra  Bagad",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "pbagad@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5336,
+   "Name": "Vivek  Verma",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "vverma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5337,
+   "Name": "Raghvendra  Singh",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "raghvend@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5338,
+   "Name": "Priya  Ranjan",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "ranjanp@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5343,
+   "Name": "Aditya K.  Jagannatham",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "adityaj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5344,
+   "Name": "Bahniman  Ghosh",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "bahniman@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5346,
+   "Name": "Samit   Ray Chaudhuri",
+   "Department": "CIVIL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "samitrc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5347,
+   "Name": "Prishati  Raychowdhury",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "prishati@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5348,
+   "Name": "Deepu  Philip",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "dphilip@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5353,
+   "Name": "Nirmalya  Guha",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "nguha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5354,
+   "Name": "Chaithra  Puttaswamy",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "chai@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5355,
+   "Name": "Krishnacharya  .",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "kcharya@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5357,
+   "Name": "Pradeep  Kumar K",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "pradeepk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5358,
+   "Name": "Sovan  Das",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sovandas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5361,
+   "Name": "T.  Muthukumar",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "tmk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5362,
+   "Name": "Abhijit  Chatterjee",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "achatter@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5363,
+   "Name": "Saikat  Chakrabarti",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "saikatc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5364,
+   "Name": "Binod  Sreenivasan",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "bsreeni@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5366,
+   "Name": "Rajesh  Kitey",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "kitey@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5367,
+   "Name": "Sohini  Sahu",
+   "Department": "ECONOMICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ssahu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5369,
+   "Name": "Ramesh  Ramapanicker",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "rameshr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5370,
+   "Name": "Akash  Anand",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "akasha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5371,
+   "Name": "Rahul  Nagpal",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "rahuln@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5372,
+   "Name": "Krithika  Venkataramani",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "krithika@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5376,
+   "Name": "Mainak  Das",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "mainakd@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5378,
+   "Name": "Ashwani Kumar  Thakur",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "akthakur@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5381,
+   "Name": "Sarang  Ingole",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sarang@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5382,
+   "Name": "Satyadev  Nandakumar",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "satyadev@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5383,
+   "Name": "Amey  Karkare",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "karkare@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5385,
+   "Name": "Tanmoy  Maiti",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "tmaiti@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5386,
+   "Name": "Anubha  Goel",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "anubha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5387,
+   "Name": "Vinod  Vasudevan",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "vinodv@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5388,
+   "Name": "Shivam  Tripathi",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "shiva@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5390,
+   "Name": "R K  Amit",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. ON CONTRACT",
+   "Email": "rkamit@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5392,
+   "Name": "Subhajit  Roy",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "subhajit@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5393,
+   "Name": "Sudib Kumar  Mishra",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "smishra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5394,
+   "Name": "Nachiketa  Tiwari",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "ntiwari@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5395,
+   "Name": "Rekha  Santhanam",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "reksan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5396,
+   "Name": "Abhishek  .",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "abhish@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5399,
+   "Name": "Shakti Singh  Gupta",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "ssgupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5400,
+   "Name": "Shobit  Omar",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "somar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5403,
+   "Name": "Ashoke  De",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "ashoke@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5404,
+   "Name": "Shashank  Shekhar",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "shashank@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5405,
+   "Name": "Rajesh  Sathiyamoorthy",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "hsrajesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5407,
+   "Name": "Vijaya  Ramarao",
+   "Department": "PHYSICS",
+   "Designation": "PROFESSOR",
+   "Email": "rvijaya@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5409,
+   "Name": "Anirban  Mukherjee",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "anirban@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5410,
+   "Name": "Tanika  Chakraborty",
+   "Department": "ECONOMICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "tanika@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5417,
+   "Name": "Soumik  Mukhopadhyay",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "soumikm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5427,
+   "Name": "Dattatraya H  Dethe",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "ddethe@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5428,
+   "Name": "Shashi Shekhar  Mishra",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "ssmishra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5429,
+   "Name": "Raghunath  Tewari",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "rtewari@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5430,
+   "Name": "Sri Vanamalla  V",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "vanamala@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5431,
+   "Name": "Rakesh  Kumar",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "rkm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5432,
+   "Name": "Ashis Kumar  Patra",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "akpatra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5447,
+   "Name": "Arvind  Kumar",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "arvindkr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5449,
+   "Name": "Devlina  Chatterjee",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "devlina@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5452,
+   "Name": "Alakesh Chandra  Mandal",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "alakeshm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5454,
+   "Name": "Saikat  Ghosh",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "gsaikat@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5455,
+   "Name": "Anindya  Chatterjee",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "PROFESSOR",
+   "Email": "anindya@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5456,
+   "Name": "Raja  Angamuthu",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "raja@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5458,
+   "Name": "Yogesh Singh  Chauhan",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "chauhan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5461,
+   "Name": "Anshu  Gaur",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "agaur@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5462,
+   "Name": "Uday Shanker  Racherla",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "udays@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5463,
+   "Name": "Kaustubh Narhar  Kulkarni",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "kkaustub@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5465,
+   "Name": "Raju Kumar  Gupta",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "guptark@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5467,
+   "Name": "Amit Kumar  Agarwal",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "amitag@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5475,
+   "Name": "Somnath  Bhowmick",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "bsomnath@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5477,
+   "Name": "Sujeet Kumar  Sinha",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sujeet@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5478,
+   "Name": "Ketan  Rajawat",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ketan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5480,
+   "Name": "Nilesh Prakash  Gurao",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "npgurao@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5481,
+   "Name": "Sagar  Chakraborty",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sagarc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5484,
+   "Name": "Naveen  Tiwari",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "naveent@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5488,
+   "Name": "Puneet  Prakash",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "ppuneet@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5503,
+   "Name": "Anand Kumar  Jha",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "akjha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5504,
+   "Name": "Nitin  Saxena",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "nitin@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5505,
+   "Name": "Bushra  Ateeq",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "bushra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5506,
+   "Name": "Manabendra  Chandra",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "mchandra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5507,
+   "Name": "Saravanan  Matheshwaran",
+   "Department": "BIOL.SCI. AND BIO.ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "saran@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5508,
+   "Name": "Ashis  Mandal",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "amandal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5509,
+   "Name": "Anand  Singh",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "anands@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5510,
+   "Name": "Thiruvancheril G  Gopakumar",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "gopan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5513,
+   "Name": "Sabuj Kumar  Kundu",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sabuj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5514,
+   "Name": "Sandeep  Anand",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "asandeep@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5515,
+   "Name": "Subhra  Sankar Dhar",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "subhra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5516,
+   "Name": "Dasari  L.V.K. Prasad",
+   "Department": "CHEMISTRY",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "dprasad@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5517,
+   "Name": "Mohammad Arshad  Rahman",
+   "Department": "ECONOMICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "marshad@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5518,
+   "Name": "Niraj  Sinha",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "nsinha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5520,
+   "Name": "Sunil Easaw  Simon",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "simon@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5523,
+   "Name": "Abhas  Singh",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "abhas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5527,
+   "Name": "Sathesh  Mariappan",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "sathesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5530,
+   "Name": "Basker  Sundararaju",
+   "Department": "CHEMISTRY",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "basker@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5533,
+   "Name": "Jivtesh  Garg",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "jivtesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5539,
+   "Name": "Syam  Nair",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "syamnair@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5550,
+   "Name": "Vinay P  Namboodiri",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "vinaypn@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5551,
+   "Name": "Sanjoy  Pusti",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "spusti@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5552,
+   "Name": "Rajat  Mittal",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "rmittal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5553,
+   "Name": "Abhijit  Pal",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "abhipal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5554,
+   "Name": "Santosha Kumar  Pattanayak",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "santosha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5555,
+   "Name": "Debasis  Sen",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "debasis@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5557,
+   "Name": "Sasmita  Patnaik",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sasmita@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5575,
+   "Name": "Sayantani  Bhattacharyya",
+   "Department": "PHYSICS",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "sayanta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5576,
+   "Name": "Anurag  Tripathi",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "anuragt@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5577,
+   "Name": "Harish  K.V.",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "kvharish@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5580,
+   "Name": "Shikha  Prasad",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "shikhap@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5581,
+   "Name": "Indra Sekhar  Sen",
+   "Department": "EARTH SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "isen@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5582,
+   "Name": "Antara  Digar",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "antarad@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5583,
+   "Name": "Dipanjan  Basu",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "dbasu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5585,
+   "Name": "Arun Kumar  Shukla",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "arshukla@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5586,
+   "Name": "Mangal  Kothari",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "mangal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5588,
+   "Name": "Aditya Hemchandra  Kelkar",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "akelkar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5589,
+   "Name": "Deep  Mukherjee",
+   "Department": "ECONOMICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "deepm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5590,
+   "Name": "Debayan  Pakrashi",
+   "Department": "ECONOMICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "pakrashi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5591,
+   "Name": "Sayan  Chattopadhyay",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sayanc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5593,
+   "Name": "Avijit  Khanra",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "kavijit@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5594,
+   "Name": "Soumya Ranjan  Sahoo",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "srsahoo@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5595,
+   "Name": "Kaushik  Bal",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "kaushik@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5596,
+   "Name": "Shankar  Prawesh",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sprawesh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5599,
+   "Name": "Sudharshana  N. P.",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sudh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5602,
+   "Name": "Arghya  Das",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "arghya@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5605,
+   "Name": "Indranil  Saha Dalal",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "indrasd@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5606,
+   "Name": "Shilpi  Gupta",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "shilpig@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5607,
+   "Name": "Nitin  Gupta",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "guptan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5611,
+   "Name": "Saurabh Mani  Tripathi",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "smt@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5613,
+   "Name": "Vaibhav  Kumar  Arghode",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "varghode@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5615,
+   "Name": "Faiz  Hamid",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "fhamid@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5617,
+   "Name": "Rajdip  Mukherjee",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "rajdipm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5620,
+   "Name": "Jayandharan  Giridhara Rao",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "jayrao@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5622,
+   "Name": "Jishnu  Bhattacharya",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "jishnu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5623,
+   "Name": "Rajshekhar  Gannavarpu",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "gshekhar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5628,
+   "Name": "Santanu  De",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sde@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5631,
+   "Name": "Swargajyoti  Gohain",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "sgohain@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5632,
+   "Name": "Anirban  Guha",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "aguha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5634,
+   "Name": "Ritwij  Bhowmik",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ritwij@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5641,
+   "Name": "Shibabrata  Nandi",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "snandi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5642,
+   "Name": "Sandeep Kumar  Shukla",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "sandeeps@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5643,
+   "Name": "Subhajit  Dutta",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "duttas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5644,
+   "Name": "Richa  Ojha",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "richao@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5645,
+   "Name": "Abheejeet  Mohapatra",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "abheem@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5655,
+   "Name": "Amarendra Kumar  Singh",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "PROFESSOR",
+   "Email": "amarendra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5663,
+   "Name": "Animesh  Mandal",
+   "Department": "EARTH SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "animeshm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5667,
+   "Name": "Santanu  Misra",
+   "Department": "EARTH SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "smisra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5673,
+   "Name": "Tanaya  Guha",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "tanaya@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5680,
+   "Name": "Ark  Verma",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "arkverma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5682,
+   "Name": "Sanjay  Kumar",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "skmr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5687,
+   "Name": "Joydeep  Chakrabortty",
+   "Department": "PHYSICS",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "joydeep@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5688,
+   "Name": "Wasim  Ahmad",
+   "Department": "ECONOMICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "wasimad@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5689,
+   "Name": "Devpriya  Kumar",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "devpriya@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5690,
+   "Name": "Indranil  Saha",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "isaha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5691,
+   "Name": "Jillet Sarah  Sam",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "jssam@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5693,
+   "Name": "Somnath  Jha",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "jhasom@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5696,
+   "Name": "Amit  Shukla",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "skamit@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5697,
+   "Name": "Shweta  Singh",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "singh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5698,
+   "Name": "Purushottam  Kar",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "purushot@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5699,
+   "Name": "Suparno  Mukhopadhyay",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "suparno@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5701,
+   "Name": "Sachin Y.  Shinde",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sachin@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5702,
+   "Name": "Piyush  Rai",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "rpiyush@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5712,
+   "Name": "Preena  Samuel",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "preena@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5713,
+   "Name": "Mohit Subhash  Law",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "mlaw@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5725,
+   "Name": "Dibakar  Ghosal",
+   "Department": "EARTH SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "dghosal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5729,
+   "Name": "Sudhanshu Shekhar  Singh",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sudhanss@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5740,
+   "Name": "Arjun  Bagchi",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "abagchi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5750,
+   "Name": "Medha  Atre",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "atrem@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5752,
+   "Name": "Gaurav  Sharma",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "grv@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5756,
+   "Name": "Rohit  Budhiraja",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "rohitbr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5757,
+   "Name": "Gaurav  Pandey",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "gpandey@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5758,
+   "Name": "Sachin Subhash  Sharma",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sachinsh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5759,
+   "Name": "Sudhanshu  Shekhar",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sudhansh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5765,
+   "Name": "Pritam  Chakraborty",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "cpritam@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5766,
+   "Name": "Arijit  Kundu",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "kundua@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5769,
+   "Name": "Amit  Verma",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "amitkver@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5770,
+   "Name": "Nisheeth  Srivastava",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "nsrivast@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5774,
+   "Name": "G. M.  Kamath",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "gmkamath@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5776,
+   "Name": "Amit Shekhar  Kuber",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "askuber@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5781,
+   "Name": "Vishal  Agarwal",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "vagarwal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5786,
+   "Name": "Ajay Singh Ramdin  Thakur",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "asthakur@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5824,
+   "Name": "Manas  Khan",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "mkhan@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5834,
+   "Name": "Mohammed Ibrahim  Sugarno",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "ibrahim@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5835,
+   "Name": "Deepak  Dhingra",
+   "Department": "EARTH SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ddhingra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5836,
+   "Name": "Chinmoy  Kolay",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ckolay@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5839,
+   "Name": "Biswabandan  Panda",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "biswap@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5846,
+   "Name": "Abhishek Kumar  Gupta",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "gkrabhi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5847,
+   "Name": "Rahul  Mangal",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "mangalr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5849,
+   "Name": "Swaprava  Nath",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "swaprava@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5856,
+   "Name": "Debadatta  Mishra",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "debam@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5858,
+   "Name": "Ajay Vikram  Singh",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ajayvs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5860,
+   "Name": "Vipin  B",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "vipin@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5861,
+   "Name": "Prosenjit  Roy",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "prosenjit@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5862,
+   "Name": "Chandraprakash  Chindam",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "chindamc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5863,
+   "Name": "Raghavendra P.  Kukillaya",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "raghavpk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5864,
+   "Name": "Subrahmanyam  Saderla",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "saderlas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5866,
+   "Name": "Ankush  Sharma",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ansharma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5867,
+   "Name": "Supratik  Banerjee",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sbanerjee@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5868,
+   "Name": "Suman  Saurabh",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "sumans@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5869,
+   "Name": "Suprio  Bhar",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "suprio@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5870,
+   "Name": "Navrose  .",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "navrose@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5872,
+   "Name": "Pranav Ramkrishna  Joshi",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "jpranavr@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5873,
+   "Name": "Preeti  Malakar",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "pmalakar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5874,
+   "Name": "Pramod  Subramanyan",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "spramod@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5875,
+   "Name": "Gourabananda  Pahar",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "gpahar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5876,
+   "Name": "Salil  Goel",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "sgoel@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5877,
+   "Name": "Bikramaditya  Datta",
+   "Department": "ECONOMIC SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "bikramd@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5878,
+   "Name": "Ishwar Kumar  Cukkemane",
+   "Department": "EARTH SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ishwar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5880,
+   "Name": "Satyajit  Guin",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "sguin@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5881,
+   "Name": "Balaji  Devaraju",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "dbalaji@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5883,
+   "Name": "Hamim  Zafar",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "hamim@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5886,
+   "Name": "Swarnendu  Biswas",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "swarnendu@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5887,
+   "Name": "Imon  Mondal",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "imon@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5888,
+   "Name": "Nilay  Kundu",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "nilayhep@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5890,
+   "Name": "Vipul  Arora",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "vipular@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5891,
+   "Name": "Santosh Kumar  Misra",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "skmisra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5892,
+   "Name": "Diptarka  Das",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "didas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5894,
+   "Name": "Supratik  Mukhopadhyay",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASSISTANT PROFESSOR",
+   "Email": "smukh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5895,
+   "Name": "Apparao  Draksharapu",
+   "Department": "CHEMISTRY",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "appud@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5896,
+   "Name": "Nitin  Mohan",
+   "Department": "BIOL.SCI. AND BIO.ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "nitinm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5897,
+   "Name": "Bidyut  Sanki",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "bidyut@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5899,
+   "Name": "Dharmaraja  Allimuthu",
+   "Department": "CHEMISTRY",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "atdharma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5900,
+   "Name": "Usha  Udaar",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "ushaudaar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5901,
+   "Name": "Akhilesh  Mimani",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "amimani@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5902,
+   "Name": "Abhishek  .",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "abhishekc@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5903,
+   "Name": "Gaurav  Tiwari",
+   "Department": "CIVIL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "gauravt@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5904,
+   "Name": "Ishita  Sengupta",
+   "Department": "CHEMISTRY",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "ishita@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5905,
+   "Name": "Minerva  Mukhopadhyay",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "minervam@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5906,
+   "Name": "Mainak  Sadhukhan",
+   "Department": "CHEMISTRY",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "mainaks@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5907,
+   "Name": "Pradip  Swarnakar",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "spradip@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5908,
+   "Name": "Syed Feroz  Hassan",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "feroz@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5909,
+   "Name": "Debraj  Das",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "rajdas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5910,
+   "Name": "Aditya  Saurabh",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "asaurabh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5911,
+   "Name": "Dibyendu Kumar  Das",
+   "Department": "BIOL.SCI. & BIO.ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "dkdas@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5912,
+   "Name": "Arijit  Ganguly",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "aganguly@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5913,
+   "Name": "Arnab  Ghosh",
+   "Department": "CHEMISTRY",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "arnab@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5914,
+   "Name": "Jayita  Nayak",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "jnayak@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5920,
+   "Name": "Himanshu  Sharma",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "sharmah@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5928,
+   "Name": "Prakash Chandra  Mondal",
+   "Department": "CHEMISTRY",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "pcmondal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5929,
+   "Name": "Chanchal  Sow",
+   "Department": "PHYSICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "chanchal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5935,
+   "Name": "Vishal Govind  Rao",
+   "Department": "CHEMISTRY",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "vgrao@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5943,
+   "Name": "Soumalya  Joardar",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "soumalya@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5945,
+   "Name": "Lalit  Saraswat",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "lalits@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5947,
+   "Name": "Shikhar Krishn  Jha",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "skjha@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5949,
+   "Name": "Harshwardhan Hemant  Katkar",
+   "Department": "CHEMICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "hkatkar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5954,
+   "Name": "Alok Ranjan  Verma",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "arverma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5957,
+   "Name": "Subhankar  Mukherjee",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "ASST. PROF. GRADE -I",
+   "Email": "subhankar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 5959,
+   "Name": "Dootika  Vats",
+   "Department": "MATHEMATICS",
+   "Designation": "ASST. PROF. GRADE -I I",
+   "Email": "dootika@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73039,
+   "Name": "Gyanesh N.  Mathur",
+   "Department": "MASTER OF DESIGN",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "gnmathur@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73046,
+   "Name": "Rajeev  Kumar",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "ASSOCIATE PROFESSOR",
+   "Email": "raj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73057,
+   "Name": "Sanjiv  Sur",
+   "Department": "BIOL.SCI. AND BIO.ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "sanjiv@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73065,
+   "Name": "Sudipto  Mukherjee",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "VISITING FACULTY",
+   "Email": "sudiptom@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73069,
+   "Name": "Srinivasa  Rao",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "srao@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73084,
+   "Name": "Rameshwar Dayal  Gupta",
+   "Department": "MATHEMATICS",
+   "Designation": "VISITING FACULTY",
+   "Email": "rdgupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73090,
+   "Name": "Abhijit  Mookerjee",
+   "Department": "PHYSICS",
+   "Designation": "VISITING FACULTY",
+   "Email": "abhm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73098,
+   "Name": "D.  Manivannan",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "dakshna@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73122,
+   "Name": "Shiv G  Kapoor",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "DIST. HON. PROFESSOR",
+   "Email": "shivg@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73126,
+   "Name": "Sushil  Auluck",
+   "Department": "PHYSICS",
+   "Designation": "VISITING FACULTY",
+   "Email": "sauluck@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73127,
+   "Name": "Manoj T  Nair",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "mnair@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73128,
+   "Name": "B  Chandra",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "chandrab@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73136,
+   "Name": "R .R.  Barthwal",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "rrb@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73151,
+   "Name": "Vedanth  Kadambi",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "DIST. HON. PROFESSOR",
+   "Email": "vedanth@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73152,
+   "Name": "Hari B.  Hablani",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "hablani@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73155,
+   "Name": "Soumik Nandy  Majumdar",
+   "Department": "MASTER OF DESIGN",
+   "Designation": "VISITING FACULTY",
+   "Email": "soumik@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73156,
+   "Name": "Pabitra K.  Saha",
+   "Department": "CIVIL ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "pabitra@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73157,
+   "Name": "Dr. Axel  Klaus  Eggert",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "aeggert@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73171,
+   "Name": "Emily  Hipchen",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "emily@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73172,
+   "Name": "Paul  Craddock",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "craddock@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73173,
+   "Name": "Jorn S.  Hansen",
+   "Department": "CIVIL ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "hansen@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73176,
+   "Name": "Simant  Dube",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "simantd@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73194,
+   "Name": "Owen  Matthews",
+   "Department": "PHYSICS",
+   "Designation": "VISITING FACULTY",
+   "Email": "matthews@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73196,
+   "Name": "Vishv Mohan  Malhotra",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "vmm@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73198,
+   "Name": "Abhishek  Jaiswal",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "ajaiswal@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73218,
+   "Name": "D.G.C.  Robertson",
+   "Department": "MAT.& MET.ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "davidrob@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73274,
+   "Name": "Ashok Kumar  Jain",
+   "Department": "CIVIL ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "jainak@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73275,
+   "Name": "Ram B  Misra",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "misrar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73277,
+   "Name": "Dilip  Soni",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "dilips@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73324,
+   "Name": "Philippe  Dugerdil",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "phil@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73332,
+   "Name": "Bali  Ram",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "bram@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73333,
+   "Name": "Prabhat K.  Swamee",
+   "Department": "CIVIL ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "swamee@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73334,
+   "Name": "Vandana  Kothari",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "vandanak@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73335,
+   "Name": "Satish  Kumar Gupta",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "VISITING FACULTY",
+   "Email": "guptask@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73336,
+   "Name": "Ganesh  Bhatt",
+   "Department": "IND. & MANAGEMENT ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "ganeshd@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73337,
+   "Name": "M.  Ramamoorty",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "DIS. HON. PROFESSOR",
+   "Email": "myram@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73375,
+   "Name": "A.K.  Varma",
+   "Department": "MASTER OF DESIGN",
+   "Designation": "VISITING FACULTY",
+   "Email": "akvarma@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73379,
+   "Name": "Olivier  Cadot",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "olivier@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73386,
+   "Name": "Jaison  Vallooran Devassy",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "jaison@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73387,
+   "Name": "Raman  Saxena",
+   "Department": "DESIGN PROGRAMME",
+   "Designation": "VISITING FACULTY",
+   "Email": "ramans@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73388,
+   "Name": "Chaitanyamoy  Ganguly",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "DIST. VISITING PROFESSOR",
+   "Email": "cganguly@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73389,
+   "Name": "Rajeev   Kumar",
+   "Department": "COMPUTER SCIENCE & ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "rajv@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73390,
+   "Name": "G K  Ananthassuresh",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "gksuresh@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73393,
+   "Name": "Ernst  Wintner",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "wintner@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73396,
+   "Name": "Ron  Kerman",
+   "Department": "MATHEMATICS",
+   "Designation": "VISITING FACULTY",
+   "Email": "rkerman@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73437,
+   "Name": "Nagarajan  Balasubramanian",
+   "Department": "CIVIL ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "nagaraj@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73438,
+   "Name": "Prashant  Shukla",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "VISITING FACULTY",
+   "Email": "prashuk@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73439,
+   "Name": "Philose  Koshy",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "philosek@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73440,
+   "Name": "Jhumkee (Chandravalee)  Iyengar",
+   "Department": "DESIGN PROGRAMME",
+   "Designation": "VISITING FACULTY",
+   "Email": "jhumkee@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73441,
+   "Name": "C. S.  Sundar",
+   "Department": "MATERIALS SCIENCE PROGRAMME",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "sundarcs@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73445,
+   "Name": "Ian  Postlethwaite",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "ianpos@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73447,
+   "Name": "Mahendra Ganpatrao  Nadkarni",
+   "Department": "MATHEMATICS",
+   "Designation": "VISITING FACULTY",
+   "Email": "mhgn@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73448,
+   "Name": "Dharam Vir  Ahluwalia",
+   "Department": "PHYSICS",
+   "Designation": "VISITING FACULTY",
+   "Email": "dharamva@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73450,
+   "Name": "Em. Seshadri  Seetharaman",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "DIST. VISITING PROFESSOR",
+   "Email": "seshadri@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73452,
+   "Name": "Arun Kanti  Misra",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "VISITING FACULTY",
+   "Email": "arunmi@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73454,
+   "Name": "Syed Fahad  Anwer",
+   "Department": "MECHANICAL ENGINEERING",
+   "Designation": "VISITING FACULTY",
+   "Email": "sfanwer@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73455,
+   "Name": "Adam  Klein",
+   "Department": "HUMANITIES & SOC. SCIENCES",
+   "Designation": "VISITING FACULTY",
+   "Email": "adam@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73456,
+   "Name": "Viney P.  Aneja",
+   "Department": "CIVIL ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "vpaneja@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73461,
+   "Name": "Kailash Chand  Gupta",
+   "Department": "CENTRE FOR ENV. SCI. & ENGG",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "kcgupta@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73462,
+   "Name": "Achintya  Haldar",
+   "Department": "CIVIL ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "haldar@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73463,
+   "Name": "Ron  Kerman",
+   "Department": "MATHEMATICS",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "ronald@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73465,
+   "Name": "Udaya  Parampalli",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "udayap@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73466,
+   "Name": "S. K.  Tandon",
+   "Department": "EARTH SCIENCES",
+   "Designation": "DIS. HON. PROFESSOR",
+   "Email": "sktand@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73480,
+   "Name": "Om Pal  Singh",
+   "Department": "NUC. ENGG.& TECH PROG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "singhop@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73482,
+   "Name": "Radhenduska  Srivastava",
+   "Department": "MATHEMATICS",
+   "Designation": "ASSTT.  PROF.  UNDER FAC. EXCH",
+   "Email": "radhe@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73486,
+   "Name": "Prakash D  Mangalgiri",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "pdmgiri@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73488,
+   "Name": "Satyabrata  Das",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "satyad@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73490,
+   "Name": "Swagata  Bhaumik",
+   "Department": "AEROSPACE ENGG.",
+   "Designation": "VISITING ASST. PROFESSOR",
+   "Email": "swagata@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73511,
+   "Name": "Ramakrishna (Rama)  Gokaraju",
+   "Department": "ELECTRICAL ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "ramag@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73533,
+   "Name": "Bankey Behari  Agrawal",
+   "Department": "MATERIALS SCIENCE & ENGG.",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "bbag@iitk.ac.in"
+ },
+ {
+   "Pf_No": 73537,
+   "Name": "S.  Kumaresan",
+   "Department": "MATHEMATICS",
+   "Designation": "VISITING PROFESSOR",
+   "Email": "kumaresa@iitk.ac.in"
+ }
+]

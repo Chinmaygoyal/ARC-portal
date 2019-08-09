@@ -149,7 +149,8 @@ router.get("/", tokenAuth, async (req, res) => {
       });
       res.render("dash/professorindex", {
         projects: projects,
-        name: professor.name
+        name: professor.name,
+        PfNo: professor.PfNo,
       });
     } catch (err) {
       res.status(400).send(err.message);
@@ -166,6 +167,11 @@ router.get("/student/profile", tokenAuth, async (req, res) => {
   var student = await Student.findOne({ _id: req.user._id });
   res.render("dash/studentprofile", { student: student });
 });
+//Professor Profile route
+router.get("/professor/profile",tokenAuth, async (req, res) => {
+  var professor = await Professor.findOne({ _id: req.user._id });
+  res.render("dash/professorprofile", { professor: professor, name:professor.name, PfNo:professor.PfNo });
+});
 
 //Change Password Route
 router.get("/profile/changepwd", tokenAuth, async (req, res) => {
@@ -178,7 +184,7 @@ router.get("/profile/changepwd", tokenAuth, async (req, res) => {
       rollNumber: student.rollNumber
     });
   if (professor)
-    res.render("dash/changepasswordprof", { professor: professor });
+    res.render("dash/changepasswordprof", { professor: professor, name:professor.name, PfNo:professor.PfNo });
 });
 
 module.exports = router;
